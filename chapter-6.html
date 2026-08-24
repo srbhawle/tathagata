@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Gupta Empire and Nalanda — भारतीय उपखंडातील बौद्ध धर्माचा इतिहास</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap');
+
+:root{
+  --bg:#F7F3EC; --bg2:#EFE9DE; --bg3:#E8DFCE; --border:#DDD5C2; --border2:#C9B99A;
+  --text:#2C1A0E; --text2:#6B4E2A; --text3:#A0876A;
+  --gold:#B8860B; --gold2:#C9A14C;
+  --serif:'Playfair Display',Georgia,serif;
+  --body:'Crimson Pro',Georgia,serif;
+  --dev:'Tiro Devanagari Marathi','Noto Sans Devanagari',serif;
+}
+[data-theme="dark"]{
+  --bg:#0E0B07; --bg2:#161108; --bg3:#1C1610; --border:#2C2316; --border2:#3D2F1A;
+  --text:#EDE3C9; --text2:#B8A87E; --text3:#7A6B49;
+  --gold:#C9A14C; --gold2:#E2C172;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;transition:background-color .3s,color .25s,border-color .3s;}
+body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.7;}
+
+/* NAV */
+nav{
+  position:sticky;top:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 1.4rem;height:56px;
+  background:var(--bg);border-bottom:1px solid var(--border);
+  box-shadow:0 1px 12px rgba(44,26,14,.07);
+}
+.nav-brand{
+  font-family:var(--serif);font-size:.95rem;color:var(--gold2);
+  text-decoration:none;display:flex;align-items:center;gap:.5rem;font-weight:600;
+}
+.nav-right{display:flex;align-items:center;gap:.6rem;}
+.nav-btn{
+  display:inline-flex;align-items:center;gap:.4rem;
+  padding:.4rem .9rem;border:1px solid var(--border2);border-radius:999px;
+  background:none;color:var(--text2);font-size:.8rem;cursor:pointer;
+  font-family:var(--body);text-decoration:none;letter-spacing:.04em;
+  transition:all .2s;
+}
+.nav-btn:hover{border-color:var(--gold);color:var(--gold2);background:rgba(184,134,11,.06);}
+.theme-btn{
+  width:34px;height:34px;border-radius:50%;border:1px solid var(--border2);
+  background:var(--bg2);color:var(--text3);font-size:.95rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+}
+.theme-btn:hover{border-color:var(--gold);}
+
+/* HEADER */
+.chapter-header{
+  padding:2.4rem 1.4rem 2rem;max-width:860px;margin:0 auto;
+  border-bottom:1px solid var(--border);
+}
+.ch-series{font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold2);margin-bottom:.5rem;}
+.ch-num{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;}
+.ch-title{font-family:var(--dev);font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:700;color:var(--text);line-height:1.2;margin-bottom:.3rem;}
+.ch-title-en{font-family:var(--serif);font-size:clamp(1.1rem,2vw,1.5rem);font-style:italic;font-weight:400;color:var(--gold2);margin-bottom:.5rem;}
+.ch-subtitle{font-family:var(--dev);font-size:1rem;color:var(--text2);margin-bottom:.3rem;}
+.ch-subtitle-en{font-size:.9rem;color:var(--text3);font-style:italic;margin-bottom:1rem;}
+.ch-era{display:inline-block;padding:.3rem .9rem;border:1px solid var(--border2);border-radius:999px;font-size:.75rem;color:var(--text3);letter-spacing:.05em;margin-bottom:1rem;}
+.ch-desc-mr{font-family:var(--dev);font-size:1rem;color:var(--text2);line-height:1.75;margin-bottom:.5rem;}
+.ch-desc-en{font-size:.95rem;color:var(--text3);line-height:1.7;}
+.ch-hr{width:44px;height:2px;background:var(--gold);border-radius:2px;margin:1.2rem 0;}
+
+/* PDF VIEWER */
+.pdf-wrap{
+  max-width:960px;margin:1.8rem auto;padding:0 1.4rem;
+}
+.pdf-toolbar{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:.8rem 1rem;background:var(--bg2);border:1px solid var(--border);
+  border-bottom:none;border-radius:var(--r,8px) var(--r,8px) 0 0;
+  flex-wrap:wrap;gap:.5rem;
+}
+.pdf-label{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);}
+.pdf-dl{
+  display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .9rem;
+  border:1px solid var(--border2);border-radius:999px;color:var(--gold2);
+  font-size:.8rem;text-decoration:none;background:none;cursor:pointer;
+  font-family:var(--body);transition:all .2s;
+}
+.pdf-dl:hover{background:rgba(184,134,11,.08);border-color:var(--gold);}
+.pdf-frame{
+  width:100%;border:1px solid var(--border);border-radius:0 0 8px 8px;
+  background:var(--bg3);display:block;
+}
+.pdf-fallback{
+  display:none;padding:2rem;text-align:center;
+  background:var(--bg2);border:1px solid var(--border);border-radius:0 0 8px 8px;
+}
+.pdf-fallback p{font-size:.95rem;color:var(--text2);margin-bottom:1rem;}
+
+/* NAVIGATION */
+.ch-nav{
+  max-width:860px;margin:2rem auto;padding:1.2rem 1.4rem;
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  border-top:1px solid var(--border);
+}
+.ch-nav a{
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.55rem 1.1rem;border:1px solid var(--border2);border-radius:999px;
+  color:var(--text2);font-size:.85rem;text-decoration:none;font-family:var(--body);
+  transition:all .2s;
+}
+.ch-nav a:hover{border-color:var(--gold2);color:var(--gold2);background:rgba(184,134,11,.05);}
+.ch-nav a.disabled{opacity:.3;pointer-events:none;}
+.ch-nav .back-home{color:var(--gold2);border-color:var(--gold);}
+
+/* FOOTER */
+footer{
+  border-top:1px solid var(--border);padding:1.5rem 1.4rem;text-align:center;
+  font-size:.82rem;color:var(--text3);background:var(--bg2);
+}
+footer strong{color:var(--gold2);}
+</style>
+</head>
+<body id="chRoot">
+
+<nav>
+  <a class="nav-brand" href="buddha-and-his-dhamma.html">☸ Buddha &amp; His Dhamma</a>
+  <div class="nav-right">
+    <a class="nav-btn" href="buddha-and-his-dhamma.html">← Back to website</a>
+    <button id="themeBtn" class="theme-btn" onclick="toggleTheme()" title="Toggle light/dark">☀️</button>
+  </div>
+</nav>
+
+<div class="chapter-header">
+  <p class="ch-series">भारतीय उपखंडातील बौद्ध धर्माचा इतिहास &nbsp;·&nbsp; History of Buddhism in the Indian Subcontinent</p>
+  <p class="ch-num">Chapter 6 &nbsp;·&nbsp; प्रकरण ६</p>
+  <h1 class="ch-title">गुप्त साम्राज्य आणि नालंदा</h1>
+  <p class="ch-title-en">The Gupta Empire and Nalanda</p>
+  <p class="ch-subtitle">सुवर्णयुग, जगातील पहिले विद्यापीठ आणि फाहियानचा भारत</p>
+  <p class="ch-subtitle-en">The golden age, world's first university, and Fa-Hien's India</p>
+  <span class="ch-era">3rd–7th century CE · Archaeology, Chinese Pilgrims & Inscriptions &nbsp;·&nbsp; इसवीसन ३रे–७वे शतक · चिनी तीर्थयात्री</span>
+  <div class="ch-hr"></div>
+  <p class="ch-desc-mr">गुप्त सुवर्णयुग, जगातील पहिले निवासी विद्यापीठ म्हणून नालंदा, आणि चिनी तीर्थयात्री फाहियानच्या नोंदी — बौद्ध धर्म त्याच्या बौद्धिक शक्तीच्या शिखरावर.</p>
+  <p class="ch-desc-en">The Gupta golden age, Nalanda as the world's first residential university, and the accounts of Chinese pilgrim Fa-Hien.</p>
+</div>
+
+<div class="pdf-wrap">
+  <div class="pdf-toolbar">
+    <span class="pdf-label">☸ &nbsp;Reading: Chapter 6 — The Gupta Empire and Nalanda</span>
+    <a class="pdf-dl" href="TGB_Chapter_6.pdf" download>⬇ Download PDF</a>
+  </div>
+  <iframe
+    class="pdf-frame"
+    src="TGB_Chapter_6.pdf"
+    height="820"
+    title="The Gupta Empire and Nalanda — TGB_Chapter_6.pdf"
+    id="pdfFrame"
+  ></iframe>
+  <div class="pdf-fallback" id="pdfFallback">
+    <p>PDF preview not available in this browser. Please download to read.</p>
+    <a class="pdf-dl" href="TGB_Chapter_6.pdf" download>⬇ Download PDF</a>
+  </div>
+</div>
+
+<div class="ch-nav">
+  <a href="chapter-5.html" class="">← Previous</a>
+  <a class="back-home" href="buddha-and-his-dhamma.html">☸ All Chapters</a>
+  <a href="chapter-7.html" class="">Next →</a>
+</div>
+
+<footer>
+  <strong>भारतीय उपखंडातील बौद्ध धर्माचा इतिहास</strong> &nbsp;·&nbsp;
+  Written by <strong>संदीप भावले</strong> &nbsp;·&nbsp;
+  <a href="https://instagram.com/srbhawle" style="color:var(--gold2);text-decoration:none;" target="_blank">@srbhawle</a>
+</footer>
+
+<script>
+function toggleTheme(){
+  const root = document.getElementById('chRoot');
+  const isDark = root.getAttribute('data-theme') === 'dark';
+  root.setAttribute('data-theme', isDark ? '' : 'dark');
+  document.getElementById('themeBtn').textContent = isDark ? '☀️' : '🌙';
+  localStorage.setItem('bd-theme', isDark ? 'light' : 'dark');
+}
+
+(function(){
+  const t = localStorage.getItem('bd-theme');
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if(t === 'dark' || (!t && prefersDark)){
+    document.getElementById('chRoot').setAttribute('data-theme','dark');
+    document.getElementById('themeBtn').textContent = '🌙';
+  }
+
+  // iframe fallback detector
+  const frame = document.getElementById('pdfFrame');
+  if(frame){
+    frame.onerror = () => {
+      frame.style.display = 'none';
+      document.getElementById('pdfFallback').style.display = 'block';
+    };
+  }
+})();
+</script>
+</body>
+</html>
