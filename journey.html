@@ -56,6 +56,26 @@
     .tradition-zone {
       transition: opacity 0.5s ease-in-out, fill 0.5s ease-in-out;
     }
+        /* Text Halo for pin readability */
+    .city-pin text, .pass-pin text {
+      paint-order: stroke fill;
+      stroke: #070b14;
+      stroke-width: 3.5px;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+      user-select: none;
+    }
+    .pin-dimmed {
+      opacity: 0.28 !important;
+      transition: opacity 0.4s ease;
+    }
+    .pin-active {
+      opacity: 1 !important;
+      transition: opacity 0.4s ease;
+    }
+    .city-pin:hover, .pass-pin:hover {
+      opacity: 1 !important;
+    }
     /* Custom Scrollbars */
     ::-webkit-scrollbar {
       width: 6px;
@@ -346,153 +366,170 @@
 
           <!-- ================= ANIMATED TRANSMISSION ROUTES ================= -->
           <g id="routesLayer">
-            <!-- 1. Buddha Era: Bodh Gaya -> Sarnath -> Rajgir -> Vaishali -->
-            <path id="route_0" d="M 485 348 L 465 342 M 465 342 L 490 355 M 490 355 L 488 335" class="route-active" stroke="#f59e0b" stroke-width="3.5" fill="none" marker-end="url(#arrowGold)"/>
+            <!-- 1. Buddha Era: Bodh Gaya (472,368) -> Sarnath (438,338) -> Pataliputra (480,318) -->
+            <path id="route_0" d="M 472 368 L 438 338 M 438 338 L 480 318" class="route-active" stroke="#f59e0b" stroke-width="3.5" fill="none" marker-end="url(#arrowGold)"/>
             
-            <!-- 2. Ashoka: Pataliputra outward to Sri Lanka, Myanmar, Gandhara -->
-            <path id="route_1" d="M 480 345 Q 520 420 480 500 T 450 630 M 480 345 Q 530 390 590 440 M 480 345 Q 400 310 340 260" class="route-active" stroke="url(#saffronGrad)" stroke-width="3.5" fill="none" opacity="0.2" marker-end="url(#arrowSaffron)"/>
+            <!-- 2. Ashoka: Pataliputra (480,318) outward to Sri Lanka, Gandhara -->
+            <path id="route_1" d="M 480 318 Q 520 420 480 500 T 450 630 M 480 318 Q 400 300 335 260" class="route-active" stroke="url(#saffronGrad)" stroke-width="3.5" fill="none" opacity="0.2" marker-end="url(#arrowSaffron)"/>
             
-            <!-- 3. Milind (Menander I): Bactria -> Taxila -> Sialkot (Sagala) -->
-            <path id="route_2" d="M 270 230 L 330 255 L 360 270" class="route-active" stroke="url(#goldGrad)" stroke-width="3.5" fill="none" opacity="0.2" marker-end="url(#arrowGold)"/>
+            <!-- 3. Milind: Balkh (265,228) -> Taxila (335,260) -> Sialkot (360,270) -->
+            <path id="route_2" d="M 265 228 L 335 260 L 360 270" class="route-active" stroke="url(#goldGrad)" stroke-width="3.5" fill="none" opacity="0.2" marker-end="url(#arrowGold)"/>
             
-            <!-- 4. Satavahana & Vakataka: Magadha/Central India -> Maharashtra (Paithan, Karla, Ajanta) -> Amaravati -->
-            <path id="route_3" d="M 480 345 Q 400 390 340 440 M 340 440 Q 380 465 430 490" class="route-active" stroke="#f59e0b" stroke-width="3.5" fill="none" opacity="0.2" marker-end="url(#arrowGold)"/>
+            <!-- 4. Satavahana: Pataliputra (480,318) -> Paithan/Ajanta (335,440) -> Amaravati (430,490) -->
+            <path id="route_3" d="M 480 318 Q 400 370 335 440 M 335 440 Q 380 465 430 490" class="route-active" stroke="#f59e0b" stroke-width="3.5" fill="none" opacity="0.2" marker-end="url(#arrowGold)"/>
             
-            <!-- 5. Kushana (Kanishka): Gandhara -> Kashmir & Gandhara -> Pamir -> Dunhuang -> Chang'an -->
-            <path id="route_4" d="M 340 260 L 375 245 M 340 260 Q 310 240 270 230 Q 360 200 450 210 Q 560 220 650 240 Q 720 260 760 275" class="route-active" stroke="url(#goldGrad)" stroke-width="3.5" fill="none" opacity="0.2" marker-end="url(#arrowGold)"/>
+            <!-- 5. Kushana: Gandhara (335,260) -> Kashmir (375,245) & Gandhara -> Pamir -> Dunhuang -> Chang'an -->
+            <path id="route_4" d="M 335 260 L 375 245 M 335 260 Q 305 240 265 228 Q 360 200 450 210 Q 560 220 650 240 Q 720 260 760 275" class="route-active" stroke="url(#goldGrad)" stroke-width="3.5" fill="none" opacity="0.2" marker-end="url(#arrowGold)"/>
             
-            <!-- 6. Gupta: Nalanda -> East Asia transmission (Korea -> Japan) -->
-            <path id="route_5" d="M 490 348 L 465 342 M 760 275 Q 830 265 865 270 Q 890 275 920 270" class="route-active" stroke="#38bdf8" stroke-width="3.5" fill="none" opacity="0.2" marker-end="url(#arrowCyan)"/>
+            <!-- 6. Gupta: Nalanda (494,348) -> Sarnath (438,338) & Chang'an -> Korea/Japan -->
+            <path id="route_5" d="M 494 348 L 438 338 M 760 275 Q 830 265 865 270 Q 890 275 920 270" class="route-active" stroke="#38bdf8" stroke-width="3.5" fill="none" opacity="0.2" marker-end="url(#arrowCyan)"/>
             
-            <!-- 7. Harshavardhan: Kannauj to Nalanda & Xuanzang carrying manuscripts back to Chang'an -->
-            <path id="route_6" d="M 420 320 L 490 348 M 490 348 Q 580 270 760 275" class="route-active" stroke="#facc15" stroke-width="3.5" fill="none" opacity="0.2" marker-end="url(#arrowGold)"/>
+            <!-- 7. Harshavardhan: Kannauj (388,316) -> Nalanda (494,348) & Nalanda -> Silk Road -> Chang'an -->
+            <path id="route_6" d="M 388 316 L 494 348 M 494 348 Q 580 270 760 275" class="route-active" stroke="#facc15" stroke-width="3.5" fill="none" opacity="0.2" marker-end="url(#arrowGold)"/>
             
-            <!-- 8. Sailendra & Srivijaya: Bengal/Tamralipti port -> Malacca -> Java (Borobudur) -->
-            <path id="route_7" d="M 490 348 Q 540 450 630 580 Q 700 630 780 660" class="route-active" stroke="#06b6d4" stroke-width="3.5" fill="none" opacity="0.2" marker-end="url(#arrowCyan)"/>
+            <!-- 8. Sailendra: Bengal/Nalanda (494,348) -> Malacca -> Java (Borobudur, 780,660) -->
+            <path id="route_7" d="M 494 348 Q 540 450 630 580 Q 700 630 780 660" class="route-active" stroke="#06b6d4" stroke-width="3.5" fill="none" opacity="0.2" marker-end="url(#arrowCyan)"/>
             
-            <!-- 9. Pala Dynasty: Vikramashila (Bihar) -> across Himalayan passes -> Lhasa & Samye (Tibet) -->
-            <path id="route_8" d="M 515 348 Q 530 320 545 285" class="route-active" stroke="url(#purpleGrad)" stroke-width="3.5" fill="none" opacity="0.2" marker-end="url(#arrowPurple)"/>
+            <!-- 9. Pala: Vikramashila (538,338) -> Himalayas -> Lhasa & Samye (555,275) -->
+            <path id="route_8" d="M 538 338 Q 545 305 555 275" class="route-active" stroke="url(#purpleGrad)" stroke-width="3.5" fill="none" opacity="0.2" marker-end="url(#arrowPurple)"/>
           </g>
 
           <!-- ================= CITIES & MONASTIC HUBS WITH DUAL TOPONYMS ================= -->
           <g id="pinsLayer">
-            <!-- Bodh Gaya -->
-            <g class="city-pin cursor-pointer" data-id="bodh_gaya" transform="translate(485, 348)">
+            <!-- Bodh Gaya / Uruvela: South on Phalgu river (text points South-West) -->
+            <g class="city-pin cursor-pointer pin-active" data-id="bodh_gaya" data-eras="0" transform="translate(472, 368)">
               <circle class="pin-pulse fill-amber-400" cx="0" cy="0" r="10"/>
               <circle cx="0" cy="0" r="7" class="fill-amber-400 stroke-stone-950 stroke-2"/>
-              <text x="10" y="2" class="fill-amber-200 text-[11px] font-bold">Uruvelā / उरुवेला (Bodh Gayā)</text>
-              <text x="10" y="14" class="fill-amber-400/90 text-[9px] font-semibold">📍 Bihar, India (भारत)</text>
+              <text x="-12" y="2" text-anchor="end" class="fill-amber-200 text-[10px] font-bold">Uruvelā / बोधगया</text>
+              <text x="-12" y="13" text-anchor="end" class="fill-amber-400/90 text-[8.5px] font-semibold">📍 Bodh Gayā (Bihar)</text>
             </g>
 
-            <!-- Sarnath -->
-            <g class="city-pin cursor-pointer" data-id="sarnath" transform="translate(465, 342)">
+            <!-- Sarnath / Isipatana: West of Bihar in UP (text points West / Left) -->
+            <g class="city-pin cursor-pointer pin-active" data-id="sarnath" data-eras="0,5" transform="translate(438, 338)">
               <circle cx="0" cy="0" r="6" class="fill-amber-400 stroke-stone-950 stroke-2"/>
-              <text x="-10" y="-12" text-anchor="end" class="fill-stone-300 text-[10px] font-bold">Isipatana / इसिपतन (Sārnāth)</text>
-              <text x="-10" y="-2" text-anchor="end" class="fill-stone-400 text-[9px]">Varanasi, UP / वाराणसी</text>
+              <text x="-10" y="-2" text-anchor="end" class="fill-stone-200 text-[10px] font-bold">Isipatana / सारनाथ</text>
+              <text x="-10" y="8" text-anchor="end" class="fill-stone-400 text-[8.5px]">Varanasi, UP</text>
             </g>
 
-            <!-- Pataliputra -->
-            <g class="city-pin cursor-pointer" data-id="pataliputra" transform="translate(480, 335)">
+            <!-- Pataliputra: On northern bank of Ganges (text points North / Up) -->
+            <g class="city-pin cursor-pointer pin-active" data-id="pataliputra" data-eras="0,1" transform="translate(480, 318)">
               <circle cx="0" cy="0" r="7" class="fill-cyan-400 stroke-stone-950 stroke-2"/>
-              <text x="10" y="-8" class="fill-cyan-200 text-[11px] font-bold">Pāṭaliputra / पाटलिपुत्र</text>
-              <text x="10" y="3" class="fill-stone-400 text-[9px]">Patna, Bihar / पाटणा</text>
+              <text x="0" y="-12" text-anchor="middle" class="fill-cyan-200 text-[10.5px] font-bold">Pāṭaliputra / पाटलिपुत्र</text>
+              <text x="0" y="-2" text-anchor="middle" class="fill-stone-300 text-[8.5px]">Patna, Bihar (राजधानी)</text>
             </g>
 
-            <!-- Anuradhapura -->
-            <g class="city-pin cursor-pointer" data-id="anuradhapura" transform="translate(450, 630)">
+            <!-- Nalanda: Central Magadha (text points South-East) -->
+            <g class="city-pin cursor-pointer pin-active" data-id="nalanda" data-eras="5,6,7" transform="translate(494, 348)">
+              <circle class="pin-pulse fill-cyan-400" cx="0" cy="0" r="9"/>
+              <circle cx="0" cy="0" r="7" class="fill-cyan-400 stroke-stone-950 stroke-2"/>
+              <text x="12" y="3" text-anchor="start" class="fill-cyan-200 text-[11px] font-bold">Nālandā / नालंदा</text>
+              <text x="12" y="14" text-anchor="start" class="fill-stone-300 text-[8.5px] font-semibold">Mahāvihāra (महाविहार)</text>
+            </g>
+
+            <!-- Vikramashila: East towards Bhagalpur/Bengal (text points East / Right) -->
+            <g class="city-pin cursor-pointer pin-active" data-id="vikramashila" data-eras="8" transform="translate(538, 338)">
+              <circle class="pin-pulse fill-purple-400" cx="0" cy="0" r="8"/>
+              <circle cx="0" cy="0" r="6" class="fill-purple-400 stroke-stone-950 stroke-2"/>
+              <text x="12" y="-2" text-anchor="start" class="fill-purple-300 text-[10.5px] font-bold">Vikramaśīlā / विक्रमशिला</text>
+              <text x="12" y="9" text-anchor="start" class="fill-purple-300 text-[8.5px]">Bhagalpur, Bihar (पाल)</text>
+            </g>
+
+            <!-- Kannauj: West in UP (text points North-West) -->
+            <g class="city-pin cursor-pointer pin-active" data-id="kannauj" data-eras="6" transform="translate(388, 316)">
+              <circle class="pin-pulse fill-yellow-400" cx="0" cy="0" r="7"/>
+              <circle cx="0" cy="0" r="5" class="fill-yellow-400 stroke-stone-950 stroke-2"/>
+              <text x="-10" y="-4" text-anchor="end" class="fill-yellow-200 text-[10.5px] font-bold">Kanyākubja / कनौज</text>
+              <text x="-10" y="6" text-anchor="end" class="fill-stone-400 text-[8.5px]">Harsha (UP)</text>
+            </g>
+
+            <!-- Anuradhapura (Sri Lanka) -->
+            <g class="city-pin cursor-pointer pin-active" data-id="anuradhapura" data-eras="1" transform="translate(450, 630)">
               <circle class="pin-pulse fill-orange-500" cx="0" cy="0" r="8"/>
               <circle cx="0" cy="0" r="6" class="fill-orange-500 stroke-stone-950 stroke-2"/>
-              <text x="12" y="2" class="fill-orange-300 text-[11px] font-bold">Tambapaṇṇi / तांबपण्णी (Anurādhapura)</text>
+              <text x="12" y="2" class="fill-orange-300 text-[11px] font-bold">Tambapaṇṇi / अनुराधापूर</text>
               <text x="12" y="14" class="fill-orange-400 text-[9px] font-semibold">📍 Sri Lanka (श्रीलंका)</text>
             </g>
 
-            <!-- Sialkot (Milind Capital) -->
-            <g class="city-pin cursor-pointer" data-id="sagala" transform="translate(360, 270)">
+            <!-- Sākala / Sialkot (Milind Capital) -->
+            <g class="city-pin cursor-pointer pin-active" data-id="sagala" data-eras="2" transform="translate(360, 270)">
               <circle class="pin-pulse fill-yellow-400" cx="0" cy="0" r="7"/>
               <circle cx="0" cy="0" r="5" class="fill-yellow-400 stroke-stone-950 stroke-2"/>
               <text x="10" y="-2" class="fill-yellow-200 text-[10px] font-bold">Sākala / साकल (Sialkot)</text>
-              <text x="10" y="9" class="fill-stone-400 text-[9px]">Punjab, Pakistan (राजा मिलिंद)</text>
+              <text x="10" y="9" class="fill-stone-400 text-[8.5px]">Punjab, Pak (राजा मिलिंद)</text>
             </g>
 
-            <!-- Satavahana & Vakataka: Paithan, Karla & Ajanta -->
-            <g class="city-pin cursor-pointer" data-id="paithan" transform="translate(340, 440)">
+            <!-- Satavahana Centers: Paithan, Karla & Ajanta -->
+            <g class="city-pin cursor-pointer pin-active" data-id="paithan" data-eras="3" transform="translate(335, 440)">
               <circle class="pin-pulse fill-amber-400" cx="0" cy="0" r="8"/>
               <circle cx="0" cy="0" r="6" class="fill-amber-400 stroke-stone-950 stroke-2"/>
-              <text x="-12" y="-4" text-anchor="end" class="fill-amber-200 text-[11px] font-bold">Pratiṣṭhāna &amp; Ajanta, Karla / अजिंठा, कार्ले</text>
+              <text x="-12" y="-3" text-anchor="end" class="fill-amber-200 text-[11px] font-bold">Pratiṣṭhāna / पैठण &amp; Karla, Ajanta</text>
               <text x="-12" y="8" text-anchor="end" class="fill-amber-400 text-[9px] font-semibold">📍 Maharashtra (सातवाहन व वाकाटक)</text>
             </g>
 
             <!-- Amaravati / Nagarjunakonda -->
-            <g class="city-pin cursor-pointer" data-id="amaravati" transform="translate(430, 490)">
+            <g class="city-pin cursor-pointer pin-active" data-id="amaravati" data-eras="3" transform="translate(430, 490)">
               <circle cx="0" cy="0" r="6" class="fill-amber-400 stroke-stone-950 stroke-2"/>
-              <text x="10" y="2" class="fill-amber-200 text-[10px] font-bold">Dhānyakaṭaka / अमरावती (Nagarjuna)</text>
-              <text x="10" y="13" class="fill-stone-400 text-[9px]">Andhra Pradesh / आंध्र प्रदेश</text>
+              <text x="12" y="2" class="fill-amber-200 text-[10px] font-bold">Dhānyakaṭaka / अमरावती (Nāgārjuna)</text>
+              <text x="12" y="13" class="fill-stone-400 text-[8.5px]">Andhra Pradesh / आंध्र प्रदेश</text>
             </g>
 
-            <!-- Gandhara: Taxila -->
-            <g class="city-pin cursor-pointer" data-id="taxila" transform="translate(340, 260)">
+            <!-- Gandhara: Taxila & Peshawar -->
+            <g class="city-pin cursor-pointer pin-active" data-id="taxila" data-eras="1,2,4" transform="translate(335, 260)">
               <circle class="pin-pulse fill-yellow-400" cx="0" cy="0" r="8"/>
               <circle cx="0" cy="0" r="6" class="fill-yellow-400 stroke-stone-950 stroke-2"/>
-              <text x="-12" y="-2" text-anchor="end" class="fill-yellow-200 text-[11px] font-bold">Gandhāra: Takṣaśilā / तक्षशिला</text>
-              <text x="-12" y="10" text-anchor="end" class="fill-yellow-400 text-[9px] font-semibold">📍 NW Pakistan (कनिष्क केंद्र)</text>
+              <text x="-12" y="-2" text-anchor="end" class="fill-yellow-200 text-[11px] font-bold">Gandhāra / तक्षशिला</text>
+              <text x="-12" y="9" text-anchor="end" class="fill-yellow-400 text-[9px] font-semibold">📍 NW Pakistan (कनिष्क)</text>
+            </g>
+
+            <!-- Khyber Pass -->
+            <g class="pass-pin cursor-pointer pin-active" data-id="khyber" data-eras="2,4" transform="translate(315, 245)">
+              <rect x="-5" y="-5" width="10" height="10" class="fill-slate-300 stroke-stone-950 stroke-2" transform="rotate(45)"/>
+              <text x="-10" y="-10" text-anchor="end" class="fill-slate-200 text-[9.5px] font-semibold">Khyber Pass / खैबर खिंड</text>
+            </g>
+
+            <!-- Balkh / Bactria -->
+            <g class="city-pin cursor-pointer pin-active" data-id="balkh" data-eras="2,4" transform="translate(265, 228)">
+              <circle cx="0" cy="0" r="5" class="fill-yellow-400 stroke-stone-950 stroke-2"/>
+              <text x="-10" y="4" text-anchor="end" class="fill-yellow-200 text-[10px] font-bold">Bāhlika / बाल्ख (Bactria)</text>
+              <text x="-10" y="14" text-anchor="end" class="fill-stone-400 text-[8.5px]">N. Afghanistan</text>
             </g>
 
             <!-- Kashmir: Kundalvana -->
-            <g class="city-pin cursor-pointer" data-id="kundalvana" transform="translate(375, 245)">
+            <g class="city-pin cursor-pointer pin-active" data-id="kundalvana" data-eras="4" transform="translate(375, 245)">
               <circle cx="0" cy="0" r="6" class="fill-yellow-400 stroke-stone-950 stroke-2"/>
               <text x="10" y="-2" class="fill-yellow-200 text-[10px] font-bold">Kuṇḍalavana / कुंडलवन</text>
-              <text x="10" y="9" class="fill-stone-400 text-[9px]">Kashmir (४थी संगीती)</text>
+              <text x="10" y="9" class="fill-stone-400 text-[8.5px]">Kashmir (४थी संगीती)</text>
             </g>
 
-            <!-- Kannauj (Harsha Capital) -->
-            <g class="city-pin cursor-pointer" data-id="kannauj" transform="translate(420, 320)">
-              <circle class="pin-pulse fill-yellow-400" cx="0" cy="0" r="7"/>
-              <circle cx="0" cy="0" r="5" class="fill-yellow-400 stroke-stone-950 stroke-2"/>
-              <text x="-10" y="-8" text-anchor="end" class="fill-yellow-200 text-[11px] font-bold">Kanyākubja / कनौज (Harsha)</text>
-              <text x="-10" y="3" text-anchor="end" class="fill-stone-400 text-[9px]">Uttar Pradesh / उ.प्र.</text>
+            <!-- Dunhuang (Mogao Caves) -->
+            <g class="city-pin cursor-pointer pin-active" data-id="dunhuang" data-eras="4" transform="translate(650, 240)">
+              <circle cx="0" cy="0" r="6" class="fill-yellow-400 stroke-stone-950 stroke-2"/>
+              <text x="12" y="2" class="fill-yellow-200 text-[11px] font-bold">Dunhuang / दुनहुआंग</text>
+              <text x="12" y="13" class="fill-stone-400 text-[8.5px]">Gansu, China (मोगाओ)</text>
             </g>
 
-            <!-- Nalanda Mahavihara -->
-            <g class="city-pin cursor-pointer" data-id="nalanda" transform="translate(490, 348)">
-              <circle class="pin-pulse fill-cyan-400" cx="0" cy="0" r="10"/>
-              <circle cx="0" cy="0" r="7" class="fill-cyan-400 stroke-stone-950 stroke-2"/>
-              <text x="12" y="12" class="fill-cyan-200 text-[12px] font-bold">Nālandā / नालंदा महाविहार</text>
-              <text x="12" y="23" class="fill-stone-400 text-[9px] font-semibold">Bihar, India / भारत</text>
+            <!-- Chang'an / Xi'an -->
+            <g class="city-pin cursor-pointer pin-active" data-id="changan" data-eras="4,5,6" transform="translate(760, 275)">
+              <circle cx="0" cy="0" r="7" class="fill-yellow-400 stroke-stone-950 stroke-2"/>
+              <text x="12" y="2" class="fill-yellow-200 text-[11px] font-bold">Chang'an / चांगआन</text>
+              <text x="12" y="13" class="fill-stone-400 text-[8.5px]">Xi'an, China (शीआन)</text>
             </g>
 
-            <!-- Vikramashila (Pala) -->
-            <g class="city-pin cursor-pointer" data-id="vikramashila" transform="translate(515, 348)">
-              <circle class="pin-pulse fill-purple-400" cx="0" cy="0" r="7"/>
-              <circle cx="0" cy="0" r="6" class="fill-purple-400 stroke-stone-950 stroke-2"/>
-              <text x="10" y="-8" class="fill-purple-300 text-[10px] font-bold">Vikramaśīlā / विक्रमशिला</text>
-              <text x="10" y="2" class="fill-purple-400 text-[9px]">Bihar (पाल महाविहार)</text>
-            </g>
-
-            <!-- Borobudur (Sailendra & Srivijaya) -->
-            <g class="city-pin cursor-pointer" data-id="borobudur" transform="translate(780, 660)">
+            <!-- Borobudur (Java, Indonesia) -->
+            <g class="city-pin cursor-pointer pin-active" data-id="borobudur" data-eras="7" transform="translate(780, 660)">
               <circle class="pin-pulse fill-cyan-400" cx="0" cy="0" r="9"/>
               <circle cx="0" cy="0" r="7" class="fill-cyan-400 stroke-stone-950 stroke-2"/>
               <text x="12" y="-6" class="fill-cyan-200 text-[11px] font-bold">Yavadvīpa: Borobudur / बोरोबुदूर</text>
-              <text x="12" y="6" class="fill-cyan-400 text-[9px] font-semibold">📍 Java, Indonesia (शैलेंद्र साम्राज्य)</text>
+              <text x="12" y="6" class="fill-cyan-400 text-[9px] font-semibold">📍 Java, Indonesia (शैलेंद्र)</text>
             </g>
 
             <!-- Lhasa & Samye (Tibet) -->
-            <g class="city-pin cursor-pointer" data-id="lhasa" transform="translate(545, 285)">
+            <g class="city-pin cursor-pointer pin-active" data-id="lhasa" data-eras="8" transform="translate(555, 275)">
               <circle class="pin-pulse fill-purple-400" cx="0" cy="0" r="8"/>
               <circle cx="0" cy="0" r="6" class="fill-purple-400 stroke-stone-950 stroke-2"/>
               <text x="12" y="2" class="fill-purple-200 text-[11px] font-bold">Lhasa &amp; Samye / ल्हासा (तिबेट)</text>
-              <text x="12" y="14" class="fill-stone-400 text-[9px] font-semibold">Tibet / तिबेट</text>
+              <text x="12" y="14" class="fill-purple-300 text-[9px] font-semibold">Tibet / तिबेट</text>
             </g>
-
-            <!-- Bagan (Myanmar) -->
-            <g class="city-pin cursor-pointer" data-id="pagan" transform="translate(590, 440)">
-              <circle cx="0" cy="0" r="6" class="fill-orange-400 stroke-stone-950 stroke-2"/>
-              <text x="10" y="2" class="fill-orange-300 text-[11px] font-bold">Suvaṇṇabhūmi: Pagan / पगान</text>
-              <text x="10" y="13" class="fill-orange-400 text-[9px] font-semibold">📍 Myanmar (अनवरथ राजा)</text>
-            </g>
-
-
-
           </g>
         </svg>
       </div>
@@ -833,11 +870,11 @@
           ancientToponyms: 'नालंदा (मगध), इसिपतन (सारनाथ), असुका (जपान)',
           modernToponyms: 'नालंदा व वाराणसी (भारत), नारा (जपान)',
           traditionSphere: 'योगाचार व माध्यमिक महायान (अभिजात विद्यापीठीय परंपरा)',
-          story: '<p>५व्या शतकात गुप्त सम्राट कुमारगुप्त प्रथम यांनी <strong>नालंदा महाविहार (बिहार)</strong> ची स्थापना केली, ज्याची पुष्टी उत्खननात सापडलेल्या मुद्रांवरून होते. हे जगातील पहिले जागतिक निवासी विद्यापीठ ठरले, जिथे १०,००० हून अधिक विद्वान शिक्षण घेत असत.</p><p>सारनाथ येथे चुनार पाषाणात कोरलेली बुद्धांची धम्मचक्र प्रवर्तन मुद्रा ही जागतिक कलेचे सर्वोच्च शिखर ठरली. याच काळात चीनी यात्रेकरू <strong>फाक्सियान</strong> भारतात आला आणि धम्म <strong>कोरिया व जपानमध्ये</strong> पोहोचला.</p>',
+          story: '<p>५व्या शतकात गुप्त सम्राट कुमारगुप्त प्रथम यांनी <strong>नालंदा महाविहार (बिहार)</strong> ची स्थापना केली, ज्याची पुष्टी उत्खननात सापडलेल्या मुद्रांवरून होते. हे जगातील पहिले जागतिक निवासी विद्यापीठ ठरले, जिथे १०,००० हून अधिक विद्वान शिक्षण घेत असत.</p><p>सारनाथ येथे चुनार पाषाणात कोरलेली बुद्धांची धम्मचक्र प्रवर्तन मुद्रा ही जागतिक कलेचे सर्वोच्च शिखर ठरली. याच काळात चीनी यात्रेकरू <strong>फाहियान</strong> भारतात आला आणि धम्म <strong>कोरिया व जपानमध्ये</strong> पोहोचला.</p>',
           factHead: 'रोचक ऐतिहासिक सत्य:',
           fact: 'सारनाथ येथील \'धम्मचक्र प्रवर्तन बुद्ध मूर्ती\' ही जागतिक कला विश्वात शांतता आणि आध्यात्मिक परिपूर्णतेचे सर्वोच्च शिखर मानली जाते!',
-          source: 'कुमारगुप्ताचे नालंदा मुद्रा शिलालेख; फाक्सियान प्रवासवृत्त; सारनाथ बुद्ध शिलालेख.',
-          siteEvidence: 'नालंदा महाविहार कुमारगुप्त प्रथम शाही मुद्रा (पुरातत्त्व संग्रहालय, नालंदा); सारनाथ धम्मचक्र प्रवर्तन बुद्धमूर्ती (सारनाथ संग्रहालय); फाक्सियान प्रवासवृत्त.'
+          source: 'कुमारगुप्ताचे नालंदा मुद्रा शिलालेख; फाहियान प्रवासवृत्त; सारनाथ बुद्ध शिलालेख.',
+          siteEvidence: 'नालंदा महाविहार कुमारगुप्त प्रथम शाही मुद्रा (पुरातत्त्व संग्रहालय, नालंदा); सारनाथ धम्मचक्र प्रवर्तन बुद्धमूर्ती (सारनाथ संग्रहालय); फाहियान प्रवासवृत्त.'
         }
       },
 
@@ -1110,6 +1147,19 @@
       applyMapCamera(era.mapView);
       updateRoutes(era.activeRoute);
       highlightTraditionZones(era.activeZones);
+      
+      // Dynamic Pin Highlight: Only highlight pins relevant to active era, dimming others
+      document.querySelectorAll('.city-pin, .pass-pin').forEach(pin => {
+        const erasAttr = pin.getAttribute('data-eras') || '';
+        const eraList = erasAttr.split(',').map(s => parseInt(s.trim(), 10));
+        if (eraList.includes(index) || (selectedTraditionFilter !== 'all')) {
+          pin.classList.remove('pin-dimmed');
+          pin.classList.add('pin-active');
+        } else {
+          pin.classList.add('pin-dimmed');
+          pin.classList.remove('pin-active');
+        }
+      });
     }
 
     // Filter by Tradition Spheres
