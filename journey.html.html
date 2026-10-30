@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>The Wheel of Peace: From Magadha to the World | शांतीचे धम्मचक्र: मगधापासून विश्वापर्यंत (6th Century BCE – 12th Century CE)</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Rozha+One&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .serif-title {
+      font-family: 'Cinzel', serif;
+      letter-spacing: -0.01em;
+    }
+    .devanagari-title {
+      font-family: 'Rozha One', 'Poppins', serif;
+      letter-spacing: 0.01em;
+    }
+    /* Animated dashed route lines */
+    /* Correct forward-flowing dashed line animation */
+    @keyframes dashTravel {
+      from {
+        stroke-dashoffset: 28;
+      }
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    .route-active {
+      stroke-dasharray: 8 6;
+      animation: dashTravel 1.2s linear infinite;
+    }
+    /* Pulse pin animation */
+    @keyframes pinPulse {
+      0% { r: 6px; opacity: 1; }
+      50% { r: 16px; opacity: 0.3; }
+      100% { r: 24px; opacity: 0; }
+    }
+    .pin-pulse {
+      animation: pinPulse 2s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+    /* Smooth Map Canvas Transitions */
+    #mapSvg {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      transform-origin: 50% 50%;
+    }
+    /* Territory Zone Hover / Active Glow */
+    .tradition-zone {
+      transition: opacity 0.5s ease-in-out, fill 0.5s ease-in-out;
+    }
+    /* Custom Scrollbars */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0c1322;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-stone-900 text-stone-100 antialiased min-h-screen flex flex-col selection:bg-amber-500 selection:text-stone-950">
+
+  <!-- Top Navigation Bar -->
+  <header class="bg-stone-950/90 backdrop-blur-md border-b border-stone-800 sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 py-2.5 flex items-center justify-between gap-3">
+      
+      <!-- Brand & Single-Line Title Container -->
+      <div class="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
+        <!-- Return to Tathagata Portal Link -->
+        <a href="https://srbhawle.github.io/tathagata/" title="Back to Tathagata Home / तथागत मुख्यपृष्ठ" class="px-2 py-1 text-xs font-semibold rounded-lg bg-stone-900 hover:bg-stone-800 text-stone-300 hover:text-amber-300 border border-stone-800 transition-all flex items-center gap-1 shrink-0">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+          <span class="lang-en hidden xs:inline">Tathagata</span>
+          <span class="lang-mr hidden">तथागत</span>
+        </a>
+
+        <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-400 flex items-center justify-center text-stone-950 font-bold shadow-lg shadow-amber-500/20 shrink-0">
+          <svg class="w-5 h-5 text-stone-950" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3"/><path stroke="currentColor" stroke-width="2" d="M12 3v6m0 6v6M3 12h6m6 0h6M5.6 5.6l4.2 4.2m4.4 4.4l4.2 4.2M5.6 18.4l4.2-4.2m4.4-4.4l4.2-4.2"/></svg>
+        </div>
+        
+        <div class="flex flex-col min-w-0 overflow-hidden">
+          <!-- Refined Editorial Metadata Bar -->
+          <div class="flex items-center gap-1.5 sm:gap-2 flex-nowrap text-xs overflow-hidden text-ellipsis whitespace-nowrap">
+            <span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] sm:text-[11px] font-bold tracking-wider uppercase bg-amber-500/15 text-amber-400 border border-amber-500/25 shrink-0">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+              <span class="lang-en">Comprehensive Chronological Odyssey</span>
+              <span class="lang-mr hidden">संपूर्ण कालक्रमानुसार ऐतिहासिक धम्मयात्रा</span>
+            </span>
+            <span class="text-stone-600 font-bold">&bull;</span>
+            <span class="text-[11px] sm:text-xs font-semibold text-amber-200/90 tracking-wide shrink-0">
+              <span class="lang-en">6th Century BCE – 12th Century CE &amp; Modern Resurgence</span>
+              <span class="lang-mr hidden">इ.स.पूर्व ६वे शतक ते १२वे शतक व आधुनिक धम्मक्रांती</span>
+            </span>
+            <span class="text-stone-600 font-bold hidden md:inline">&bull;</span>
+            <span class="text-[11px] text-stone-400 font-normal hidden md:inline truncate">
+              <span class="lang-en">9 Imperial &amp; Philosophical Eras</span>
+              <span class="lang-mr hidden">९ प्रमुख ऐतिहासिक कालखंड</span>
+            </span>
+          </div>
+
+          <!-- Strictly Single-Line Title with Responsive Sizing -->
+          <h1 class="font-bold tracking-tight text-stone-50 mt-0.5 whitespace-nowrap leading-tight text-[13px] xs:text-sm sm:text-base md:text-lg lg:text-xl truncate">
+            <span class="lang-en serif-title font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-100 to-amber-300">The Wheel of Peace: From Magadha to the World</span>
+            <span class="lang-mr hidden devanagari-title text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-100 to-amber-300">शांतीचे धम्मचक्र: मगधापासून विश्वापर्यंत</span>
+          </h1>
+        </div>
+      </div>
+
+      <!-- Action Buttons: Language & Auto-Play -->
+      <div class="flex items-center gap-2 shrink-0">
+        
+        <!-- Auto-Play Journey Button -->
+        <button type="button" id="btnAutoPlay" class="px-2.5 sm:px-3 py-1.5 text-xs font-semibold rounded-lg bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-stone-950 transition-all shadow-md flex items-center gap-1.5">
+          <svg id="playIcon" class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <span id="playLabelEn" class="lang-en hidden sm:inline">Watch Journey</span>
+          <span id="playLabelMr" class="lang-mr hidden">यात्रा सुरू करा</span>
+        </button>
+
+        <!-- Bilingual Switcher -->
+        <div class="inline-flex rounded-lg bg-stone-800 p-0.5 border border-stone-700" role="group">
+          <button type="button" id="btnLangEn" class="px-2.5 py-1 text-xs font-bold rounded-md transition-all bg-amber-500 text-stone-950 shadow-sm">
+            EN
+          </button>
+          <button type="button" id="btnLangMr" class="px-2.5 py-1 text-xs font-semibold rounded-md transition-all text-stone-400 hover:text-white">
+            मराठी
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Tradition Filter Pill Bar: Spheres of Buddhism -->
+  <div class="bg-stone-950 border-b border-stone-800 px-3 sm:px-6 py-2 sticky top-[57px] z-30">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2 overflow-x-auto scrollbar-none">
+      <div class="flex items-center gap-1.5 sm:gap-2 flex-nowrap" id="traditionFilterBar">
+        <span class="text-[10px] sm:text-xs font-bold text-stone-400 uppercase tracking-wider whitespace-nowrap mr-1">
+          <span class="lang-en">Spheres:</span>
+          <span class="lang-mr hidden">परंपरा:</span>
+        </span>
+
+        <button type="button" data-tradition="all" class="tradition-pill px-2.5 py-1 rounded-lg text-xs font-bold transition-all bg-stone-800 text-amber-300 border border-amber-500/40 shadow-sm whitespace-nowrap flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+          <span class="lang-en">All Eras (सर्व १० टप्पे)</span>
+          <span class="lang-mr hidden">सर्व १० टप्पे</span>
+        </button>
+
+        <button type="button" data-tradition="theravada" class="tradition-pill px-2.5 py-1 rounded-lg text-xs font-medium transition-all text-stone-300 hover:text-white hover:bg-stone-800/80 border border-transparent whitespace-nowrap flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-[#ea580c]"></span>
+          <span class="lang-en">🟠 Theravāda (थेरवाद)</span>
+          <span class="lang-mr hidden">🟠 थेरवाद (श्रीलंका, म्यानमार)</span>
+        </button>
+
+        <button type="button" data-tradition="mahayana" class="tradition-pill px-2.5 py-1 rounded-lg text-xs font-medium transition-all text-stone-300 hover:text-white hover:bg-stone-800/80 border border-transparent whitespace-nowrap flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-[#facc15]"></span>
+          <span class="lang-en">🟡 Mahāyāna (महायान)</span>
+          <span class="lang-mr hidden">🟡 महायान (चीन, जपान, सातवाहन)</span>
+        </button>
+
+        <button type="button" data-tradition="vajrayana" class="tradition-pill px-2.5 py-1 rounded-lg text-xs font-medium transition-all text-stone-300 hover:text-white hover:bg-stone-800/80 border border-transparent whitespace-nowrap flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-[#c084fc]"></span>
+          <span class="lang-en">🟣 Vajrayāna (वज्रयान)</span>
+          <span class="lang-mr hidden">🟣 वज्रयान (तिबेट, पाल साम्राज्य)</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9-Era Stepper Bar with Multi-Row Wrap (No horizontal scroll needed!) -->
+  <nav class="bg-stone-900/95 border-b border-stone-800 px-3 sm:px-6 py-2">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center gap-1.5 sm:gap-2 justify-start" id="timelineBar">
+      
+      <!-- 1. Gautam Buddha -->
+      <button type="button" data-chapter="0" class="chapter-btn px-2.5 py-1 rounded-lg text-xs font-bold transition-all bg-amber-500 text-stone-950 shadow-sm whitespace-nowrap flex items-center gap-1">
+        <span class="w-1.5 h-1.5 rounded-full bg-stone-950"></span>
+        <span class="lang-en">1. Gautam Buddha <span class="text-[10px] opacity-80">(500 BCE)</span></span>
+        <span class="lang-mr hidden">१. तथागत बुद्ध <span class="text-[10px] opacity-80">(इ.स.पू. ५००)</span></span>
+      </button>
+
+      <!-- 2. Ashoka -->
+      <button type="button" data-chapter="1" class="chapter-btn px-2.5 py-1 rounded-lg text-xs font-medium transition-all text-stone-400 hover:text-stone-200 hover:bg-stone-800 whitespace-nowrap flex items-center gap-1">
+        <span class="w-1.5 h-1.5 rounded-full bg-amber-500/50"></span>
+        <span class="lang-en">2. Ashoka <span class="text-[10px] opacity-80">(250 BCE)</span></span>
+        <span class="lang-mr hidden">२. सम्राट अशोक <span class="text-[10px] opacity-80">(इ.स.पू. २५०)</span></span>
+      </button>
+
+      <!-- 3. Milind (Menander I) -->
+      <button type="button" data-chapter="2" class="chapter-btn px-2.5 py-1 rounded-lg text-xs font-medium transition-all text-stone-400 hover:text-stone-200 hover:bg-stone-800 whitespace-nowrap flex items-center gap-1">
+        <span class="w-1.5 h-1.5 rounded-full bg-amber-500/50"></span>
+        <span class="lang-en">3. Milind (Menander I) <span class="text-[10px] opacity-80">(150 BCE)</span></span>
+        <span class="lang-mr hidden">३. राजा मिलिंद <span class="text-[10px] opacity-80">(इ.स.पू. १५०)</span></span>
+      </button>
+
+      <!-- 4. Satavahana & Vakataka -->
+      <button type="button" data-chapter="3" class="chapter-btn px-2.5 py-1 rounded-lg text-xs font-medium transition-all text-stone-400 hover:text-stone-200 hover:bg-stone-800 whitespace-nowrap flex items-center gap-1">
+        <span class="w-1.5 h-1.5 rounded-full bg-amber-500/50"></span>
+        <span class="lang-en">4. Satavahana (Ajanta &amp; Karla) <span class="text-[10px] opacity-80">(100 BCE–200 CE)</span></span>
+        <span class="lang-mr hidden">४. सातवाहन (अजिंठा व कार्ले) <span class="text-[10px] opacity-80">(इ.स.पू. १००)</span></span>
+      </button>
+
+      <!-- 5. Kushana (Kanishka) -->
+      <button type="button" data-chapter="4" class="chapter-btn px-2.5 py-1 rounded-lg text-xs font-medium transition-all text-stone-400 hover:text-stone-200 hover:bg-stone-800 whitespace-nowrap flex items-center gap-1">
+        <span class="w-1.5 h-1.5 rounded-full bg-amber-500/50"></span>
+        <span class="lang-en">5. Kushana (Kanishka) <span class="text-[10px] opacity-80">(100 CE)</span></span>
+        <span class="lang-mr hidden">५. सम्राट कनिष्क <span class="text-[10px] opacity-80">(इ.स. १००)</span></span>
+      </button>
+
+      <!-- 6. Gupta Era -->
+      <button type="button" data-chapter="5" class="chapter-btn px-2.5 py-1 rounded-lg text-xs font-medium transition-all text-stone-400 hover:text-stone-200 hover:bg-stone-800 whitespace-nowrap flex items-center gap-1">
+        <span class="w-1.5 h-1.5 rounded-full bg-amber-500/50"></span>
+        <span class="lang-en">6. Gupta (Nalanda Founded) <span class="text-[10px] opacity-80">(400 CE)</span></span>
+        <span class="lang-mr hidden">६. गुप्त काळ (नालंदा) <span class="text-[10px] opacity-80">(इ.स. ४००)</span></span>
+      </button>
+
+      <!-- 7. Harshavardhan -->
+      <button type="button" data-chapter="6" class="chapter-btn px-2.5 py-1 rounded-lg text-xs font-medium transition-all text-stone-400 hover:text-stone-200 hover:bg-stone-800 whitespace-nowrap flex items-center gap-1">
+        <span class="w-1.5 h-1.5 rounded-full bg-amber-500/50"></span>
+        <span class="lang-en">7. Harshavardhan <span class="text-[10px] opacity-80">(606 CE)</span></span>
+        <span class="lang-mr hidden">७. सम्राट हर्षवर्धन <span class="text-[10px] opacity-80">(इ.स. ६०६)</span></span>
+      </button>
+
+      <!-- 8. Maritime Sailendra & Srivijaya (Borobudur) -->
+      <button type="button" data-chapter="7" class="chapter-btn px-2.5 py-1 rounded-lg text-xs font-medium transition-all text-stone-400 hover:text-stone-200 hover:bg-stone-800 whitespace-nowrap flex items-center gap-1">
+        <span class="w-1.5 h-1.5 rounded-full bg-amber-500/50"></span>
+        <span class="lang-en">8. Sailendra (Borobudur) <span class="text-[10px] opacity-80">(800 CE)</span></span>
+        <span class="lang-mr hidden">८. शैलेंद्र (बोरोबुदूर) <span class="text-[10px] opacity-80">(इ.स. ८००)</span></span>
+      </button>
+
+      <!-- 9. Pala Dynasty (Vikramashila & Tibet) -->
+      <button type="button" data-chapter="8" class="chapter-btn px-2.5 py-1 rounded-lg text-xs font-medium transition-all text-stone-400 hover:text-stone-200 hover:bg-stone-800 whitespace-nowrap flex items-center gap-1">
+        <span class="w-1.5 h-1.5 rounded-full bg-amber-500/50"></span>
+        <span class="lang-en">9. Pala Dynasty (Vikramashila) <span class="text-[10px] opacity-80">(800–1200 CE)</span></span>
+        <span class="lang-mr hidden">९. पाल साम्राज्य (विक्रमशिला) <span class="text-[10px] opacity-80">(इ.स. ८००–१२००)</span></span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- Main Showcase Container: Interactive Geographic Map + Story Card Split -->
+  <main class="flex-1 max-w-7xl w-full mx-auto p-3 sm:p-5 flex flex-col lg:grid lg:grid-cols-12 gap-4">
+    
+    <!-- LEFT / TOP: Interactive Animated Geographic Map (7 cols on desktop) -->
+    <div class="lg:col-span-7 bg-stone-950 rounded-2xl border border-stone-800 shadow-2xl overflow-hidden relative flex flex-col">
+      
+      <!-- Map Top HUD Bar -->
+      <div class="absolute top-3 left-3 right-3 z-20 flex items-center justify-between pointer-events-none">
+        <div class="bg-stone-900/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-stone-700/80 shadow-lg pointer-events-auto flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span id="mapRegionLabel" class="text-xs font-bold text-stone-200 tracking-wide">
+            Magadha (Bihar, India)
+          </span>
+        </div>
+
+        <!-- Map Navigation Buttons -->
+        <div class="bg-stone-900/90 backdrop-blur-md px-1.5 py-1 rounded-xl border border-stone-700/80 shadow-lg pointer-events-auto flex items-center gap-1">
+          <button type="button" id="btnMapReset" class="p-1.5 hover:bg-stone-800 rounded text-stone-400 hover:text-white" title="Reset View">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
+          </button>
+          <button type="button" id="btnMapZoomIn" class="p-1.5 hover:bg-stone-800 rounded text-stone-400 hover:text-white font-bold" title="Zoom In">+</button>
+          <button type="button" id="btnMapZoomOut" class="p-1.5 hover:bg-stone-800 rounded text-stone-400 hover:text-white font-bold" title="Zoom Out">&minus;</button>
+        </div>
+      </div>
+
+      <!-- Vector Map Canvas (Responsive High-Definition Geographical Projection) -->
+      <div class="w-full h-[380px] sm:h-[480px] lg:h-[600px] overflow-hidden relative flex items-center justify-center bg-[#070b14]">
+        <svg id="mapSvg" viewBox="0 0 1000 680" class="w-full h-full cursor-grab active:cursor-grabbing">
+          <defs>
+            <radialGradient id="oceanGrad" cx="50%" cy="50%" r="60%">
+              <stop offset="0%" stop-color="#0e1726"/>
+              <stop offset="100%" stop-color="#04060d"/>
+            </radialGradient>
+            <linearGradient id="saffronGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#fb923c"/>
+              <stop offset="100%" stop-color="#ea580c"/>
+            </linearGradient>
+            <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#fde047"/>
+              <stop offset="100%" stop-color="#ca8a04"/>
+            </linearGradient>
+            <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#c084fc"/>
+              <stop offset="100%" stop-color="#7e22ce"/>
+            </linearGradient>
+            <!-- Directional Arrowhead Markers -->
+            <marker id="arrowGold" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#facc15" />
+            </marker>
+            <marker id="arrowSaffron" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#ea580c" />
+            </marker>
+            <marker id="arrowPurple" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#c084fc" />
+            </marker>
+            <marker id="arrowCyan" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#38bdf8" />
+            </marker>
+          </defs>
+
+          <!-- Water Surface -->
+          <rect width="1000" height="680" fill="url(#oceanGrad)"/>
+
+          <!-- Continental Landmasses -->
+          <g id="landmassLayer" class="fill-[#131d2e] stroke-[#24334a] stroke-width-1 opacity-90">
+            <path d="M 50 150 Q 150 120 300 130 T 500 100 T 800 80 T 980 120 L 980 400 Q 850 450 780 420 Q 720 390 680 430 Q 640 480 620 540 L 590 540 Q 580 450 550 400 L 500 350 Q 420 380 320 350 L 250 380 Q 200 350 120 330 L 50 300 Z" />
+            <path d="M 280 340 Q 320 330 380 330 Q 460 320 520 340 Q 560 380 540 430 Q 520 480 470 540 Q 450 580 430 610 Q 410 580 370 530 Q 330 480 310 440 Q 290 400 280 340 Z" fill="#182438" stroke="#2c3e59"/>
+            <path d="M 445 615 Q 460 620 460 635 Q 455 650 445 650 Q 435 640 445 615 Z" fill="#22334d" stroke="#3b506f"/>
+            <path d="M 590 420 Q 640 450 630 520 L 640 560 L 610 570 Q 600 500 580 450 Z" />
+            <path d="M 620 580 Q 680 610 740 640 L 730 655 Q 660 630 610 595 Z" fill="#182438" stroke="#2c3e59"/>
+            <path d="M 720 650 Q 800 660 850 665 L 850 675 Q 790 675 715 660 Z" fill="#182438" stroke="#2c3e59"/>
+            <path d="M 860 250 Q 875 270 870 300 Q 855 295 860 250 Z" fill="#22334d"/>
+            <path d="M 890 240 Q 940 260 950 320 L 935 325 Q 920 280 885 250 Z" fill="#22334d"/>
+          </g>
+
+          <!-- Tradition Region Shading Zones -->
+          <g id="traditionZonesLayer">
+            <path id="zone_theravada" class="tradition-zone" d="M 420 590 Q 480 580 500 630 T 450 660 Z M 570 410 Q 640 430 630 540 L 590 560 Z" fill="#ea580c" opacity="0.12"/>
+            <path id="zone_mahayana" class="tradition-zone" d="M 230 200 Q 450 170 650 210 T 960 260 L 940 340 Q 820 380 650 320 Q 520 270 300 280 Z" fill="#facc15" opacity="0.10"/>
+            <path id="zone_vajrayana" class="tradition-zone" d="M 420 270 Q 520 260 620 310 L 560 380 Q 490 370 440 330 Z" fill="#c084fc" opacity="0.15"/>
+          </g>
+
+          <!-- Mountain Ridges -->
+          <g id="mountainRidges" stroke="#475569" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6">
+            <path d="M 280 270 Q 330 250 380 260 T 430 280"/>
+            <path d="M 400 280 Q 480 300 560 325 T 620 360" stroke-width="3" stroke="#64748b"/>
+          </g>
+
+          <!-- River Networks -->
+          <g id="riverNetwork" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5">
+            <path d="M 380 310 Q 430 330 480 340 Q 520 350 530 375"/> <!-- Ganga -->
+            <path d="M 360 260 Q 320 280 310 320 Q 300 370 305 400"/> <!-- Indus -->
+            <path d="M 320 420 Q 380 440 450 460"/> <!-- Godavari / Deccan -->
+            <path d="M 350 480 Q 410 490 470 510"/> <!-- Krishna -->
+          </g>
+
+          <!-- ================= ANIMATED TRANSMISSION ROUTES ================= -->
+          <g id="routesLayer">
+            <!-- 1. Buddha Era: Bodh Gaya -> Sarnath -> Rajgir -> Vaishali -->
+            <path id="route_0" d="M 485 348 L 465 342 M 465 342 L 490 355 M 490 355 L 488 335" class="route-active" stroke="#f59e0b" stroke-width="3.5" fill="none" marker-end="url(#arrowGold)"/>
+            
+            <!-- 2. Ashoka: Pataliputra outward to Sri Lanka, Myanmar, Gandhara -->
+            <path id="route_1" d="M 480 345 Q 520 420 480 500 T 450 630 M 480 345 Q 530 390 590 440 M 480 345 Q 400 310 340 260" class="route-active" stroke="url(#saffronGrad)" stroke-width="3.5" fill="none" opacity="0.2" marker-end="url(#arrowSaffron)"/>
+            
+            <!-- 3. Milind (Menander I): Bactria -> Taxila -> Sialkot (Sagala) -->
+            <path id="route_2" d="M 270 230 L 330 255 L 360 270" class="route-active" stroke="url(#goldGrad)" stroke-width="3.5" fill="none" opacity="0.2" marker-end="url(#arrowGold)"/>
+            
+            <!-- 4. Satavahana & Vakataka: Magadha/Central India -> Maharashtra (Paithan, Karla, Ajanta) -> Amaravati -->
+            <path id="route_3" d="M 480 345 Q 400 390 340 440 M 340 440 Q 380 465 430 490" class="route-active" stroke="#f59e0b" stroke-width="3.5" fill="none" opacity="0.2" marker-end="url(#arrowGold)"/>
+            
+            <!-- 5. Kushana (Kanishka): Gandhara -> Kashmir & Gandhara -> Pamir -> Dunhuang -> Chang'an -->
+            <path id="route_4" d="M 340 260 L 375 245 M 340 260 Q 310 240 270 230 Q 360 200 450 210 Q 560 220 650 240 Q 720 260 760 275" class="route-active" stroke="url(#goldGrad)" stroke-width="3.5" fill="none" opacity="0.2" marker-end="url(#arrowGold)"/>
+            
+            <!-- 6. Gupta: Nalanda -> East Asia transmission (Korea -> Japan) -->
+            <path id="route_5" d="M 490 348 L 465 342 M 760 275 Q 830 265 865 270 Q 890 275 920 270" class="route-active" stroke="#38bdf8" stroke-width="3.5" fill="none" opacity="0.2" marker-end="url(#arrowCyan)"/>
+            
+            <!-- 7. Harshavardhan: Kannauj to Nalanda & Xuanzang carrying manuscripts back to Chang'an -->
+            <path id="route_6" d="M 420 320 L 490 348 M 490 348 Q 580 270 760 275" class="route-active" stroke="#facc15" stroke-width="3.5" fill="none" opacity="0.2" marker-end="url(#arrowGold)"/>
+            
+            <!-- 8. Sailendra & Srivijaya: Bengal/Tamralipti port -> Malacca -> Java (Borobudur) -->
+            <path id="route_7" d="M 490 348 Q 540 450 630 580 Q 700 630 780 660" class="route-active" stroke="#06b6d4" stroke-width="3.5" fill="none" opacity="0.2" marker-end="url(#arrowCyan)"/>
+            
+            <!-- 9. Pala Dynasty: Vikramashila (Bihar) -> across Himalayan passes -> Lhasa & Samye (Tibet) -->
+            <path id="route_8" d="M 515 348 Q 530 320 545 285" class="route-active" stroke="url(#purpleGrad)" stroke-width="3.5" fill="none" opacity="0.2" marker-end="url(#arrowPurple)"/>
+          </g>
+
+          <!-- ================= CITIES & MONASTIC HUBS WITH DUAL TOPONYMS ================= -->
+          <g id="pinsLayer">
+            <!-- Bodh Gaya -->
+            <g class="city-pin cursor-pointer" data-id="bodh_gaya" transform="translate(485, 348)">
+              <circle class="pin-pulse fill-amber-400" cx="0" cy="0" r="10"/>
+              <circle cx="0" cy="0" r="7" class="fill-amber-400 stroke-stone-950 stroke-2"/>
+              <text x="10" y="2" class="fill-amber-200 text-[11px] font-bold">Uruvelā / उरुवेला (Bodh Gayā)</text>
+              <text x="10" y="14" class="fill-amber-400/90 text-[9px] font-semibold">📍 Bihar, India (भारत)</text>
+            </g>
+
+            <!-- Sarnath -->
+            <g class="city-pin cursor-pointer" data-id="sarnath" transform="translate(465, 342)">
+              <circle cx="0" cy="0" r="6" class="fill-amber-400 stroke-stone-950 stroke-2"/>
+              <text x="-10" y="-12" text-anchor="end" class="fill-stone-300 text-[10px] font-bold">Isipatana / इसिपतन (Sārnāth)</text>
+              <text x="-10" y="-2" text-anchor="end" class="fill-stone-400 text-[9px]">Varanasi, UP / वाराणसी</text>
+            </g>
+
+            <!-- Pataliputra -->
+            <g class="city-pin cursor-pointer" data-id="pataliputra" transform="translate(480, 335)">
+              <circle cx="0" cy="0" r="7" class="fill-cyan-400 stroke-stone-950 stroke-2"/>
+              <text x="10" y="-8" class="fill-cyan-200 text-[11px] font-bold">Pāṭaliputra / पाटलिपुत्र</text>
+              <text x="10" y="3" class="fill-stone-400 text-[9px]">Patna, Bihar / पाटणा</text>
+            </g>
+
+            <!-- Anuradhapura -->
+            <g class="city-pin cursor-pointer" data-id="anuradhapura" transform="translate(450, 630)">
+              <circle class="pin-pulse fill-orange-500" cx="0" cy="0" r="8"/>
+              <circle cx="0" cy="0" r="6" class="fill-orange-500 stroke-stone-950 stroke-2"/>
+              <text x="12" y="2" class="fill-orange-300 text-[11px] font-bold">Tambapaṇṇi / तांबपण्णी (Anurādhapura)</text>
+              <text x="12" y="14" class="fill-orange-400 text-[9px] font-semibold">📍 Sri Lanka (श्रीलंका)</text>
+            </g>
+
+            <!-- Sialkot (Milind Capital) -->
+            <g class="city-pin cursor-pointer" data-id="sagala" transform="translate(360, 270)">
+              <circle class="pin-pulse fill-yellow-400" cx="0" cy="0" r="7"/>
+              <circle cx="0" cy="0" r="5" class="fill-yellow-400 stroke-stone-950 stroke-2"/>
+              <text x="10" y="-2" class="fill-yellow-200 text-[10px] font-bold">Sākala / साकल (Sialkot)</text>
+              <text x="10" y="9" class="fill-stone-400 text-[9px]">Punjab, Pakistan (राजा मिलिंद)</text>
+            </g>
+
+            <!-- Satavahana & Vakataka: Paithan, Karla & Ajanta -->
+            <g class="city-pin cursor-pointer" data-id="paithan" transform="translate(340, 440)">
+              <circle class="pin-pulse fill-amber-400" cx="0" cy="0" r="8"/>
+              <circle cx="0" cy="0" r="6" class="fill-amber-400 stroke-stone-950 stroke-2"/>
+              <text x="-12" y="-4" text-anchor="end" class="fill-amber-200 text-[11px] font-bold">Pratiṣṭhāna &amp; Ajanta, Karla / अजिंठा, कार्ले</text>
+              <text x="-12" y="8" text-anchor="end" class="fill-amber-400 text-[9px] font-semibold">📍 Maharashtra (सातवाहन व वाकाटक)</text>
+            </g>
+
+            <!-- Amaravati / Nagarjunakonda -->
+            <g class="city-pin cursor-pointer" data-id="amaravati" transform="translate(430, 490)">
+              <circle cx="0" cy="0" r="6" class="fill-amber-400 stroke-stone-950 stroke-2"/>
+              <text x="10" y="2" class="fill-amber-200 text-[10px] font-bold">Dhānyakaṭaka / अमरावती (Nagarjuna)</text>
+              <text x="10" y="13" class="fill-stone-400 text-[9px]">Andhra Pradesh / आंध्र प्रदेश</text>
+            </g>
+
+            <!-- Gandhara: Taxila -->
+            <g class="city-pin cursor-pointer" data-id="taxila" transform="translate(340, 260)">
+              <circle class="pin-pulse fill-yellow-400" cx="0" cy="0" r="8"/>
+              <circle cx="0" cy="0" r="6" class="fill-yellow-400 stroke-stone-950 stroke-2"/>
+              <text x="-12" y="-2" text-anchor="end" class="fill-yellow-200 text-[11px] font-bold">Gandhāra: Takṣaśilā / तक्षशिला</text>
+              <text x="-12" y="10" text-anchor="end" class="fill-yellow-400 text-[9px] font-semibold">📍 NW Pakistan (कनिष्क केंद्र)</text>
+            </g>
+
+            <!-- Kashmir: Kundalvana -->
+            <g class="city-pin cursor-pointer" data-id="kundalvana" transform="translate(375, 245)">
+              <circle cx="0" cy="0" r="6" class="fill-yellow-400 stroke-stone-950 stroke-2"/>
+              <text x="10" y="-2" class="fill-yellow-200 text-[10px] font-bold">Kuṇḍalavana / कुंडलवन</text>
+              <text x="10" y="9" class="fill-stone-400 text-[9px]">Kashmir (४थी संगीती)</text>
+            </g>
+
+            <!-- Kannauj (Harsha Capital) -->
+            <g class="city-pin cursor-pointer" data-id="kannauj" transform="translate(420, 320)">
+              <circle class="pin-pulse fill-yellow-400" cx="0" cy="0" r="7"/>
+              <circle cx="0" cy="0" r="5" class="fill-yellow-400 stroke-stone-950 stroke-2"/>
+              <text x="-10" y="-8" text-anchor="end" class="fill-yellow-200 text-[11px] font-bold">Kanyākubja / कनौज (Harsha)</text>
+              <text x="-10" y="3" text-anchor="end" class="fill-stone-400 text-[9px]">Uttar Pradesh / उ.प्र.</text>
+            </g>
+
+            <!-- Nalanda Mahavihara -->
+            <g class="city-pin cursor-pointer" data-id="nalanda" transform="translate(490, 348)">
+              <circle class="pin-pulse fill-cyan-400" cx="0" cy="0" r="10"/>
+              <circle cx="0" cy="0" r="7" class="fill-cyan-400 stroke-stone-950 stroke-2"/>
+              <text x="12" y="12" class="fill-cyan-200 text-[12px] font-bold">Nālandā / नालंदा महाविहार</text>
+              <text x="12" y="23" class="fill-stone-400 text-[9px] font-semibold">Bihar, India / भारत</text>
+            </g>
+
+            <!-- Vikramashila (Pala) -->
+            <g class="city-pin cursor-pointer" data-id="vikramashila" transform="translate(515, 348)">
+              <circle class="pin-pulse fill-purple-400" cx="0" cy="0" r="7"/>
+              <circle cx="0" cy="0" r="6" class="fill-purple-400 stroke-stone-950 stroke-2"/>
+              <text x="10" y="-8" class="fill-purple-300 text-[10px] font-bold">Vikramaśīlā / विक्रमशिला</text>
+              <text x="10" y="2" class="fill-purple-400 text-[9px]">Bihar (पाल महाविहार)</text>
+            </g>
+
+            <!-- Borobudur (Sailendra & Srivijaya) -->
+            <g class="city-pin cursor-pointer" data-id="borobudur" transform="translate(780, 660)">
+              <circle class="pin-pulse fill-cyan-400" cx="0" cy="0" r="9"/>
+              <circle cx="0" cy="0" r="7" class="fill-cyan-400 stroke-stone-950 stroke-2"/>
+              <text x="12" y="-6" class="fill-cyan-200 text-[11px] font-bold">Yavadvīpa: Borobudur / बोरोबुदूर</text>
+              <text x="12" y="6" class="fill-cyan-400 text-[9px] font-semibold">📍 Java, Indonesia (शैलेंद्र साम्राज्य)</text>
+            </g>
+
+            <!-- Lhasa & Samye (Tibet) -->
+            <g class="city-pin cursor-pointer" data-id="lhasa" transform="translate(545, 285)">
+              <circle class="pin-pulse fill-purple-400" cx="0" cy="0" r="8"/>
+              <circle cx="0" cy="0" r="6" class="fill-purple-400 stroke-stone-950 stroke-2"/>
+              <text x="12" y="2" class="fill-purple-200 text-[11px] font-bold">Lhasa &amp; Samye / ल्हासा (तिबेट)</text>
+              <text x="12" y="14" class="fill-stone-400 text-[9px] font-semibold">Tibet / तिबेट</text>
+            </g>
+
+            <!-- Bagan (Myanmar) -->
+            <g class="city-pin cursor-pointer" data-id="pagan" transform="translate(590, 440)">
+              <circle cx="0" cy="0" r="6" class="fill-orange-400 stroke-stone-950 stroke-2"/>
+              <text x="10" y="2" class="fill-orange-300 text-[11px] font-bold">Suvaṇṇabhūmi: Pagan / पगान</text>
+              <text x="10" y="13" class="fill-orange-400 text-[9px] font-semibold">📍 Myanmar (अनवरथ राजा)</text>
+            </g>
+
+
+
+          </g>
+        </svg>
+      </div>
+
+      <!-- Quick Map Caption Footer -->
+      <div class="px-4 py-2 bg-stone-900 border-t border-stone-800 flex items-center justify-between text-xs text-stone-300 flex-wrap gap-2">
+        <span class="flex items-center gap-2 text-[11px] sm:text-xs">
+          <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+          <span class="lang-en font-medium">9 Chronological Eras: Buddha &bull; Ashoka &bull; Milind &bull; Satavahana &bull; Kushana &bull; Gupta &bull; Harsha &bull; Sailendra/Borobudur &bull; Pala</span>
+          <span class="lang-mr hidden font-medium">९ कालखंड: बुद्ध &bull; अशोक &bull; मिलिंद &bull; सातवाहन &bull; कुषाण &bull; गुप्त &bull; हर्षवर्धन &bull; शैलेंद्र/बोरोबुदूर &bull; पाल</span>
+        </span>
+        <span class="text-[10px] text-stone-400">Click any tab above or pin to navigate</span>
+      </div>
+
+    </div>
+
+    <!-- RIGHT / BOTTOM: Engaging Visual Story Card (5 cols on desktop) -->
+    <div class="lg:col-span-5 flex flex-col gap-3">
+      
+      <!-- Main Narrative Card -->
+      <div id="storyCard" class="bg-stone-950 rounded-2xl border border-stone-800 p-4 sm:p-5 shadow-2xl flex flex-col justify-between relative overflow-hidden">
+        
+        <div>
+          <!-- Era Step Badge & Year Window -->
+          <div class="flex items-center justify-between gap-2 pb-2 border-b border-stone-800 flex-wrap">
+            <span id="chapterBadge" class="text-xs font-bold uppercase tracking-wider text-amber-400">
+              Era 1 of 9
+            </span>
+            <span id="eraWindowBadge" class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-300 border border-amber-500/30">
+              c. 563 BCE – 483 BCE
+            </span>
+          </div>
+
+          <!-- Era Title & Monarch / Figure Tag -->
+          <div class="mt-2.5">
+            <span id="monarchTag" class="text-[11px] font-bold text-amber-400 uppercase tracking-widest block">
+              Gautam Buddha (तथागत गौतम बुद्ध)
+            </span>
+            <h2 id="chapterTitle" class="text-lg sm:text-2xl font-bold serif-title text-stone-100 leading-tight mt-0.5">
+              The Awakening &amp; Foundational Sangha
+            </h2>
+          </div>
+          
+          <!-- Present-Day Region Banner -->
+          <div id="modernRegionsTag" class="mt-2 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-stone-900 border border-stone-700/80 text-xs text-amber-300 font-medium">
+            <svg class="w-3.5 h-3.5 text-amber-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span id="modernRegionsText">Modern: Bihar &amp; Uttar Pradesh (India), Lumbini (Nepal)</span>
+          </div>
+
+          <!-- Toponym Concordance Card (Ancient BCE/CE ↔ Modern Present-Day) -->
+          <div class="mt-2.5 p-2 rounded-xl bg-stone-900/95 border border-stone-800 text-xs flex flex-col gap-1">
+            <div class="flex items-center justify-between text-[10px] font-bold border-b border-stone-800/80 pb-1">
+              <span class="text-amber-400 uppercase tracking-wider">
+                🏛️ Toponym Concordance: Ancient BCE ↔ Modern
+              </span>
+              <span class="text-stone-500">Pali / Contemporary</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2 text-[11px] pt-0.5">
+              <div class="bg-stone-950/70 p-1.5 rounded border border-stone-800/80">
+                <span class="text-stone-400 block text-[9px] uppercase font-semibold">Ancient / ऐतिहासिक:</span>
+                <strong id="toponymAncientName" class="text-amber-300 text-[10px] sm:text-[11px]">Uruvelā, Isipatana, Rājagaha (Magadha)</strong>
+              </div>
+              <div class="bg-stone-950/70 p-1.5 rounded border border-stone-800/80">
+                <span class="text-stone-400 block text-[9px] uppercase font-semibold">Present / आधुनिक:</span>
+                <strong id="toponymModernName" class="text-emerald-300 text-[10px] sm:text-[11px]">Bodh Gayā, Sārnāth, Rajgir (India)</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Core Narrative Text -->
+          <div class="mt-3 text-xs sm:text-sm text-stone-300 leading-relaxed space-y-2" id="chapterStory">
+            <p>
+              In the 6th century BCE, Siddhārtha Gautama attained Enlightenment beneath the Bodhi tree at <strong>Uruvelā (Bodh Gayā, Bihar)</strong>. Delivering his First Sermon at <strong>Isipatana (Sārnāth, Varanasi)</strong>, he set in motion the Wheel of the Dhamma.
+            </p>
+          </div>
+
+          <!-- Tradition & Modern Sphere Card -->
+          <div id="traditionInsightCard" class="mt-2.5 p-2 rounded-xl bg-stone-900/90 border border-stone-800 text-xs flex items-center justify-between">
+            <span class="font-bold text-amber-400 text-[11px]">
+              Tradition: <span id="traditionSphereName" class="text-white">Early Buddhist Sangha (मूल संघ)</span>
+            </span>
+            <span id="traditionSphereBadge" class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-300">Foundational</span>
+          </div>
+
+          <!-- "Did You Know?" / रोचक माहिती Card -->
+          <div class="mt-2.5 p-2 rounded-xl bg-amber-950/30 border border-amber-800/40 text-xs">
+            <div class="flex items-center gap-1.5 text-amber-400 font-bold mb-0.5 text-[11px]">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14H8a4 4 0 01-.8-7.92 4.002 4.002 0 017.6 0A4 4 0 0112 14z"/></svg>
+              <span id="factHeading">Epigraphic & Primary Fact / शिलालेखीय व ऐतिहासिक संदर्भ:</span>
+            </div>
+            <p id="factContent" class="text-stone-300 leading-relaxed text-[11px]">
+              The First Council at Rajgir gathered 500 Arhats in Sattapanni Cave to chant and memorize the entire Vinaya and Sutta Pitaka orally.
+            </p>
+          </div>
+
+          <!-- Primary Epigraphic Anchor Citation -->
+          <div class="mt-2 text-[10px] text-stone-400 italic">
+            <strong>Historical Anchor:</strong> <span id="sourceCitation">Aśoka Rock Edict VIII; Piprahwa Relic Inscription; Cullavagga XI.</span>
+          </div>
+        </div>
+
+        <!-- Previous / Next Controls -->
+        <div class="mt-4 pt-3 border-t border-stone-800 flex items-center justify-between gap-3">
+          <button type="button" id="btnPrevChapter" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-stone-900 hover:bg-stone-800 text-stone-300 transition-all flex items-center gap-1 disabled:opacity-30 disabled:pointer-events-none">
+            &larr; <span class="lang-en">Previous</span><span class="lang-mr hidden">मागील</span>
+          </button>
+          
+          <span id="chapterStepDots" class="flex items-center gap-1">
+            <!-- 10 dots generated by JS -->
+          </span>
+
+          <button type="button" id="btnNextChapter" class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-amber-500 hover:bg-amber-400 text-stone-950 transition-all shadow-md flex items-center gap-1">
+            <span class="lang-en">Next</span><span class="lang-mr hidden">पुढील</span> &rarr;
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Interactive JavaScript Engine with Full 10 Comprehensive Eras -->
+  <script>
+    // 10 Comprehensive Historical Chronological Eras
+    const eras = [
+      // 1. GAUTAM BUDDHA
+      {
+        id: 0,
+        monarch: 'Gautam Buddha (तथागत गौतम बुद्ध)',
+        dates_en: 'c. 563 BCE – 483 BCE', dates_mr: 'इ.स.पूर्व ५६३ – ४८३',
+        tradition: 'early',
+        mapView: { x: 50, y: -20, scale: 1.5, region: 'Magadha & Kosala (Bihar & UP, India)' },
+        activeRoute: 'route_0',
+        activeZones: [],
+        en: {
+          badge: 'Era 1 of 9: The Teacher',
+          title: 'The Awakening & Foundational Sangha',
+          modernRegions: 'Modern: Bihar & Uttar Pradesh (India), Lumbini (Nepal)',
+          ancientToponyms: 'Uruvelā, Isipatana, Rājagaha, Vesālī (Magadha)',
+          modernToponyms: 'Bodh Gayā, Sārnāth (Varanasi), Rajgir, Vaishali (India)',
+          traditionSphere: 'Early Buddhist Sangha (Foundational Dharma)',
+          story: '<p>In the 6th century BCE, Siddhārtha Gautama attained Enlightenment beneath the Bodhi tree at <strong>Uruvelā (Bodh Gayā, modern Bihar)</strong>. At <strong>Isipatana (Sārnāth, Varanasi)</strong>, he set in motion the Wheel of the Dhamma (<em>Dhammacakkappavattana Sutta</em>), establishing the Sangha.</p><p>After the Mahāparinibbāna at Kushinagar, the First Buddhist Council convened at Sattapaṇṇi Cave in <strong>Rājagaha (Rajgir)</strong> to codify the Dhamma and Vinaya through unified oral chanting.</p>',
+          factHead: 'Did You Know?',
+          fact: 'During the rainy season (Vassa), monks paused wandering and resided in bamboo groves (Venuvana) gifted by King Bimbisara—the birth of the world\'s first permanent residential monasticism!',
+          source: 'Piprahwa Buddhist Relic Casket Inscription; Vinaya Piṭaka (Cullavagga XI); Dīgha Nikāya.',
+          siteEvidence: 'Piprahwa Relic Casket (Indian Museum, Kolkata, inscribed: "iyam salila nidhane budhasa bhagavate sakiyanam"); Rummindei Ashoka Pillar (Lumbini, Nepal).'
+        },
+        mr: {
+          badge: 'टप्पा १ / ९: धम्मसंस्थापक',
+          title: 'संबोधी प्राप्ती आणि प्रारंभिक संघ स्थापना',
+          modernRegions: 'सध्याचा प्रदेश: बिहार व उत्तर प्रदेश (भारत), लुंबिनी (नेपाळ)',
+          ancientToponyms: 'उरुवेला, इसिपतन, राजगह, वैसाली (मगध साम्राज्य)',
+          modernToponyms: 'बोधगया, सारनाथ (वाराणसी), राजगीर, वैशाली (भारत)',
+          traditionSphere: 'मूळ बौद्ध संघ (धम्म पायाभरणी काळ)',
+          story: '<p>इ.स.पूर्व ६व्या शतकात तथागत गौतम बुद्धांना <strong>उरुवेला (बोधगया, बिहार)</strong> येथे पवित्र बोधिवृक्षाखाली सर्वोच्च संबोधी प्राप्त झाली. <strong>इसिपतन (सारनाथ, वाराणसी)</strong> येथे त्यांनी धम्मचक्र प्रवर्तन सुत्ताद्वारे धम्माचा पहिला उपदेश दिला.</p><p>तथागतांच्या महापरिनिर्वाणानंतर <strong>राजगह (राजगीर)</strong> येथील सत्तपन्नी गुहेत पहिली बौद्ध संगीती भरली, जिथे ५०० अरहंतांनी सुत्त आणि विनय त्रिपिटकाचे मुखोद्गत संकलन केले.</p>',
+          factHead: 'रोचक ऐतिहासिक सत्य:',
+          fact: 'पावसाळ्यातील चार महिने भिक्षू एकाच ठिकाणी वास्तव्य करत (वर्षावास). मगध सम्राट बिंबिसाराने तथागतांना दान दिलेले \'वेणुवन\' हे जगातील पहिले निवासी बौद्ध विहार ठरले!',
+          source: 'पिपरहवा अस्थिकलश शिलालेख; सम्राट अशोक ८वा शिलालेख; विनयपिटक चुल्लवग्ग.',
+          siteEvidence: 'पिपरहवा अस्थिकलश (कोलकाता संग्रहालय, ब्राह्मी शिलालेख: "इयं सलिल निधाने बुधस भगवते सकियानं"); रुम्मिंदेई अशोक स्तंभ (लुंबिनी, नेपाळ).'
+        }
+      },
+
+      // 2. ASHOKA (MAURYA)
+      {
+        id: 1,
+        monarch: 'Emperor Ashoka (चक्रवर्ती सम्राट अशोक)',
+        dates_en: 'c. 268 BCE – 232 BCE', dates_mr: 'इ.स.पूर्व २६८ – २३२',
+        tradition: 'theravada',
+        mapView: { x: 40, y: -70, scale: 1.3, region: 'Mauryan Empire, Sri Lanka & Mon Coast' },
+        activeRoute: 'route_1',
+        activeZones: ['zone_theravada'],
+        en: {
+          badge: 'Milestone 2 of 10: Imperial Dharma Envoy',
+          title: 'Dharma-Vijaya & Global Peace Envoys',
+          modernRegions: 'Modern: India, Sri Lanka, Lower Myanmar, Pakistan, Afghanistan',
+          ancientToponyms: 'Pāṭaliputra, Tambapaṇṇi, Suvaṇṇabhūmi, Gandhāra',
+          modernToponyms: 'Patna (India), Anuradhapura (Sri Lanka), Mon Coast (Myanmar)',
+          traditionSphere: 'Theravāda Monastic Transmission (Southern Axis)',
+          story: '<p>Following the Kalinga war, Emperor Ashoka renounced conquest by sword in favor of <em>Dharma-vijaya</em> (victory by righteousness). At <strong>Pāṭaliputra (Patna)</strong>, he convened the Third Buddhist Council under Moggaliputta Tissa.</p><p>Ashoka sent his son Arhat Mahinda and daughter Therī Saṅghamittā to <strong>Tambapaṇṇi (Anurādhapura, Sri Lanka)</strong> with a sacred Bodhi tree sapling, establishing the Theravāda Mahāvihāra lineage. Other missions reached <strong>Suvaṇṇabhūmi (Myanmar)</strong> and Hellenistic kingdoms.</p>',
+          factHead: 'Did You Know?',
+          fact: 'Ashoka\'s Major Rock Edict XIII explicitly mentions sending Buddhist peace envoys to 5 contemporary Greek kings: Antiochus II of Syria, Ptolemy II of Egypt, Antigonus of Macedonia, Magas of Cyrene, and Alexander of Epirus!',
+          source: 'Ashoka Major Rock Edicts (II, XIII); Schism Edict; Mahāvaṃsa (ch. XII–XIX).',
+          siteEvidence: 'Major Rock Edict XIII (Shahbazgarhi/Kalsi, explicitly naming Antiochus II, Ptolemy II, Antigonus, Magas, Alexander); Sri Lanka Brahmi Cave Inscriptions.'
+        },
+        mr: {
+          badge: 'टप्पा २ / १०: साम्राज्यीय धर्मप्रसार',
+          title: 'धम्मविजय आणि जागतिक शांतीदूत मोहीम',
+          modernRegions: 'सध्याचा प्रदेश: भारत, श्रीलंका, दक्षिण म्यानमार, पाकिस्तान, अफगाणिस्तान',
+          ancientToponyms: 'पाटलिपुत्र, तांबपण्णी, सुवर्णभूमी, गांधार',
+          modernToponyms: 'पाटणा (भारत), अनुराधापूर (श्रीलंका), मॉन किनारपट्टी (म्यानमार)',
+          traditionSphere: 'थेरवाद परंपरा (दक्षिण व सागरी प्रसार)',
+          story: '<p>कलिंग युद्धाच्या पश्चात्तापानंतर सम्राट अशोकाने शस्त्रविजयाऐवजी <em>धम्मविजय</em> हे धोरण स्वीकारले. राजधानी <strong>पाटलिपुत्र (पाटणा, बिहार)</strong> येथे मोग्गलीपुत्त तिस्स यांच्या अध्यक्षतेखाली तिसरी बौद्ध संगीती भरवली.</p><p>अशोकाचे पुत्र अरहंत महिंद आणि कन्या थेरी संघमित्रा यांनी मूळ बोधिवृक्षाची शाखा नेऊन <strong>तांबपण्णी (अनुराधापूर, श्रीलंका)</strong> येथे महाविहार संघाची स्थापना केली. तसेच सोण व उत्तर यांनी <strong>सुवर्णभूमी (म्यानमार)</strong> येथे धम्मप्रसार केला.</p>',
+          factHead: 'रोचक ऐतिहासिक सत्य:',
+          fact: 'सम्राट अशोकाच्या १३व्या प्रमुख शिलालेखात ५ समकालीन ग्रीक राजांकडे धम्मप्रचारक पाठवल्याचा स्पष्ट उल्लेख आहे: सिरियाचा अँटिओकस, इजिप्तचा टॉलेमी, मॅसेडोनियाचा अँटिगोनास, सायरीनचा मगस आणि एपिरसचा अलेक्झांडर!',
+          source: 'सम्राट अशोकाचे २रे व १३वे शिलालेख; महावंस; दीपवंस.',
+          siteEvidence: '१३वा शिलालेख (सिरिया, इजिप्त, ग्रीस ५ राजांचा स्पष्ट उल्लेख); २रा शिलालेख (लंकेपर्यंत औषधी उपचार); श्रीलंका देवानंपिय तिस्स ब्राह्मी गुहा शिलालेख.'
+        }
+      },
+
+      // 3. MILIND (MENANDER I) - INDO-GREEK
+      {
+        id: 2,
+        monarch: 'King Milind / Menander I (राजा मिलिंद)',
+        dates_en: 'c. 165 BCE – 130 BCE', dates_mr: 'इ.स.पूर्व १६५ – १३०',
+        tradition: 'mahayana',
+        mapView: { x: -30, y: 30, scale: 1.45, region: 'Indo-Greek Kingdom (Punjab, Pak & NW India)' },
+        activeRoute: 'route_2',
+        activeZones: ['zone_mahayana'],
+        en: {
+          badge: 'Milestone 3 of 10: Indo-Greek Dialogue',
+          title: 'Milindapañha & Greco-Buddhist Synthesis',
+          modernRegions: 'Modern: Sialkot & Taxila (Punjab, Pakistan), Eastern Afghanistan',
+          ancientToponyms: 'Sākala (Sagala), Bāhlika (Bactria), Gandhāra',
+          modernToponyms: 'Sialkot & Taxila (Pakistan), Balkh (Afghanistan)',
+          traditionSphere: 'Greco-Buddhist Intellectual Exchange & Early Mahāyāna',
+          story: '<p>The Indo-Greek king Menander I (known in Pali as <strong>Milinda</strong>) ruled a vast realm from his capital at <strong>Sākala (modern Sialkot, Pakistan)</strong>. Renowned for sharp philosophical inquiry, he engaged Buddhist sage <strong>Nāgasena</strong> in deep metaphysical debates.</p><p>Their recorded dialogues formed the classic text <em>Milindapañha</em> (The Questions of King Milinda). King Menander embraced Buddhism, struck coins bearing the eight-spoked Dharma Wheel, and patronized Greco-Buddhist art across the upper Indus.</p>',
+          factHead: 'Did You Know?',
+          fact: 'Greek biographer Plutarch recorded that when King Menander died, rival cities competed for his ashes, dividing his cremated remains to erect monumental Buddhist Stupas across the northwestern subcontinent!',
+          source: 'Milindapañha (Pali text); Indo-Greek bilingual coinage with Dharmachakra; Plutarch Moralia.',
+          siteEvidence: 'Bilingual Greek-Kharoshthi silver coins of Menander I (British Museum & Lahore Museum) bearing "BASILEOS SOTEROS MENANDROU" and 8-spoked Dharmachakra; Plutarch Moralia 821D-E.'
+        },
+        mr: {
+          badge: 'टप्पा ३ / १०: इंडो-ग्रीक समन्वय',
+          title: 'मिलिंदपञ्ह आणि ग्रीक-बौद्ध तत्त्वज्ञान संवाद',
+          modernRegions: 'सध्याचा प्रदेश: सियालकोट व तक्षशिला (पंजाब, पाकिस्तान), पूर्व अफगाणिस्तान',
+          ancientToponyms: 'साकल (सागला), बाह्लीक (बॅक्ट्रिया), गांधार',
+          modernToponyms: 'सियालकोट (पाकिस्तान), बाल्ख (अफगाणिस्तान)',
+          traditionSphere: 'ग्रीक-बौद्ध संवाद आणि महायान तत्त्वज्ञान बीजारोपण',
+          story: '<p>इंडो-ग्रीक सम्राट मिनँडर (पाली साहित्यात <strong>राजा मिलिंद</strong>) यांनी <strong>साकल (सध्याचे सियालकोट, पाकिस्तान)</strong> ही आपली राजधानी केली. त्यांनी प्रसिद्ध बौद्ध विद्वान <strong>नागसेन</strong> यांच्याशी धर्म, आत्मा, कर्म आणि निर्वाणावर सखोल तात्विक प्रश्न विचारले.</p><p>हा तात्विक संवाद <em>मिलिंदपञ्ह</em> या जगप्रसिद्ध ग्रंथात अमर झाला. राजा मिलिंदाने बौद्ध धम्माची दीक्षा घेतली आणि आपल्या नाण्यांवर आठ आऱ्यांचे \'धम्मचक्र\' कोरले.</p>',
+          factHead: 'रोचक ऐतिहासिक सत्य:',
+          fact: 'ग्रीक इतिहासकार प्लुटार्कने नोंदवले आहे की राजा मिलिंदाच्या निधनानंतर त्याच्या अस्थी मिळवण्यासाठी प्रांतांमध्ये स्पर्धा लागली आणि भस्म वाटून त्यावर अनेक शहरांमध्ये बौद्ध स्तूप उभारले गेले!',
+          source: 'मिलिंदपञ्ह ग्रंथ; मिलिंदाची धम्मचक्रयुक्त नाणी; प्लुटार्क मोरालिया.',
+          siteEvidence: 'राजा मिनँडरची ग्रीक व खरोष्ठी नाणी (ब्रिटिश व लाहोर संग्रहालय) ज्यावर धम्मचक्र कोरले आहे; ग्रीक इतिहासकार प्लुटार्कचे मोरालिया ग्रंथ संदर्भ.'
+        }
+      },
+
+      // 4. SATAVAHANA & VAKATAKA (DECCAN CAVES & AJANTA)
+      {
+        id: 3,
+        monarch: 'Satavahana & Vakataka Dynasties (सातवाहन व वाकाटक)',
+        dates_en: 'c. 1st Century BCE – 5th Century CE', dates_mr: 'इ.स.पू. १ले शतक ते इ.स. ५वे शतक',
+        tradition: 'theravada',
+        mapView: { x: 30, y: -40, scale: 1.35, region: 'Deccan: Maharashtra Caves & Andhra Stupas' },
+        activeRoute: 'route_3',
+        activeZones: ['zone_theravada', 'zone_mahayana'],
+        en: {
+          badge: 'Milestone 4 of 10: Deccan Rock-Cut Glory',
+          title: 'Western Ghat Caves (Ajanta, Karla) & Āchārya Nāgārjuna',
+          modernRegions: 'Modern: Maharashtra (Ajanta, Karla, Kanheri, Paithan), Andhra Pradesh (Amaravati)',
+          ancientToponyms: 'Pratiṣṭhāna (Paithan), Dhānyakaṭaka (Amaravati), Sūrpāraka (Sopara)',
+          modernToponyms: 'Paithan, Pune/Lonavala, Chhatrapati Sambhajinagar (Maharashtra), Guntur (Andhra)',
+          traditionSphere: 'Mahāsāṃghika, Madhyamaka (Āchārya Nāgārjuna) & Mahāyāna',
+          story: '<p>Under the <strong>Satavahanas</strong> and subsequently the <strong>Vakatakas</strong> (King Harishena, 5th c. CE), Maharashtra and the Deccan became the world capital of rock-cut Buddhist architecture. Monks and merchant guilds carved the legendary cave sanctuaries of <strong>Karla, Bhaja, Bedse, Kanheri, Nasik, and Ajanta</strong>.</p><p>Ajanta\'s world-famous murals (Bodhisattva Padmapāṇi and Vajrapāṇi) and the giant reclining Mahaparinirvana Buddha were sculpted under Vakataka patronage. In Andhra, <strong>Āchārya Nāgārjuna</strong> formulated the foundational treatises of <em>Madhyamaka</em> (Shunyata / Middle Way) philosophy at Nagarjunakonda.</p>',
+          factHead: 'Did You Know?',
+          fact: 'Over 800 of India\'s ancient rock-cut Buddhist caves are located in Maharashtra alone! The Great Chaitya at Karla features a 2,100-year-old preserved Himalayan teakwood ceiling that has never decayed!',
+          source: 'Nasik, Karla, and Ajanta Cave Inscriptions; Harishena Ajanta Cave 16 Inscription; Mūlamadhyamakakārikā.',
+          siteEvidence: 'Karla Cave 8 Great Chaitya Inscriptions (1st c. BCE carbon-dated teakwood ribbing); Nasik Cave 3 Inscription of Gautamiputra Satakarni; Amaravati Stupa marble carvings (British Museum & Chennai Museum).'
+        },
+        mr: {
+          badge: 'टप्पा ४ / १०: सह्याद्री लेणी सुवर्णकाळ',
+          title: 'महाराष्ट्रातील लेणी (अजिंठा, कार्ले), अमरावती स्तूप व आचार्य नागार्जुन',
+          modernRegions: 'सध्याचा प्रदेश: महाराष्ट्र (अजिंठा, कार्ले, भाजे, कान्हेरी, पैठण), आंध्र प्रदेश (अमरावती)',
+          ancientToponyms: 'प्रतिष्ठान (पैठण), धान्यकटक (अमरावती), शूर्पारका (सोपारा)',
+          modernToponyms: 'पैठण, लोणावळा, छत्रपती संभाजीनगर (महाराष्ट्र), गुंटूर (आंध्र)',
+          traditionSphere: 'महासांघिक, माध्यमिक महायान (शून्यतावाद) आणि लेणी शिल्पकला',
+          story: '<p>इ.स.पूर्व १ले शतक ते इ.स. ५वे शतक दरम्यान <strong>सातवाहन</strong> आणि त्यानंतर <strong>वाकाटक सम्राट हरिषेण</strong> यांच्या राजवटीत सह्याद्रीत बौद्ध लेण्यांची निर्मिती झाली. सह्याद्रीच्या डोंगररांगांमध्ये <strong>कार्ले, भाजे, नाशिक, कान्हेरी आणि अजिंठा</strong> येथे जागतिक दर्जाची दगडी चैत्यगृहे व विहार कोरले गेले.</p><p>अजिंठ्यातील जगप्रसिद्ध बोधिसत्त्व पद्मपाणी आणि वज्रपाणी यांची भित्तिचित्रे याच काळात साकारली गेली. याच कालखंडात <strong>आचार्य नागार्जुन</strong> यांनी महायान तत्त्वज्ञानाचा पाया मानला गेलेला \'माध्यमिक शून्यतावाद\' मांडला.</p>',
+          factHead: 'रोचक ऐतिहासिक सत्य:',
+          fact: 'संपूर्ण भारतातील एकूण प्राचीन बौद्ध लेणींपैकी ८०% पेक्षा जास्त (सुमारे ८०० हून अधिक लेणी) एकट्या महाराष्ट्रात आहेत! कार्ले येथील महाचैत्याचे सागवानी लाकडाचे छत २,१०० वर्षांनंतरही शाबूत आहे!',
+          source: 'वाकाटक हरिषेणाचा अजिंठा गुहा १६ शिलालेख; गौतमीपुत्र सातकर्णीचे नाशिक शिलालेख; मूलमाध्यमिककारिका.',
+          siteEvidence: 'कार्ले महाचैत्य गुहा क्र. ८ शिलालेख (लाकडी कमानींचे कार्बन डेटिंग); नाशिक गुहा क्र. ३ गौतमीपुत्र सातकर्णी शिलालेख; अमरावती महास्तूप संगमरवरी शिल्पे.'
+        }
+      },
+
+      // 5. KUSHANA (KANISHKA)
+      {
+        id: 4,
+        monarch: 'Emperor Kanishka I / Kushanas (सम्राट कनिष्क / कुषाण)',
+        dates_en: 'c. 1st Century CE – 2nd Century CE', dates_mr: 'इ.स. १ले शतक ते २रे शतक',
+        tradition: 'mahayana',
+        mapView: { x: -60, y: 70, scale: 1.4, region: 'Gandhara, Kashmir & Silk Road (Central Asia & China)' },
+        activeRoute: 'route_4',
+        activeZones: ['zone_mahayana'],
+        en: {
+          badge: 'Milestone 5 of 10: Silk Road Scriptorium',
+          title: '4th Buddhist Council & the Silk Road Surge',
+          modernRegions: 'Modern: Pakistan, Kashmir, Afghanistan, Xinjiang & China',
+          ancientToponyms: 'Puruṣapura (Peshawar), Kuṇḍalavana (Kashmir), Mathurā, Dunhuang',
+          modernToponyms: 'Peshawar (Pakistan), Jalandhar/Kashmir (India), Gansu (China)',
+          traditionSphere: 'Mahāyāna Canon Formation & Sarvāstivāda Abhidharma',
+          story: '<p>Under Kushan Emperor <strong>Kanishka I</strong>, Buddhism surged across the Silk Road. From capitals at <strong>Puruṣapura (Peshawar)</strong> and <strong>Mathurā</strong>, Kanishka convened the <strong>Fourth Buddhist Council</strong> in Kashmir to engrave the Sarvāstivāda Abhidharma on copper plates.</p><p>Gandharan sculptural workshops carved majestic Buddha statues. Buddhist caravans crossed the Pamir passes into the Tarim Basin oases, entering China at <strong>Dunhuang (Mogao Caves)</strong>.</p>',
+          factHead: 'Did You Know?',
+          fact: 'The Kanishka Stupa in Peshawar was described by Chinese pilgrim Xuanzang as over 600 feet tall—the tallest architectural monument in the ancient Asian world!',
+          source: 'Rabatak Inscription of Kanishka (Bactrian); Kanishka Casket Inscription; Mahāvibhāṣā Śāstra.',
+          siteEvidence: 'Rabatak Bactrian Inscription (Kabul Museum, Baghlan 1993, confirming Kanishka\'s realm); Shah-ji-ki-Dheri Casket (Peshawar Museum); British Library Gandhari Birch-Bark Scrolls.'
+        },
+        mr: {
+          badge: 'टप्पा ५ / १०: रेशीम मार्ग महाविस्तार',
+          title: 'चौथी बौद्ध संगीती आणि गांधार महाशिल्पकला',
+          modernRegions: 'सध्याचा प्रदेश: पाकिस्तान, काश्मीर, अफगाणिस्तान, शिंजियांग व मध्य चीन',
+          ancientToponyms: 'पुरुषपूर (पेशावर), कुंडलवन (काश्मीर), मथुरा, दुनहुआंग',
+          modernToponyms: 'पेशावर (पाकिस्तान), काश्मीर (भारत), गांसु (चीन)',
+          traditionSphere: 'संस्कृत महायान त्रिपिटक संकलन आणि सर्वास्तिवाद',
+          story: '<p>कुषाण सम्राट <strong>कनिष्क</strong> यांच्या काळात बौद्ध धम्माचा रेशीम मार्गाने मध्य आशिया व चीनमध्ये प्रचंड प्रसार झाला. कनिष्काने काश्मीरमधील <strong>कुंडलवन</strong> येथे चौथी बौद्ध संगीती भरवली.</p><p>येथे तयार झालेले \'महाविभाषा शास्त्र\' ताम्रपटांवर कोरून जतन केले गेले. गांधार प्रदेशात ग्रीक-रोमन व भारतीय कलेच्या संगमातून बुद्धांच्या मूर्ती कोरल्या गेल्या आणि रेशीम मार्गाने धम्म चीनमध्ये पोहोचला.</p>',
+          factHead: 'रोचक ऐतिहासिक सत्य:',
+          fact: 'पेशावर येथे सम्राट कनिष्काने उभारलेला बौद्ध महास्तूप तब्बल ६०० फूट उंच होता! तत्कालीन आशिया खंडातील ही सर्वात उंच मानवनिर्मित वास्तू मानली जात असे!',
+          source: 'कनिष्काचा रबातक बॅक्ट्रियन शिलालेख; कनिष्क अस्थिकलश मंजुषा; महाविभाषा शास्त्र.',
+          siteEvidence: 'रबातक बॅक्ट्रियन शिलालेख (काबूल संग्रहालय, अफगाणिस्तान १९९३ उत्खनन); शाह-जी-की-ढेरी कनिष्क अस्थिकलश (पेशावर संग्रहालय); ब्रिटिश लायब्ररी गांधारी भुर्जपत्रे.'
+        }
+      },
+
+      // 6. GUPTA ERA
+      {
+        id: 5,
+        monarch: 'Gupta Dynasty (गुप्त साम्राज्य सुवर्णकाळ)',
+        dates_en: 'c. 4th Century CE – 6th Century CE', dates_mr: 'इ.स. ४थे शतक ते ६वे शतक',
+        tradition: 'mahayana',
+        mapView: { x: 20, y: -20, scale: 1.35, region: 'Northern India & Classical Universities' },
+        activeRoute: 'route_5',
+        activeZones: ['zone_mahayana'],
+        en: {
+          badge: 'Milestone 6 of 10: Scholastic Renaissance',
+          title: 'Foundation of Nālandā & Classical Arts',
+          modernRegions: 'Modern: Bihar & UP (India), Yellow Sea, Asuka (Japan)',
+          ancientToponyms: 'Nālandā (Magadha), Isipatana (Sārnāth), Asuka (Japan)',
+          modernToponyms: 'Nalanda & Varanasi (India), Baekje (Korea), Nara (Japan)',
+          traditionSphere: 'Universal Mahāyāna (Yogācāra & Madhyamaka Philosophy)',
+          story: '<p>In the 5th century CE, Emperor Kumaragupta I founded the <strong>Nālandā Mahāvihāra (Bihar)</strong>, corroborated by royal terracotta seals and excavation records. Nālandā became the world\'s preeminent residential university, hosting over 10,000 scholars studying philosophy, logic, medicine, and astronomy.</p><p>Sārnāth created the serene classical Dharmachakra Buddha statues. Chinese pilgrim <strong>Faxian</strong> visited India (399–412 CE), while Buddhism reached <strong>Korea</strong> (372 CE) and <strong>Japan</strong> (552 CE).</p>',
+          factHead: 'Did You Know?',
+          fact: 'The Chunar sandstone sculpture of the Buddha in Dharmachakra-mudra excavated at Sarnath (ASI Sarnath Museum) exemplifies 5th-century Gupta epigraphic standards, inscribed with the Buddhist creed formula.',
+          source: 'Nālandā Royal Seals of Kumaragupta; Sarnath Buddha Inscriptions; Faxian\'s Record.',
+          siteEvidence: 'Nālandā Royal Terracotta Seals of Kumaragupta I (ASI Nalanda Museum); Sarnath Chunar sandstone Dharmachakra Buddha (ASI Sarnath Museum); Faxian\'s Gaoseng Faxian Zhuan.'
+        },
+        mr: {
+          badge: 'टप्पा ६ / १०: ज्ञान व कला सुवर्णयुग',
+          title: 'नालंदा महाविहार स्थापना आणि अभिजात शिल्पकला',
+          modernRegions: 'सध्याचा प्रदेश: बिहार व उ.प्र. (भारत), कोरिया, असुका (जपान)',
+          ancientToponyms: 'नालंदा (मगध), इसिपतन (सारनाथ), असुका (जपान)',
+          modernToponyms: 'नालंदा व वाराणसी (भारत), नारा (जपान)',
+          traditionSphere: 'योगाचार व माध्यमिक महायान (अभिजात विद्यापीठीय परंपरा)',
+          story: '<p>५व्या शतकात गुप्त सम्राट कुमारगुप्त प्रथम यांनी <strong>नालंदा महाविहार (बिहार)</strong> ची स्थापना केली, ज्याची पुष्टी उत्खननात सापडलेल्या मुद्रांवरून होते. हे जगातील पहिले जागतिक निवासी विद्यापीठ ठरले, जिथे १०,००० हून अधिक विद्वान शिक्षण घेत असत.</p><p>सारनाथ येथे चुनार पाषाणात कोरलेली बुद्धांची धम्मचक्र प्रवर्तन मुद्रा ही जागतिक कलेचे सर्वोच्च शिखर ठरली. याच काळात चीनी यात्रेकरू <strong>फाक्सियान</strong> भारतात आला आणि धम्म <strong>कोरिया व जपानमध्ये</strong> पोहोचला.</p>',
+          factHead: 'रोचक ऐतिहासिक सत्य:',
+          fact: 'सारनाथ येथील \'धम्मचक्र प्रवर्तन बुद्ध मूर्ती\' ही जागतिक कला विश्वात शांतता आणि आध्यात्मिक परिपूर्णतेचे सर्वोच्च शिखर मानली जाते!',
+          source: 'कुमारगुप्ताचे नालंदा मुद्रा शिलालेख; फाक्सियान प्रवासवृत्त; सारनाथ बुद्ध शिलालेख.',
+          siteEvidence: 'नालंदा महाविहार कुमारगुप्त प्रथम शाही मुद्रा (पुरातत्त्व संग्रहालय, नालंदा); सारनाथ धम्मचक्र प्रवर्तन बुद्धमूर्ती (सारनाथ संग्रहालय); फाक्सियान प्रवासवृत्त.'
+        }
+      },
+
+      // 7. HARSHAVARDHAN
+      {
+        id: 6,
+        monarch: 'Emperor Harshavardhan (सम्राट हर्षवर्धन)',
+        dates_en: 'c. 606 CE – 647 CE', dates_mr: 'इ.स. ६०६ – ६४७',
+        tradition: 'mahayana',
+        mapView: { x: 30, y: -20, scale: 1.35, region: 'Northern India & Kannauj (UP & Bihar)' },
+        activeRoute: 'route_6',
+        activeZones: ['zone_mahayana', 'zone_theravada'],
+        en: {
+          badge: 'Milestone 7 of 10: Kannauj & Pilgrims',
+          title: 'Grand Assemblies & Xuanzang\'s Odyssey',
+          modernRegions: 'Modern: Uttar Pradesh & Bihar (India), Xi\'an (China)',
+          ancientToponyms: 'Kanyākubja (Kannauj), Nālandā, Prayāga, Chang\'an',
+          modernToponyms: 'Kannauj & Prayagraj (UP), Nalanda (Bihar), Xi\'an (China)',
+          traditionSphere: 'Mahāyāna Scholasticism & Sinitic Transmission',
+          story: '<p>Emperor <strong>Harshavardhana</strong> patronized Buddhism, donating revenues from 100 villages to maintain <strong>Nālandā Mahāvihāra</strong> under Chancellor Śīlabhadra. Harsha convened the historic <strong>Kannauj Assembly</strong> in honor of Chinese pilgrim <strong>Xuanzang</strong>.</p><p>At the <strong>Prayāga Maha-Moksha Assembly</strong>, Harsha distributed his imperial treasury to monks and the needy. Xuanzang returned to Chang\'an with 657 Sanskrit manuscripts, translating them for East Asia.</p>',
+          factHead: 'Did You Know?',
+          fact: 'At the Prayag assembly, Emperor Harsha distributed all his royal wealth, gold, and jewels gathered over five years, until he had to borrow a simple cloth from his sister Rajyashri to wear!',
+          source: 'Bāṇabhaṭṭa\'s Harṣacarita; Xuanzang\'s Dà Táng Xīyù Jì; Nalanda Copper-Plate Charters.',
+          siteEvidence: 'Madhuban & Banskhera Copper-Plate Inscriptions bearing King Harsha\'s royal signature; Nalanda clay seals of Harsha; Xuanzang\'s Da Tang Xiyu Ji (National Library of China).'
+        },
+        mr: {
+          badge: 'टप्पा ७ / १०: जागतिक विद्वत संमेलन',
+          title: 'कनौज धर्मपरिषद आणि ह्युएनत्संग यांची भारत यात्रा',
+          modernRegions: 'सध्याचा प्रदेश: उत्तर प्रदेश व बिहार (भारत), शीआन (चीन)',
+          ancientToponyms: 'कन्याकुब्ज (कनौज), नालंदा, प्रयाग, चांगआन',
+          modernToponyms: 'कनौज व प्रयागराज (उ.प्र.), नालंदा (बिहार), शीआन (चीन)',
+          traditionSphere: 'महायान ज्ञानपरंपरा आणि भारत-चीन सांस्कृतिक सेतू',
+          story: '<p>सम्राट <strong>हर्षवर्धन</strong> यांनी नालंदा महाविहाराच्या पोषणासाठी १०० हून अधिक गावे दान दिली. चीनी प्रवासी महाविद्वान <strong>ह्युएनत्संग</strong> यांच्या सन्मानार्थ हर्षवर्धनाने राजधानी <strong>कनौज</strong> येथे २० देशांचे राजे आणि हजारो विद्वानांची भव्य सर्वधर्म परिषद भरवली.</p><p>प्रयाग येथील महामोक्ष परिषदेत हर्षवर्धन आपले संपूर्ण शाही भांडार दान करत असत. ह्युएनत्संगने भारतात अध्ययन करून ६५७ संस्कृत ग्रंथ चीनमध्ये नेले.</p>',
+          factHead: 'रोचक ऐतिहासिक सत्य:',
+          fact: 'प्रयागच्या महादानात सम्राट हर्षवर्धन आपली राजवस्त्रेही दान करत असत, इतके की शेवटी बहिण राज्यश्रीकडून साधे वस्त्र मागून त्यांना नेसावे लागे!',
+          source: 'बाणभट्ट लिखित हर्षचरित; ह्युएनत्संग लिखित सी-यू-की (पश्चिम देश वृत्तांत); नालंदा ताम्रपट.',
+          siteEvidence: 'मधुबन व बांसखेडा ताम्रपट शिलालेख (हर्षवर्धनाची स्वतःची स्वाक्षरी); नालंदा शाही मुद्रा; ह्युएनत्संग लिखित सी-यू-की (पश्चिम देश वृत्तांत, चीन राष्ट्रीय ग्रंथालय).'
+        }
+      },
+
+      // 8. MARITIME SAILENDRA & SRIVIJAYA (BOROBUDUR)
+      {
+        id: 7,
+        monarch: 'Sailendra & Srivijaya Empires (शैलेंद्र व श्रीविजय)',
+        dates_en: 'c. 750 CE – 900 CE', dates_mr: 'इ.स. ७५० – ९००',
+        tradition: 'mahayana',
+        mapView: { x: -30, y: -70, scale: 1.25, region: 'Maritime Southeast Asia: Java & Sumatra (Indonesia)' },
+        activeRoute: 'route_7',
+        activeZones: ['zone_theravada', 'zone_mahayana'],
+        en: {
+          badge: 'Milestone 8 of 10: Maritime Monumental Glory',
+          title: 'Śailendra Dynasty & Borobudur (World\'s Largest Stūpa)',
+          modernRegions: 'Modern: Central Java & Sumatra (Indonesia), Strait of Malacca',
+          ancientToponyms: 'Yavadvīpa (Java), Suvarṇadvīpa (Sumatra), Śrīvijaya',
+          modernToponyms: 'Magelang & Palembang (Indonesia)',
+          traditionSphere: 'Maritime Mahāyāna & Vajrayāna Mandala Architecture',
+          story: '<p>In the 8th–9th century, the Buddhist <strong>Śailendra Dynasty</strong> of Java and the <strong>Śrīvijaya Empire</strong> of Sumatra ruled the trade routes of maritime Southeast Asia. They erected <strong>Borobudur</strong>, a magnificent stone step-pyramid mandala and the largest Buddhist monument on Earth.</p><p>Decorated with 2,672 relief panels and 504 Buddha statues, Borobudur symbolizes the Bodhisattva\'s path to Enlightenment. Chinese master <strong>Yijing</strong> spent years studying Sanskrit grammar in Sumatra before traveling to India.</p>',
+          factHead: 'Did You Know?',
+          fact: 'Borobudur contains over 2 million volcanic stone blocks interlocked without mortar, designed as an immense three-dimensional stone mandala representing Kamadhatu, Rupadhatu, and Arupadhatu!',
+          source: 'Kalasan Inscription (778 CE); Nalanda Copper-Plate of King Balaputradeva; Yijing\'s Records.',
+          siteEvidence: 'Borobudur Monument (UNESCO World Heritage Site, Central Java, 2,672 carved reliefs); Kalasan Pre-Nagari Inscription (778 CE); Nalanda Copper-Plate of King Devapala (granting 5 villages).'
+        },
+        mr: {
+          badge: 'टप्पा ८ / १०: सागरी साम्राज्य वैभव',
+          title: 'शैलेंद्र साम्राज्य आणि बोरोबुदूर (जगातील सर्वात मोठा स्तूप)',
+          modernRegions: 'सध्याचा प्रदेश: मध्य जावा व सुमात्रा (इंडोनेशिया), मलाक्का सामुद्रधुनी',
+          ancientToponyms: 'यवद्वीप (जावा), सुवर्णद्वीप (सुमात्रा), श्रीविजय साम्राज्य',
+          modernToponyms: 'मागेलांग व पालेमबांग (इंडोनेशिया)',
+          traditionSphere: 'सागरी महायान व तंत्रयान मंडला शिल्पकला',
+          story: '<p>इ.स. ७५० ते ८५० दरम्यान मध्य जावातील <strong>शैलेंद्र राजवंश</strong> आणि सुमात्रातील <strong>श्रीविजय साम्राज्याने</strong> सागरी बौद्ध ज्ञानकेंद्रे स्थापन केली. त्यांनी जावा येथे <strong>बोरोबुदूर</strong> हा दगडी महास्तूप उभारला.</p><p>या स्तूपावर कर्मविभंग, ललितविस्तर, जातक आणि गंडव्यूह ग्रंथांवर आधारित २,६७२ दगडी शिल्पे कोरलेली आहेत. चीनी भिक्षू <strong>इत्सिंग</strong> याने भारतात येण्यापूर्वी सुमात्रामध्ये संस्कृत आणि विनय नियमांचा अभ्यास केला होता.</p>',
+          factHead: 'रोचक ऐतिहासिक सत्य:',
+          fact: 'बोरोबुदूर महास्तूप कोणत्याही चुन्याशिवाय २० लाखांपेक्षा जास्त ज्वालामुखीच्या दगडी ठोकळ्यांनी एकमेकांत गुंफून तयार केला गेला आहे!',
+          source: 'कलासन शिलालेख (७७८); बालपुत्रदेवाचा नालंदा ताम्रपट; इत्सिंग प्रवासवृत्त.',
+          siteEvidence: 'बोरोबुदूर महास्तूप (युनेस्को जागतिक वारसा स्थळ, मध्य जावा, २,६७२ शिल्पे); कलासन शिलालेख (इ.स. ७७८); देवपाल राजाचा नालंदा ताम्रपट (श्रीविजय राजा बालपुत्रदेवास ५ गावे दान).'
+        }
+      },
+
+      // 9. PALA DYNASTY (VIKRAMASHILA & TIBET)
+      {
+        id: 8,
+        monarch: 'Pala Dynasty (पाल साम्राज्य)',
+        dates_en: 'c. 750 CE – 1174 CE', dates_mr: 'इ.स. ७५० – ११७४',
+        tradition: 'vajrayana',
+        mapView: { x: 10, y: -20, scale: 1.35, region: 'Bengal-Bihar, Himalayas & Tibet' },
+        activeRoute: 'route_8',
+        activeZones: ['zone_vajrayana'],
+        en: {
+          badge: 'Era 9 of 9: Trans-Himalayan Lineages',
+          title: 'Vikramaśīlā, Vajrayāna & Tibetan Transmission',
+          modernRegions: 'Modern: Bihar & Bengal (India), Tibet (China), Nepal, Bhutan',
+          ancientToponyms: 'Vikramaśīlā, Somapura, Odantapurī, Samye, Lhasa',
+          modernToponyms: 'Bhagalpur (Bihar), Paharpur (Bangladesh), Lhasa (Tibet)',
+          traditionSphere: 'Vajrayāna (Tantric Mahāvihāra Academies)',
+          story: '<p>The <strong>Pāla Emperors</strong> (Dharmapala, Devapala) were the last imperial Buddhist monarchs of India. They founded renowned universities at <strong>Vikramaśīlā, Somapura, and Odantapurī</strong>, patronizing the 84 Mahasiddhas.</p><p>From Vikramaśīlā, <strong>Padmasambhava (Guru Rinpoche)</strong> and <strong>Atiśa Dīpaṅkara</strong> crossed Himalayan passes into <strong>Tibet</strong>, consecrating Samye and standardizing the Tibetan Buddhist canon. These lineages safely preserved the complete Sanskrit philosophies after the 12th-century sack of Nalanda.</p>',
+          factHead: 'Did You Know?',
+          fact: 'Atiśa Dīpaṅkara was 60 years old and chancellor of Vikramashila when he accepted the Tibetan king\'s invitation, walking on foot across the frozen Himalayan passes to Tibet, composing the foundational treatise Bodhipathapradīpa to standardize monastic discipline across Tibetan monasteries.',
+          source: 'Khalimpur Copper Plate of Dharmapala; Tibetan Blue Annals; Tāranātha\'s History of Indian Buddhism.',
+          siteEvidence: 'Khalimpur Copper Plate of Dharmapala (Kolkata Museum); Antichak Vikramashila archaeological excavation site (ASI); Somapura Mahavihara ruins at Paharpur (UNESCO World Heritage); Taranatha\'s History.'
+        },
+        mr: {
+          badge: 'कालखंड ९ / ९: वज्रयान व तिबेट संप्रसार',
+          title: 'विक्रमशिला महाविहार आणि तिबेट धम्मप्रवेश',
+          modernRegions: 'सध्याचा प्रदेश: बिहार व पश्चिम बंगाल (भारत), तिबेट (चीन), नेपाळ, भूतान',
+          ancientToponyms: 'विक्रमशिला, सोमपूर, ओदंतपुरी, साम्ये, ल्हासा',
+          modernToponyms: 'भागलपूर (बिहार), पहाडपूर (बांगलादेश), ल्हासा (तिबेट)',
+          traditionSphere: 'वज्रयान (तंत्रयान महाविहार विद्यापीठे)',
+          story: '<p>बंगाल-बिहारचे <strong>पाल सम्राट</strong> (गोपाल, धर्मपाल, देवपाल) हे भारतातील अखेरचे महान बौद्ध राजे होते. त्यांनी <strong>विक्रमशिला, सोमपूर आणि ओदंतपुरी</strong> ही जागतिक कीर्तीची विद्यापीठे स्थापन केली.</p><p>विक्रमशिलेचे कुलगुरू <strong>अतिश दीपंकर</strong> आणि <strong>पद्मसम्भव</strong> यांनी हिमालयातील खिंडी ओलांडून तिबेटमध्ये साम्ये विहाराची स्थापना केली. १२व्या शतकातील विध्वंसानंतर हा ग्रंथसाठा तिबेटमध्ये सुरक्षित राहिला.</p>',
+          factHead: 'रोचक ऐतिहासिक सत्य:',
+          fact: 'विक्रमशिला महाविहाराचे कुलगुरू अतिश दीपंकर श्रीज्ञान यांनी इ.स. १०४२ मध्ये तिबेटी राजा येशे-ओ यांच्या आमंत्रणावरून तिबेटमध्ये जाऊन "बोधिपथप्रदीप" या ग्रंथाची रचना केली आणि विहारांमधील शिस्तीचे प्रमाणीकरण केले.',
+          source: 'धर्मपालाचा खलिमपूर ताम्रपट; तिबेटी ब्ल्यू ॲनाल्स; तारानाथ लिखित भारताचा बौद्ध इतिहास.',
+          siteEvidence: 'सम्राट धर्मपालाचा खलिमपूर ताम्रपट (कोलकाता संग्रहालय); अंतीचक विक्रमशिला उत्खनन अवशेष (भारतीय पुरातत्त्व सर्वेक्षण); सोमपूर महाविहार पहाडपूर (युनेस्को वारसा, बांगलादेश); तारानाथ इतिहास.'
+        }
+      }
+    ];
+
+    // State Variables
+    let currentEraIndex = 0;
+    let currentLang = 'en';
+    let isAutoPlaying = false;
+    let autoPlayTimer = null;
+    let selectedTraditionFilter = 'all';
+
+    // DOM Elements
+    const mapSvg = document.getElementById('mapSvg');
+    const mapRegionLabel = document.getElementById('mapRegionLabel');
+    const chapterBadge = document.getElementById('chapterBadge');
+    const eraWindowBadge = document.getElementById('eraWindowBadge');
+    const monarchTag = document.getElementById('monarchTag');
+    const chapterTitle = document.getElementById('chapterTitle');
+    const modernRegionsText = document.getElementById('modernRegionsText');
+    const toponymAncient = document.getElementById('toponymAncientName');
+    const toponymModern = document.getElementById('toponymModernName');
+    const chapterStory = document.getElementById('chapterStory');
+    const traditionSphereName = document.getElementById('traditionSphereName');
+    const traditionSphereBadge = document.getElementById('traditionSphereBadge');
+    const factHeading = document.getElementById('factHeading');
+    const factContent = document.getElementById('factContent');
+    const sourceCitation = document.getElementById('sourceCitation');
+    const btnPrev = document.getElementById('btnPrevChapter');
+    const btnNext = document.getElementById('btnNextChapter');
+    const stepDots = document.getElementById('chapterStepDots');
+
+    // Pan / Zoom Map Camera
+    function applyMapCamera(view) {
+      mapSvg.style.transform = `translate(${view.x}px, ${view.y}px) scale(${view.scale})`;
+      if (currentLang === 'mr') {
+        const mrRegions = [
+          'मगध व कोसल (बिहार व उ.प्र., भारत)',
+          'मौर्य साम्राज्य, श्रीलंका व म्यानमार',
+          'इंडो-ग्रीक साकल (सियालकोट) व गांधार',
+          'दख्खन: महाराष्ट्र (अजिंठा, कार्ले) व आंध्र (अमरावती)',
+          'गांधार (पेशावर), काश्मीर व रेशीम मार्ग (चीन)',
+          'गुप्त साम्राज्य व नालंदा महाविहार (बिहार)',
+          'कनौज (उत्तर प्रदेश) व प्रयाग',
+          'सागरी आशिया: जावा (बोरोबुदूर) व सुमात्रा',
+          'पाल साम्राज्य (विक्रमशिला) व तिबेट'
+        ];
+        mapRegionLabel.textContent = mrRegions[currentEraIndex] || view.region;
+      } else {
+        mapRegionLabel.textContent = view.region;
+      }
+    }
+
+    // Update Route visibility
+    function updateRoutes(activeRouteId) {
+      document.querySelectorAll('#routesLayer path').forEach(p => {
+        p.style.opacity = '0.12';
+        p.classList.remove('route-active');
+      });
+
+      const p = document.getElementById(activeRouteId);
+      if (p) {
+        p.style.opacity = '0.9';
+        p.classList.add('route-active');
+      }
+    }
+
+    // Highlight Tradition Zones
+    function highlightTraditionZones(zones) {
+      const allZones = document.querySelectorAll('.tradition-zone');
+      allZones.forEach(z => {
+        z.style.opacity = '0.04';
+      });
+
+      if (zones && zones.length > 0) {
+        zones.forEach(zid => {
+          const z = document.getElementById(zid);
+          if (z) {
+            z.style.opacity = zid === 'zone_theravada' ? '0.22' : (zid === 'zone_mahayana' ? '0.18' : '0.25');
+          }
+        });
+      }
+    }
+
+    // Render Era Details
+    function renderEra(index) {
+      currentEraIndex = index;
+      const era = eras[index];
+      const data = era[currentLang];
+
+      chapterBadge.textContent = data.badge;
+      eraWindowBadge.textContent = currentLang === 'mr' ? era.dates_mr : era.dates_en;
+      const monarchTitles_mr = [
+        'तथागत गौतम बुद्ध (धम्मसंस्थापक व मार्गदाता)',
+        'चक्रवर्ती सम्राट अशोक (मौर्य साम्राज्य)',
+        'राजा मिलिंद / मिनँडर प्रथम (इंडो-ग्रीक राज्य)',
+        'सातवाहन आणि वाकाटक साम्राज्य (महाराष्ट्र व दख्खन)',
+        'सम्राट कनिष्क प्रथम (कुषाण साम्राज्य)',
+        'गुप्त साम्राज्य (सम्राट कुमारगुप्त प्रथम व सुवर्णकाळ)',
+        'सम्राट हर्षवर्धन (वर्धन साम्राज्य)',
+        'शैलेंद्र व श्रीविजय साम्राज्य (बोरोबुदूर, जावा)',
+        'पाल साम्राज्य (विक्रमशिला व तिबेट धम्मप्रवेश)'
+      ];
+      const monarchTitles_en = [
+        'Gautam Buddha (Foundational Teacher)',
+        'Chakravarti Emperor Ashoka (Mauryan Empire)',
+        'King Milind / Menander I (Indo-Greek Kingdom)',
+        'Satavahana & Vakataka Dynasties (Deccan & Maharashtra)',
+        'Emperor Kanishka I (Kushan Empire)',
+        'Imperial Gupta Dynasty (Kumaragupta I & Golden Age)',
+        'Emperor Harshavardhana (Vardhana Empire)',
+        'Sailendra & Srivijaya Empires (Borobudur, Java)',
+        'Pala Imperial Dynasty (Vikramashila & Tibet)'
+      ];
+      monarchTag.textContent = currentLang === 'mr' ? monarchTitles_mr[index] : monarchTitles_en[index];
+      chapterTitle.textContent = data.title;
+      modernRegionsText.textContent = data.modernRegions;
+      toponymAncient.textContent = data.ancientToponyms;
+      toponymModern.textContent = data.modernToponyms;
+      chapterStory.innerHTML = data.story;
+      traditionSphereName.textContent = data.traditionSphere;
+      factHeading.textContent = data.factHead;
+      factContent.textContent = data.fact;
+      sourceCitation.textContent = data.source;
+
+      // Update Tradition Sphere Badge Color
+      if (era.tradition === 'theravada') {
+        traditionSphereBadge.className = 'px-2 py-0.5 rounded text-[10px] font-bold bg-[#ea580c]/20 text-[#fb923c] border border-[#ea580c]/40';
+        traditionSphereBadge.textContent = 'Theravāda / थेरवाद';
+      } else if (era.tradition === 'mahayana') {
+        traditionSphereBadge.className = 'px-2 py-0.5 rounded text-[10px] font-bold bg-[#facc15]/20 text-[#fde047] border border-[#facc15]/40';
+        traditionSphereBadge.textContent = 'Mahāyāna / महायान';
+      } else if (era.tradition === 'vajrayana') {
+        traditionSphereBadge.className = 'px-2 py-0.5 rounded text-[10px] font-bold bg-[#c084fc]/20 text-[#e9d5ff] border border-[#c084fc]/40';
+        traditionSphereBadge.textContent = 'Vajrayāna / वज्रयान';
+      } else {
+        traditionSphereBadge.className = 'px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40';
+        traditionSphereBadge.textContent = 'Early Sangha / मूल संघ';
+      }
+
+      btnPrev.disabled = index === 0;
+      btnNext.disabled = index === eras.length - 1;
+
+      // Update Milestone Stepper Buttons
+      document.querySelectorAll('.chapter-btn').forEach((btn, i) => {
+        if (i === index) {
+          btn.classList.add('bg-amber-500', 'text-stone-950', 'shadow-sm', 'font-bold');
+          btn.classList.remove('text-stone-400', 'hover:bg-stone-800');
+        } else {
+          btn.classList.remove('bg-amber-500', 'text-stone-950', 'shadow-sm', 'font-bold');
+          btn.classList.add('text-stone-400', 'hover:bg-stone-800');
+        }
+      });
+
+      // Update Step Dots (10 dots)
+      stepDots.innerHTML = eras.map((_, i) => 
+        `<span class="w-2 h-2 rounded-full transition-all ${i === index ? 'bg-amber-500 scale-125' : 'bg-stone-700'}"></span>`
+      ).join('');
+
+      applyMapCamera(era.mapView);
+      updateRoutes(era.activeRoute);
+      highlightTraditionZones(era.activeZones);
+    }
+
+    // Filter by Tradition Spheres
+    function filterByTradition(traditionKey) {
+      selectedTraditionFilter = traditionKey;
+
+      document.querySelectorAll('.tradition-pill').forEach(pill => {
+        if (pill.getAttribute('data-tradition') === traditionKey) {
+          pill.classList.add('bg-stone-800', 'text-amber-300', 'border-amber-500/40', 'font-bold');
+          pill.classList.remove('border-transparent', 'text-stone-300');
+        } else {
+          pill.classList.remove('bg-stone-800', 'text-amber-300', 'border-amber-500/40', 'font-bold');
+          pill.classList.add('border-transparent', 'text-stone-300');
+        }
+      });
+
+      if (traditionKey === 'all') {
+        renderEra(currentEraIndex);
+      // Ensure HUD region label updates
+      const era = eras[currentEraIndex];
+      applyMapCamera(era.mapView);
+        document.querySelectorAll('.city-pin, .pass-pin').forEach(pin => pin.style.opacity = '1');
+      } else if (traditionKey === 'theravada') {
+        highlightTraditionZones(['zone_theravada']);
+        applyMapCamera({ x: 30, y: -70, scale: 1.25, region: 'Theravāda Sphere: Sri Lanka, Myanmar, Deccan' });
+        renderEra(1); // Jump to Ashoka / Lanka
+      } else if (traditionKey === 'mahayana') {
+        highlightTraditionZones(['zone_mahayana']);
+        applyMapCamera({ x: -50, y: 50, scale: 1.3, region: 'Mahāyāna Sphere: Milind, Kushana, Silk Road, China' });
+        renderEra(4); // Jump to Kushana / Kanishka
+      } else if (traditionKey === 'vajrayana') {
+        highlightTraditionZones(['zone_vajrayana']);
+        applyMapCamera({ x: 10, y: -20, scale: 1.35, region: 'Vajrayāna Sphere: Pala Empire & Tibet' });
+        renderEra(8); // Jump to Pala
+      }
+    }
+
+    document.querySelectorAll('.tradition-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        const t = pill.getAttribute('data-tradition');
+        filterByTradition(t);
+      });
+    });
+
+    // Navigation Click Listeners
+    btnPrev.addEventListener('click', () => {
+      if (currentEraIndex > 0) renderEra(currentEraIndex - 1);
+    });
+
+    btnNext.addEventListener('click', () => {
+      if (currentEraIndex < eras.length - 1) renderEra(currentEraIndex + 1);
+    });
+
+    document.querySelectorAll('.chapter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const idx = parseInt(btn.getAttribute('data-chapter'), 10);
+        renderEra(idx);
+      });
+    });
+
+    // Auto-Play Feature (Cycling through all 10 eras)
+    const btnAutoPlay = document.getElementById('btnAutoPlay');
+    const playIcon = document.getElementById('playIcon');
+
+    function toggleAutoPlay() {
+      if (isAutoPlaying) {
+        stopAutoPlay();
+      } else {
+        startAutoPlay();
+      }
+    }
+
+    function startAutoPlay() {
+      isAutoPlaying = true;
+      btnAutoPlay.classList.add('ring-2', 'ring-amber-300');
+      playIcon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
+      
+      autoPlayTimer = setInterval(() => {
+        if (currentEraIndex < eras.length - 1) {
+          renderEra(currentEraIndex + 1);
+        } else {
+          renderEra(0);
+        }
+      }, 5500);
+    }
+
+    function stopAutoPlay() {
+      isAutoPlaying = false;
+      clearInterval(autoPlayTimer);
+      btnAutoPlay.classList.remove('ring-2', 'ring-amber-300');
+      playIcon.innerHTML = '<path d="M8 5v14l11-7z"/>';
+    }
+
+    btnAutoPlay.addEventListener('click', toggleAutoPlay);
+
+    // Language Toggle
+    function setLanguage(lang) {
+      currentLang = lang;
+      try {
+        localStorage.setItem('carto_story_lang', lang);
+      } catch (e) {}
+
+      if (lang === 'mr') {
+        document.querySelectorAll('.lang-en').forEach(el => el.classList.add('hidden'));
+        document.querySelectorAll('.lang-mr').forEach(el => el.classList.remove('hidden'));
+        document.getElementById('btnLangMr').classList.add('bg-amber-500', 'text-stone-950', 'shadow-sm', 'font-bold');
+        document.getElementById('btnLangMr').classList.remove('text-stone-400');
+        document.getElementById('btnLangEn').classList.remove('bg-amber-500', 'text-stone-950', 'shadow-sm', 'font-bold');
+        document.getElementById('btnLangEn').classList.add('text-stone-400');
+      } else {
+        document.querySelectorAll('.lang-mr').forEach(el => el.classList.add('hidden'));
+        document.querySelectorAll('.lang-en').forEach(el => el.classList.remove('hidden'));
+        document.getElementById('btnLangEn').classList.add('bg-amber-500', 'text-stone-950', 'shadow-sm', 'font-bold');
+        document.getElementById('btnLangEn').classList.remove('text-stone-400');
+        document.getElementById('btnLangMr').classList.remove('bg-amber-500', 'text-stone-950', 'shadow-sm', 'font-bold');
+        document.getElementById('btnLangMr').classList.add('text-stone-400');
+      }
+
+      renderEra(currentEraIndex);
+      // Ensure HUD region label updates
+      const era = eras[currentEraIndex];
+      applyMapCamera(era.mapView);
+    }
+
+    document.getElementById('btnLangEn').addEventListener('click', () => setLanguage('en'));
+    document.getElementById('btnLangMr').addEventListener('click', () => setLanguage('mr'));
+
+    // Map Zoom / Reset Buttons
+    document.getElementById('btnMapReset').addEventListener('click', () => {
+      renderEra(currentEraIndex);
+      // Ensure HUD region label updates
+      const era = eras[currentEraIndex];
+      applyMapCamera(era.mapView);
+    });
+
+    document.getElementById('btnMapZoomIn').addEventListener('click', () => {
+      const era = eras[currentEraIndex];
+      era.mapView.scale = Math.min(era.mapView.scale * 1.25, 3.0);
+      applyMapCamera(era.mapView);
+    });
+
+    document.getElementById('btnMapZoomOut').addEventListener('click', () => {
+      const era = eras[currentEraIndex];
+      era.mapView.scale = Math.max(era.mapView.scale * 0.8, 1.0);
+      applyMapCamera(era.mapView);
+    });
+
+    // City Marker Click: jumps directly to the era focusing on that city
+    const cityEraMap = {
+      'bodh_gaya': 0,
+      'sarnath': 0,
+      'pataliputra': 1,
+      'anuradhapura': 1,
+      'sagala': 2,
+      'paithan': 3,
+      'amaravati': 3,
+      'taxila': 4,
+      'kundalvana': 4,
+      'dunhuang': 4,
+      'changan': 4,
+      'nalanda': 5,
+      'kannauj': 6,
+      'borobudur': 7,
+      'vikramashila': 8,
+      'lhasa': 8,
+      'pagan': 9,
+    };
+
+    document.querySelectorAll('.city-pin, .pass-pin').forEach(pin => {
+      pin.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const cityId = pin.getAttribute('data-id');
+        if (cityEraMap[cityId] !== undefined) {
+          renderEra(cityEraMap[cityId]);
+        }
+      });
+    });
+
+    // Initial Load
+    window.addEventListener('load', () => {
+      try {
+        const saved = localStorage.getItem('carto_story_lang');
+        if (saved === 'mr') setLanguage('mr');
+      } catch (e) {}
+
+      renderEra(0);
+    });
+  </script>
+</body>
+</html>
