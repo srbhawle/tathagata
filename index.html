@@ -485,6 +485,8 @@ html[data-lang="mr"] .book-chapter-era{font-style:normal; font-family:var(--dev)
   .brand span:not(.wheel){font-size:.85rem;}
   .lang-toggle button{padding:.35rem .65rem; font-size:.74rem;}
 }
+/* "मर" label drawn by CSS so browser auto-translate cannot turn it into "Die" */
+#btnMR::before { content: "\092E\0930"; }
 </style>
 </head>
 <body>
@@ -504,7 +506,7 @@ html[data-lang="mr"] .book-chapter-era{font-style:normal; font-family:var(--dev)
   <div style="display:flex; align-items:center; gap:.6rem;">
     <div class="lang-toggle" translate="no">
       <button id="btnEN" class="active" onclick="setLang('en')" aria-label="English">EN</button>
-      <button id="btnMR" lang="mr" onclick="setLang('mr')" aria-label="मराठी">मर</button>
+      <button id="btnMR" lang="mr" onclick="setLang('mr')" aria-label="मराठी"></button>
     </div>
     <button id="themeBtn" onclick="toggleTheme()" title="Toggle light/dark mode" style="
       width:36px; height:36px; border-radius:50%; border:1.5px solid var(--line-strong);

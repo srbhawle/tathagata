@@ -130,6 +130,8 @@
       background: #334155;
       border-radius: 4px;
     }
+      /* "मर" label drawn by CSS so browser auto-translate cannot turn it into "Die" */
+    #btnLangMr::before { content: "\092E\0930"; }
   </style>
 </head>
 <body class="bg-stone-900 text-stone-100 antialiased min-h-screen flex flex-col selection:bg-amber-500 selection:text-stone-950">
@@ -194,9 +196,7 @@
           <button type="button" id="btnLangEn" aria-label="English" class="px-2.5 py-1 text-xs font-bold rounded-md transition-all bg-amber-500 text-stone-950 shadow-sm">
             EN
           </button>
-          <button type="button" id="btnLangMr" lang="mr" aria-label="मराठी" class="px-2.5 py-1 text-xs font-semibold rounded-md transition-all text-stone-400 hover:text-white">
-            मर
-          </button>
+          <button type="button" id="btnLangMr" lang="mr" aria-label="मराठी" class="px-2.5 py-1 text-xs font-semibold rounded-md transition-all text-stone-400 hover:text-white"></button>
         </div>
 
       </div>
