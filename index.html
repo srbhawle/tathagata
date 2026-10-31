@@ -502,9 +502,9 @@ html[data-lang="mr"] .book-chapter-era{font-style:normal; font-family:var(--dev)
     <li><button onclick="goPage('book')" data-p="book" style="color:var(--gold-bright);"><span lang-en>☸ Journey</span><span lang-mr>☸ इतिहास</span></button></li>
   </ul>
   <div style="display:flex; align-items:center; gap:.6rem;">
-    <div class="lang-toggle">
-      <button id="btnEN" class="active" onclick="setLang('en')">EN</button>
-      <button id="btnMR" onclick="setLang('mr')">मर</button>
+    <div class="lang-toggle" translate="no">
+      <button id="btnEN" class="active" onclick="setLang('en')" aria-label="English">EN</button>
+      <button id="btnMR" lang="mr" onclick="setLang('mr')" aria-label="मराठी">मर</button>
     </div>
     <button id="themeBtn" onclick="toggleTheme()" title="Toggle light/dark mode" style="
       width:36px; height:36px; border-radius:50%; border:1.5px solid var(--line-strong);
