@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlRoot">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>तथागत · Buddha & His Dhamma</title>
+<meta name="theme-color" content="#F7F3EC">
+<meta name="description" content="बुद्ध आणि त्यांचा धम्म — Buddha's life, teachings, path to enlightenment, and the complete history of Buddhism in the Indian subcontinent. In English and Marathi.">
+
+<!-- Open Graph / WhatsApp / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://srbhawle.github.io/tathagata/">
+<meta property="og:title" content="तथागत · Buddha & His Dhamma">
+<meta property="og:description" content="बुद्ध आणि त्यांचा धम्म — Buddha's life, teachings, path to enlightenment, and the complete history of Buddhism in the Indian subcontinent. In English and Marathi.">
+<meta property="og:locale" content="mr_IN">
+<meta property="og:locale:alternate" content="en_IN">
+<meta property="og:site_name" content="तथागत · Buddha & His Dhamma">
+
+<!-- Instagram / Social -->
+<meta property="og:see_also" content="https://www.instagram.com/srbhawle/">
+<meta name="author" content="Sandeep Bhawle (@srbhawle)">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://srbhawle.github.io/tathagata/">
+
+<!-- Favicon — dharma wheel -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%23F7F3EC'/><text y='.9em' font-size='82' x='9'>&#9784;</text></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%23C9A14C'/><text y='.9em' font-size='82' x='9'>&#9784;</text></svg>">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@300;400;500;600;700&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap');
+
+:root{
+  /* ── Still Water (Light) palette ── */
+  --ink-950:#F7F3EC; --ink-900:#EFE9DE; --ink-850:#E8DFCE; --ink-800:#DDD5C2;
+  --line:#DDD5C2; --line-strong:#C9B99A;
+  --paper:#2C1A0E; --paper-dim:#6B4E2A; --paper-mute:#A0876A;
+  --gold:#B8860B; --gold-bright:#C9A14C; --gold-pale:#7A5020;
+  --rust:#8B4513; --rust-bright:#A0522D;
+  --jade:#3D6B4F; --jade-bright:#4F9E6B;
+  --r-sm:6px; --r-md:10px; --r-lg:16px;
+  --serif: 'Playfair Display', Georgia, serif;
+  --body: 'Crimson Pro', Georgia, serif;
+  --dev: 'Tiro Devanagari Marathi', 'Noto Sans Devanagari', serif;
+  --nav-bg: rgba(247,243,236,.94);
+  --nav-shadow: 0 1px 0 var(--line);
+  --hero-g1: rgba(201,161,76,.08);
+  --hero-g2: rgba(139,69,19,.05);
+  --hero-g3: rgba(61,107,79,.04);
+}
+
+/* ── Bodhi Flame (Dark) overrides ── */
+[data-theme="dark"]{
+  --ink-950:#0E0B07; --ink-900:#161108; --ink-850:#1C1610; --ink-800:#231B12;
+  --line:#2C2316; --line-strong:#3D2F1A;
+  --paper:#EDE3C9; --paper-dim:#B8A87E; --paper-mute:#7A6B49;
+  --gold:#C9A14C; --gold-bright:#E2C172; --gold-pale:#F2DFA0;
+  --rust:#C5611F; --rust-bright:#E07A35;
+  --jade:#4F7A6B; --jade-bright:#6FA38C;
+  --nav-bg: rgba(14,11,7,.88);
+  --nav-shadow: 0 1px 0 var(--line);
+  --hero-g1: rgba(201,161,76,.10);
+  --hero-g2: rgba(197,97,31,.07);
+  --hero-g3: rgba(79,122,107,.06);
+}
+
+/* smooth theme transition */
+*, *::before, *::after {
+  transition: background-color .35s ease, border-color .3s ease, color .25s ease;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--ink-950);
+  color:var(--paper);
+  font-family:var(--body);
+  font-size:17.5px;
+  line-height:1.75;
+  overflow-x:hidden;
+}
+
+/* language visibility engine */
+[lang-en]{display:inline;} [lang-mr]{display:none;}
+html[data-lang="mr"] [lang-en]{display:none;} html[data-lang="mr"] [lang-mr]{display:inline;}
+html[data-lang="mr"] [lang-mr].block{display:block;} [lang-en].block{display:block;} [lang-mr].block{display:none;}
+html[data-lang="mr"] body{font-family:var(--dev), var(--body);}
+html[data-lang="mr"] .serif-head{font-family:var(--dev), var(--serif);}
+
+/* texture */
+body::before{
+  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.3;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+}
+
+/* ============ NAV ============ */
+nav{
+  position:sticky; top:0; z-index:200;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 1.6rem; height:64px;
+  background:var(--nav-bg); backdrop-filter:blur(14px) saturate(1.1); box-shadow:var(--nav-shadow);
+  border-bottom:1px solid var(--line);
+}
+.brand{
+  font-family:var(--serif); font-size:1.05rem; color:var(--gold-bright);
+  display:flex; align-items:center; gap:.55rem; cursor:pointer; letter-spacing:.01em;
+  text-decoration:none; flex-shrink:0;
+}
+html[data-lang="mr"] .brand{font-family:var(--dev);}
+.brand .wheel{font-size:1.3rem; filter:drop-shadow(0 0 6px rgba(201,161,76,.4));}
+.navlinks{display:flex; gap:.1rem; list-style:none; flex-wrap:wrap;}
+.navlinks button{
+  background:none; border:none; color:var(--paper-dim); cursor:pointer;
+  font-family:var(--body); font-size:.78rem; letter-spacing:.1em; text-transform:uppercase;
+  padding:.5rem .8rem; border-radius:var(--r-sm); transition:all .2s;
+}
+html[data-lang="mr"] .navlinks button{font-family:var(--dev); letter-spacing:0; font-size:.85rem; text-transform:none;}
+.navlinks button:hover{color:var(--gold-bright); background:rgba(201,161,76,.08);}
+.navlinks button.active{color:var(--gold-bright); background:rgba(201,161,76,.12);}
+.lang-toggle{
+  display:flex; align-items:center; gap:0; border:1.5px solid var(--gold); border-radius:999px;
+  padding:3px; background:var(--ink-900); flex-shrink:0; box-shadow:0 0 0 1px rgba(201,161,76,.15);
+}
+.lang-toggle button{
+  border:none; background:none; padding:.42rem 1.05rem; font-size:.8rem; letter-spacing:.05em;
+  color:var(--gold-bright); cursor:pointer; border-radius:999px; transition:all .25s; font-family:var(--body); font-weight:500;
+}
+.lang-toggle button.active{background:var(--gold-bright); color:var(--ink-950); font-weight:700;}
+[data-theme="dark"] .lang-toggle button.active{color:#0E0B07;}
+.navtoggle{display:none; background:none; border:none; color:var(--gold-bright); font-size:1.5rem; cursor:pointer;}
+
+/* ============ PAGES ============ */
+.page{display:none;}
+.page.active{display:block; animation:reveal .4s ease;}
+@keyframes reveal{from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:none;}}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative; text-align:center; padding:5.5rem 1.6rem 4rem; overflow:hidden;
+  background:
+    radial-gradient(ellipse 55% 45% at 50% 18%, var(--hero-g1) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 50% at 15% 85%, var(--hero-g2) 0%, transparent 65%),
+    radial-gradient(ellipse 45% 40% at 88% 15%, var(--hero-g3) 0%, transparent 60%),
+    var(--ink-950);
+  border-bottom:1px solid var(--line);
+}
+.hero-rays{
+  position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+  width:900px; height:520px; pointer-events:none;
+  background:repeating-conic-gradient(from 0deg at 50% 0%, transparent 0deg 8deg, rgba(139,69,19,.018) 8deg 16deg);
+  mask:radial-gradient(ellipse 60% 100% at 50% 0%, black 0%, transparent 75%);
+}
+.hero-content{position:relative; z-index:2; max-width:740px; margin:0 auto;}
+.eyebrow{
+  font-size:.74rem; letter-spacing:.32em; text-transform:uppercase; color:var(--gold);
+  opacity:.85; margin-bottom:1.6rem; font-weight:500;
+}
+.dharma-glyph{
+  font-size:3.4rem; display:block; margin-bottom:1.1rem; color:var(--gold-bright);
+  filter:drop-shadow(0 0 18px rgba(201,161,76,.35));
+  animation:breathe 5s ease-in-out infinite;
+}
+@keyframes breathe{0%,100%{filter:drop-shadow(0 0 8px rgba(184,134,11,.25));} 50%{filter:drop-shadow(0 0 18px rgba(184,134,11,.4));}}
+.hero h1{
+  font-family:var(--serif); font-weight:700; font-size:clamp(2.5rem,6vw,4.6rem);
+  line-height:1.08; color:var(--paper); margin-bottom:.35rem;
+}
+html[data-lang="mr"] .hero h1{font-family:var(--dev); font-weight:700;}
+.hero h1 em{font-style:italic; font-weight:400; color:var(--gold-bright);}
+.hero .sub{
+  font-family:var(--serif); font-size:clamp(1.25rem,3vw,1.9rem); font-style:italic;
+  color:var(--paper-dim); margin-bottom:1.6rem;
+}
+html[data-lang="mr"] .hero .sub{font-family:var(--dev); font-style:normal;}
+.hr-thin{width:64px; height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); margin:0 auto 1.6rem;}
+.hero-verse{
+  font-family:var(--serif); font-style:italic; font-size:1.08rem; color:var(--paper-dim);
+  max-width:480px; margin:0 auto 2.1rem; line-height:1.85;
+}
+html[data-lang="mr"] .hero-verse{font-family:var(--dev); font-style:normal;}
+.hero-verse cite{display:block; font-size:.78rem; font-style:normal; color:var(--paper-mute); letter-spacing:.08em; margin-top:.5rem;}
+.chip-row{display:flex; flex-wrap:wrap; gap:.55rem; justify-content:center;}
+.chip{
+  padding:.5rem 1.15rem; border:1px solid var(--line-strong); border-radius:999px;
+  color:var(--paper-dim); font-size:.82rem; cursor:pointer; background:rgba(201,161,76,.03);
+  transition:all .25s; font-family:var(--body);
+}
+html[data-lang="mr"] .chip{font-family:var(--dev);}
+.chip:hover{border-color:var(--gold); color:var(--gold-bright); background:rgba(201,161,76,.1); transform:translateY(-1px);}
+
+/* ============ HOME OVERVIEW CARDS ============ */
+.overview-grid{
+  display:grid; grid-template-columns:repeat(3, 1fr);
+  gap:1px; background:var(--line); margin:0 1.6rem 1.6rem; border-radius:var(--r-lg); overflow:hidden;
+  border:1px solid var(--line);
+}
+/* 7th card (Journey) spans full bottom row */
+.overview-grid .ov-card:nth-child(7){ grid-column: 1 / -1; display:flex; align-items:center; gap:1.5rem; }
+.overview-grid .ov-card:nth-child(7) .ov-glyph{ font-size:2.2rem; margin-bottom:0; flex-shrink:0; }
+.overview-grid .ov-card:nth-child(7) .ov-content{ flex:1; }
+@media (max-width:860px){ 
+  .overview-grid{grid-template-columns:repeat(2, 1fr);} 
+  .overview-grid .ov-card:nth-child(7){ grid-column: 1 / -1; }
+}
+@media (max-width:560px){ 
+  .overview-grid{grid-template-columns:1fr;} 
+  .overview-grid .ov-card:nth-child(7){ grid-column: 1; flex-direction:column; align-items:flex-start; gap:0.5rem; }
+}
+.ov-card{
+  background:var(--ink-900); padding:1.6rem; text-align:left; cursor:pointer;
+  transition:background .25s; position:relative;
+}
+.ov-card:hover{background:var(--ink-850);}
+.ov-card::before{
+  content:''; position:absolute; top:0; left:0; width:0; height:2px; background:var(--gold);
+  transition:width .3s;
+}
+.ov-card:hover::before{width:100%;}
+.ov-glyph{font-size:1.7rem; margin-bottom:.7rem; display:block; color:var(--gold-bright);}
+.ov-title{font-family:var(--serif); font-size:1.05rem; color:var(--paper); margin-bottom:.3rem;}
+html[data-lang="mr"] .ov-title{font-family:var(--dev);}
+.ov-desc{font-size:.86rem; color:var(--paper-mute); line-height:1.6;}
+
+/* ============ SECTION HEADER ============ */
+.shead{padding:3rem 1.6rem 1.8rem; background:var(--ink-900); border-bottom:1px solid var(--line);}
+.shead-inner{max-width:1140px; margin:0 auto;}
+.s-label{font-size:.72rem; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); margin-bottom:.5rem;}
+.s-title{font-family:var(--serif); font-weight:700; font-size:clamp(1.9rem,4vw,2.7rem); color:var(--paper); line-height:1.18; margin-bottom:.5rem;}
+html[data-lang="mr"] .s-title{font-family:var(--dev);}
+.s-title em{font-style:italic; font-weight:400; color:var(--gold-bright);}
+.s-intro{font-size:1.02rem; color:var(--paper-dim); max-width:660px; line-height:1.75;}
+.s-line{width:46px; height:2px; background:var(--gold); border-radius:2px; margin:.95rem 0 1rem;}
+
+.content-wrap{max-width:1140px; margin:0 auto; padding:0 1.6rem;}
+
+/* ============ TIMELINE (Life) ============ */
+.timeline{padding:2.2rem 0;}
+.tl-rail{position:relative; padding-left:2.6rem;}
+.tl-rail::before{content:''; position:absolute; left:0; top:.5rem; bottom:.5rem; width:1px; background:linear-gradient(180deg,var(--gold) 0%,var(--line-strong) 70%,transparent 100%);}
+.tl-item{position:relative; margin-bottom:1.9rem;}
+.tl-item::before{content:''; position:absolute; left:-2.6rem; top:1.55rem; width:10px; height:10px; border-radius:50%; background:var(--gold); box-shadow:0 0 0 4px var(--ink-950), 0 0 6px rgba(184,134,11,.3);}
+.tl-card{background:var(--ink-900); border:1px solid var(--line); border-radius:var(--r-md); padding:1.5rem 1.7rem; cursor:pointer; transition:border-color .25s, background .25s; box-shadow:0 1px 4px rgba(44,26,14,.06);}
+.tl-card:hover{border-color:var(--line-strong); background:var(--ink-850);}
+.tl-date{font-size:.74rem; letter-spacing:.14em; text-transform:uppercase; color:var(--rust-bright); margin-bottom:.4rem; display:flex; align-items:center; gap:.5rem;}
+.tl-num{font-family:var(--serif); font-style:italic; color:var(--paper-mute); font-size:.78rem;}
+.tl-title{font-family:var(--serif); font-size:1.28rem; font-weight:600; color:var(--paper); margin-bottom:.55rem;}
+html[data-lang="mr"] .tl-title{font-family:var(--dev);}
+.tl-desc{font-size:.97rem; color:var(--paper-dim); line-height:1.75;}
+.tl-more{display:none; margin-top:.9rem; padding-top:.9rem; border-top:1px solid var(--line);}
+.tl-item.open .tl-more{display:block; animation:reveal .3s ease;}
+.tl-quote{padding-left:.9rem; border-left:2px solid var(--gold); font-style:italic; font-size:.92rem; color:var(--gold-pale); margin-bottom:.7rem;}
+html[data-lang="mr"] .tl-quote{font-style:normal;}
+.tl-extra-text{font-size:.92rem; color:var(--paper-dim); line-height:1.75;}
+.expand-btn{display:inline-flex; align-items:center; gap:.4rem; font-size:.74rem; color:var(--gold); letter-spacing:.08em; text-transform:uppercase; margin-top:.8rem; cursor:pointer; font-weight:500;}
+.expand-btn .arrow{transition:transform .25s; display:inline-block;}
+.tl-item.open .expand-btn .arrow{transform:rotate(180deg);}
+
+/* ============ TEACHINGS GRID ============ */
+.teach-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(310px,1fr)); gap:1px; background:var(--line); margin:2rem 0; border-radius:var(--r-lg); overflow:hidden; border:1px solid var(--line);}
+.teach-card{background:var(--ink-900); padding:2rem; cursor:pointer; transition:background .25s; position:relative; box-shadow:0 1px 3px rgba(44,26,14,.05);}
+.teach-card:hover{background:var(--ink-850);}
+.teach-card::after{content:''; position:absolute; bottom:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,var(--gold-bright),transparent); transform:scaleX(0); transition:transform .35s;}
+.teach-card:hover::after{transform:scaleX(1);}
+.teach-num{font-family:var(--serif); font-size:2.7rem; font-weight:700; color:var(--line-strong); line-height:1; margin-bottom:.7rem; display:block;}
+.teach-pali{font-size:.74rem; letter-spacing:.1em; text-transform:uppercase; color:var(--paper-mute); margin-bottom:.7rem;}
+.teach-title{font-family:var(--serif); font-size:1.18rem; color:var(--gold-bright); margin-bottom:.7rem; font-weight:600;}
+html[data-lang="mr"] .teach-title{font-family:var(--dev);}
+.teach-desc{font-size:.95rem; color:var(--paper-dim); line-height:1.75;}
+.teach-more{display:none; margin-top:1rem; border-top:1px solid var(--line); padding-top:1rem;}
+.teach-card.open .teach-more{display:block; animation:reveal .3s ease;}
+.eight-list{list-style:none;}
+.eight-list li{display:flex; gap:.8rem; padding:.55rem 0; border-bottom:1px solid var(--line); font-size:.92rem; color:var(--paper-dim); align-items:flex-start;}
+.eight-list li:last-child{border-bottom:none;}
+.e-num{color:var(--gold); font-size:.75rem; font-family:var(--serif); min-width:1.2rem; padding-top:.1rem;}
+.e-name{color:var(--paper); font-weight:600;}
+.teach-foot-quote{margin-top:.9rem; padding-left:.8rem; border-left:2px solid var(--gold); font-style:italic; font-size:.9rem; color:var(--gold-pale);}
+html[data-lang="mr"] .teach-foot-quote{font-style:normal;}
+
+/* ============ PATH STAGES ============ */
+.stages{padding:2.2rem 0;}
+.stage{display:grid; grid-template-columns:60px 1fr; gap:0; position:relative;}
+.stage:not(:last-child)::after{content:''; position:absolute; left:29px; top:64px; bottom:-1.1rem; width:1px; background:linear-gradient(180deg,var(--gold),var(--line-strong));}
+.stage-num-col{display:flex; flex-direction:column; align-items:center; padding-top:.4rem; position:relative; z-index:1;}
+.stage-num{width:52px; height:52px; border:1.5px solid var(--gold-bright); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-size:1.2rem; color:var(--gold-bright); background:var(--ink-950); flex-shrink:0;}
+.stage-body{background:var(--ink-900); border:1px solid var(--line); border-radius:var(--r-md); margin:0 0 1.1rem 1.1rem; padding:1.5rem 1.7rem; cursor:pointer; transition:border-color .25s;}
+.stage-body:hover{border-color:var(--line-strong);}
+.stage-loc{font-size:.74rem; letter-spacing:.14em; text-transform:uppercase; color:var(--rust-bright); margin-bottom:.45rem;}
+.stage-title{font-family:var(--serif); font-size:1.22rem; font-weight:600; color:var(--paper); margin-bottom:.55rem;}
+html[data-lang="mr"] .stage-title{font-family:var(--dev);}
+.stage-desc{font-size:.95rem; color:var(--paper-dim); line-height:1.75;}
+
+/* ============ STORIES ============ */
+.story-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(330px,1fr)); gap:1.4rem; padding:2.2rem 0;}
+.story-card{background:var(--ink-900); border:1px solid var(--line); border-radius:var(--r-md); padding:1.9rem; cursor:pointer; transition:all .25s; position:relative; overflow:hidden;}
+.story-card:hover{border-color:var(--line-strong); transform:translateY(-2px);}
+.story-theme{font-size:.74rem; letter-spacing:.12em; text-transform:uppercase; color:var(--jade-bright); margin-bottom:.6rem; font-weight:500;}
+.story-title{font-family:var(--serif); font-size:1.22rem; color:var(--paper); margin-bottom:.65rem; font-weight:600;}
+html[data-lang="mr"] .story-title{font-family:var(--dev);}
+.story-summary{font-size:.95rem; color:var(--paper-dim); line-height:1.75; margin-bottom:.9rem;}
+.story-full{display:none; border-top:1px solid var(--line); padding-top:.9rem; font-size:.93rem; color:var(--paper-dim); line-height:1.8;}
+.story-card.open .story-full{display:block; animation:reveal .3s ease;}
+.story-full p{margin-bottom:.7rem;}
+.story-quote{margin-top:.7rem; padding:.8rem 1rem; background:rgba(184,134,11,.06); border-left:2px solid var(--gold); font-style:italic; font-size:.9rem; color:var(--gold-pale); border-radius:0 var(--r-sm) var(--r-sm) 0;}
+html[data-lang="mr"] .story-quote{font-style:normal;}
+
+/* ============ RIVALS / ERA ============ */
+.rival-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(330px,1fr)); gap:1px; background:var(--line); margin:2rem 0; border-radius:var(--r-lg); overflow:hidden; border:1px solid var(--line);}
+.rival-card{background:var(--ink-900); padding:1.9rem; transition:background .25s;}
+.rival-card:hover{background:var(--ink-850);}
+.rival-tag{display:inline-block; padding:.28rem .8rem; border:1px solid var(--line-strong); border-radius:999px; font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--rust-bright); margin-bottom:.85rem;}
+.rival-name{font-family:var(--serif); font-size:1.28rem; color:var(--gold-bright); margin-bottom:.25rem; font-weight:600;}
+html[data-lang="mr"] .rival-name{font-family:var(--dev);}
+.rival-founder{font-size:.82rem; color:var(--paper-mute); font-style:italic; margin-bottom:.9rem;}
+html[data-lang="mr"] .rival-founder{font-style:normal;}
+.rival-desc{font-size:.93rem; color:var(--paper-dim); line-height:1.75; margin-bottom:.85rem;}
+.rival-buddha{font-size:.9rem; color:var(--gold-pale); font-style:italic; padding-left:.85rem; border-left:2px solid var(--gold); opacity:.92;}
+html[data-lang="mr"] .rival-buddha{font-style:normal;}
+
+/* ============ ENLIGHTENMENT PATH ============ */
+.modern-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.4rem; padding:2.2rem 0;}
+.modern-card{background:var(--ink-900); border:1px solid var(--line); border-top:2px solid var(--gold-bright); border-radius:0 0 var(--r-md) var(--r-md); padding:1.9rem; transition:border-color .25s;}
+.modern-card:hover{border-color:var(--line-strong); border-top-color:var(--gold-bright);}
+.modern-title{font-family:var(--serif); font-size:1.2rem; color:var(--paper); margin-bottom:.4rem; font-weight:600;}
+html[data-lang="mr"] .modern-title{font-family:var(--dev);}
+.modern-problem{font-size:.86rem; color:var(--paper-mute); font-style:italic; margin-bottom:.95rem;}
+html[data-lang="mr"] .modern-problem{font-style:normal;}
+.modern-teaching{font-size:.95rem; color:var(--paper-dim); line-height:1.75; margin-bottom:.95rem;}
+.modern-quote{padding:.8rem 1rem; border-left:2px solid var(--gold); background:rgba(184,134,11,.06); font-style:italic; font-size:.9rem; color:var(--gold-pale); border-radius:0 var(--r-sm) var(--r-sm) 0;}
+html[data-lang="mr"] .modern-quote{font-style:normal;}
+
+/* ============ QUOTE BANNERS ============ */
+.banner{text-align:center; padding:3.5rem 1.6rem; background:var(--ink-800); border-top:1px solid var(--line); border-bottom:1px solid var(--line); position:relative; overflow:hidden;}
+.banner::before{content:'❝'; position:absolute; top:0; left:50%; transform:translateX(-50%); font-size:7rem; color:var(--gold); opacity:.05; font-family:Georgia,serif;}
+.banner-quote{font-family:var(--serif); font-style:italic; font-size:clamp(1.25rem,2.8vw,1.85rem); color:var(--paper); max-width:680px; margin:0 auto 1rem; line-height:1.6; position:relative;}
+html[data-lang="mr"] .banner-quote{font-family:var(--dev); font-style:normal;}
+.banner-cite{font-size:.78rem; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); opacity:.85;}
+
+/* ============ MARATHI SECTION SPECIFIC ============ */
+.mr-hero{text-align:center; padding:3.5rem 1.6rem 2rem; background:var(--ink-900); border-bottom:1px solid var(--line);}
+.mr-tath{font-family:var(--dev); font-weight:700; font-size:2.6rem; color:var(--gold-bright); display:block; margin-bottom:.4rem;}
+.mr-tath-sub{font-family:var(--dev); font-size:1.05rem; color:var(--paper-mute); margin-bottom:.4rem;}
+.mr-tagline{font-family:var(--dev); font-size:1.15rem; color:var(--paper-dim); margin-bottom:1.6rem;}
+.subnav{display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center; padding:1.2rem 1.6rem; background:var(--ink-950); border-bottom:1px solid var(--line);}
+.subnav-label{font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--paper-mute); align-self:center; margin-right:.4rem;}
+.subnav button{background:none; border:1px solid var(--line-strong); border-radius:999px; padding:.45rem 1.1rem; font-size:.85rem; color:var(--paper-dim); cursor:pointer; transition:all .2s; font-family:var(--dev);}
+.subnav button:hover, .subnav button.active{border-color:var(--gold); color:var(--gold-bright); background:rgba(201,161,76,.08);}
+.mr-section{display:none;}
+.mr-section.active{display:block; animation:reveal .35s ease;}
+
+/* ============ CTA ============ */
+.cta-box{text-align:center; padding:2.2rem 1.6rem; background:linear-gradient(135deg, rgba(184,134,11,.06), rgba(139,69,19,.04)); border-top:1px solid var(--line-strong); border-bottom:1px solid var(--line-strong); margin:2rem 0 0;}
+.cta-box p{font-family:var(--serif); font-style:italic; font-size:1.05rem; color:var(--gold-pale);}
+html[data-lang="mr"] .cta-box p{font-family:var(--dev); font-style:normal;}
+.cta-box strong{color:var(--gold-bright); font-weight:600;}
+
+/* ============ FOOTER ============ */
+footer{background:var(--ink-850); border-top:1px solid var(--line); padding:3.2rem 1.6rem; text-align:center;}
+.foot-glyph{font-size:2.1rem; margin-bottom:1rem; display:block; opacity:.9; color:var(--gold);}
+.foot-title{font-family:var(--serif); font-size:1.15rem; color:var(--gold-bright); margin-bottom:.5rem;}
+html[data-lang="mr"] .foot-title{font-family:var(--dev);}
+.foot-sub{font-size:.95rem; color:var(--paper-dim); margin-bottom:1.6rem; max-width:480px; margin-left:auto; margin-right:auto; line-height:1.65;}
+.foot-links{display:flex; gap:1.6rem; justify-content:center; flex-wrap:wrap; margin-bottom:2rem;}
+.foot-links a{color:var(--paper-dim); text-decoration:none; font-size:.85rem; letter-spacing:.08em; text-transform:uppercase; transition:color .2s;}
+.foot-links a:hover{color:var(--gold-bright);}
+.foot-copy{font-size:.88rem; color:var(--paper-dim); line-height:1.8;}
+
+/* ============ BOOK / GRANTHMAALA SECTION ============ */
+.book-hero{
+  background:linear-gradient(180deg, var(--ink-850) 0%, var(--ink-950) 100%);
+  border-bottom:1px solid var(--line); padding:3rem 1.6rem 2rem; text-align:center;
+}
+.book-series-label{
+  font-size:.72rem; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); 
+  margin-bottom:.5rem; display:block;
+}
+.book-series-title{
+  font-family:var(--dev); font-size:clamp(1.3rem,3vw,2rem); color:var(--paper); 
+  font-weight:700; line-height:1.4; margin-bottom:.4rem;
+}
+.book-series-sub{
+  font-family:var(--dev); font-size:1rem; color:var(--paper-dim); margin-bottom:1.2rem;
+}
+.book-about{
+  font-family:var(--dev); font-size:.95rem; color:var(--paper-dim); 
+  max-width:620px; margin:0 auto; line-height:1.75;
+}
+.book-grid{
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(320px,1fr));
+  gap:1px; background:var(--line); margin:2rem 0; border-radius:var(--r-lg);
+  overflow:hidden; border:1px solid var(--line);
+}
+.book-card{
+  background:var(--ink-900); padding:1.7rem; position:relative;
+  transition:background .25s; display:flex; flex-direction:column; gap:.5rem;
+}
+.book-card:hover{background:var(--ink-850);}
+.book-card::before{
+  content:''; position:absolute; left:0; top:0; bottom:0; width:3px;
+  background:var(--gold-bright); opacity:.5; transition:opacity .25s;
+}
+.book-card:hover::before{opacity:1;}
+.book-card-row{display:flex; justify-content:space-between; align-items:flex-start; gap:.8rem;}
+.book-chapter-num{
+  font-family:var(--serif); font-size:.72rem; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--rust-bright); margin-bottom:.3rem; display:block;
+}
+.book-chapter-era{
+  font-size:.72rem; color:var(--paper-mute); font-style:italic; margin-bottom:.3rem;
+}
+html[data-lang="mr"] .book-chapter-era{font-style:normal; font-family:var(--dev);}
+.book-chapter-title{
+  font-family:var(--dev); font-size:1.15rem; font-weight:700; color:var(--gold-bright);
+  line-height:1.4; margin-bottom:.2rem;
+}
+.book-chapter-subtitle{
+  font-family:var(--dev); font-size:.9rem; color:var(--paper-dim); line-height:1.6;
+}
+.book-dl-btn{
+  display:inline-flex; align-items:center; gap:.5rem; padding:.5rem 1.1rem;
+  border:1px solid var(--line-strong); border-radius:999px; background:rgba(184,134,11,.06);
+  color:var(--gold); font-size:.78rem; letter-spacing:.06em; text-decoration:none;
+  transition:all .25s; cursor:pointer; flex-shrink:0; margin-top:.3rem; align-self:flex-start;
+  font-family:var(--body);
+}
+.book-dl-btn:hover{background:rgba(201,161,76,.12); border-color:var(--gold); transform:translateY(-1px);}
+.book-appendix-row{
+  display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line);
+  border-radius:var(--r-md); overflow:hidden; border:1px solid var(--line); margin-top:2rem;
+}
+.book-appendix-card{
+  background:var(--ink-850); padding:1.4rem; transition:background .25s;
+}
+.book-appendix-card:hover{background:var(--ink-800);}
+.book-appendix-label{
+  font-size:.7rem; letter-spacing:.2em; text-transform:uppercase; color:var(--paper-mute);
+  margin-bottom:.4rem; display:block;
+}
+.book-appendix-title{
+  font-family:var(--dev); font-size:1rem; font-weight:600; color:var(--paper); margin-bottom:.3rem;
+}
+.book-appendix-desc{
+  font-family:var(--dev); font-size:.85rem; color:var(--paper-dim); line-height:1.6; margin-bottom:.7rem;
+}
+.book-notice{
+  background:rgba(184,134,11,.06); border:1px solid var(--line-strong); border-radius:var(--r-md);
+  padding:1.2rem 1.5rem; text-align:center; margin-top:2rem;
+  font-family:var(--dev); font-size:.9rem; color:var(--paper-dim); line-height:1.7;
+}
+.book-notice strong{color:var(--gold-bright);}
+@media(max-width:560px){
+  .book-appendix-row{grid-template-columns:1fr;}
+  .book-card-row{flex-direction:column;}
+}
+
+/* ============ SCROLL TOP ============ */
+.scrolltop{
+  position:fixed; bottom:1.8rem; right:1.8rem; width:46px; height:46px; border-radius:50%;
+  background:var(--gold-bright); color:#F7F3EC; border:none; cursor:pointer; font-size:1.1rem;
+  display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none;
+  transition:opacity .3s, transform .2s; box-shadow:0 4px 16px rgba(0,0,0,.4); z-index:150;
+}
+.scrolltop.show{opacity:1; pointer-events:auto;}
+.scrolltop:hover{transform:translateY(-3px);}
+
+/* ============ MOBILE ============ */
+@media (max-width:760px){
+  nav{padding:0 .8rem; height:auto; min-height:64px; flex-wrap:wrap; row-gap:.5rem; padding-top:.6rem; padding-bottom:.6rem;}
+  .brand{font-size:.92rem;}
+  .brand span:not(.wheel){white-space:nowrap;}
+  .navlinks{display:none; position:absolute; top:100%; left:0; right:0; flex-direction:column; background:rgba(14,11,7,.98); border-bottom:1px solid var(--line); padding:.8rem; box-shadow:0 8px 24px rgba(0,0,0,.4);}
+  .navlinks.open{display:flex;}
+  .navlinks button{text-align:left; padding:.65rem .8rem;}
+  .navtoggle{display:block; order:3;}
+  .lang-toggle{order:2; flex-shrink:0;}
+  .lang-toggle button{padding:.4rem .8rem; font-size:.8rem;}
+  nav > div{display:flex; align-items:center; gap:.6rem; flex-shrink:0;}
+  .shead, .timeline, .teach-grid, .stages, .story-grid, .rival-grid, .modern-grid{padding-left:0; padding-right:0;}
+  .tl-rail{padding-left:2rem;}
+  .tl-item::before{left:-2rem;}
+  .stage{grid-template-columns:46px 1fr;}
+  .stage:not(:last-child)::after{left:22px;}
+  .stage-body{margin-left:.8rem;}
+}
+
+@media (max-width:420px){
+  .brand span:not(.wheel){font-size:.85rem;}
+  .lang-toggle button{padding:.35rem .65rem; font-size:.74rem;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="brand" onclick="goPage('home')"><span class="wheel">☸</span><span lang-en>Buddha &amp; His Dhamma</span><span lang-mr>बुद्ध आणि धम्म</span></a>
+  <ul class="navlinks" id="navlinks">
+    <li><button onclick="goPage('home')" class="active" data-p="home"><span lang-en>Home</span><span lang-mr>मुख्यपृष्ठ</span></button></li>
+    <li><button onclick="goPage('life')" data-p="life"><span lang-en>Life</span><span lang-mr>जीवन</span></button></li>
+    <li><button onclick="goPage('teachings')" data-p="teachings"><span lang-en>Teachings</span><span lang-mr>शिकवण</span></button></li>
+    <li><button onclick="goPage('path')" data-p="path"><span lang-en>Path</span><span lang-mr>मार्ग</span></button></li>
+    <li><button onclick="goPage('stories')" data-p="stories"><span lang-en>Stories</span><span lang-mr>कथा</span></button></li>
+    <li><button onclick="goPage('era')" data-p="era"><span lang-en>Era</span><span lang-mr>कालखंड</span></button></li>
+    <li><button onclick="goPage('today')" data-p="today"><span lang-en>Today</span><span lang-mr>आज</span></button></li>
+    <li><button onclick="goPage('book')" data-p="book" style="color:var(--gold-bright);"><span lang-en>☸ Journey</span><span lang-mr>☸ इतिहास</span></button></li>
+  </ul>
+  <div style="display:flex; align-items:center; gap:.6rem;">
+    <div class="lang-toggle">
+      <button id="btnEN" class="active" onclick="setLang('en')">EN</button>
+      <button id="btnMR" onclick="setLang('mr')">मर</button>
+    </div>
+    <button id="themeBtn" onclick="toggleTheme()" title="Toggle light/dark mode" style="
+      width:36px; height:36px; border-radius:50%; border:1.5px solid var(--line-strong);
+      background:var(--ink-900); color:var(--paper-dim); font-size:1rem; cursor:pointer;
+      display:flex; align-items:center; justify-content:center; flex-shrink:0;
+      transition:all .25s;
+    ">☀️</button>
+    <button class="navtoggle" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+  </div>
+</nav>
+
+<!-- ============ HOME ============ -->
+<div class="page active" id="page-home">
+  <div class="hero">
+    <div class="hero-rays"></div>
+    <div class="hero-content">
+      <p class="eyebrow">तथागत &nbsp;·&nbsp; <span lang-en>Tathāgata · The Awakened One</span><span lang-mr>जे जागे झाले</span></p>
+      <span class="dharma-glyph">☸</span>
+      <h1 class="serif-head">
+        <span lang-en class="block">Buddha <em>&amp;</em><br>His Dhamma</span>
+        <span lang-mr class="block">बुद्ध <em>आणि</em><br>त्यांचा धम्म</span>
+      </h1>
+      <p class="sub"><span lang-en>The Way of the Awakened</span><span lang-mr>जागृत झालेल्यांचा मार्ग</span></p>
+      <div class="hr-thin"></div>
+      <blockquote class="hero-verse">
+        <span lang-en>"Even death is not to be feared<br>by one who has lived wisely."<cite>— Dhammapada</cite></span>
+        <span lang-mr>"जो शहाणपणाने जगला, त्याला<br>मृत्यूचीही भीती वाटत नाही."<cite>— धम्मपद</cite></span>
+      </blockquote>
+      <div class="chip-row">
+        <div class="chip" onclick="goPage('life')"><span lang-en>① Life of Siddhartha</span><span lang-mr>① सिद्धार्थाचे जीवन</span></div>
+        <div class="chip" onclick="goPage('teachings')"><span lang-en>② Core Teachings</span><span lang-mr>② मुख्य शिकवण</span></div>
+        <div class="chip" onclick="goPage('path')"><span lang-en>③ Path to Enlightenment</span><span lang-mr>③ ज्ञानप्राप्तीचा मार्ग</span></div>
+        <div class="chip" onclick="goPage('stories')"><span lang-en>④ Buddhist Stories</span><span lang-mr>④ बौद्ध कथा</span></div>
+        <div class="chip" onclick="goPage('era')"><span lang-en>⑤ Buddha's Era</span><span lang-mr>⑤ बुद्धकालीन युग</span></div>
+        <div class="chip" onclick="goPage('today')"><span lang-en>⑥ Dhamma Today</span><span lang-mr>⑥ आजचा धम्म</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="banner">
+    <p class="banner-quote"><span lang-en>"The mind is everything. What you think, you become."</span><span lang-mr>"मन हेच सर्वस्व आहे. तुम्ही जे विचार करता, तेच तुम्ही बनता."</span></p>
+    <p class="banner-cite">Dhammapada · धम्मपद</p>
+  </div>
+
+  <div class="overview-grid">
+    <div class="ov-card" onclick="goPage('life')">
+      <span class="ov-glyph">📿</span>
+      <div class="ov-title"><span lang-en>Life &amp; History</span><span lang-mr>जीवन आणि इतिहास</span></div>
+      <div class="ov-desc"><span lang-en>From Lumbini to Kushinagar — nine defining moments</span><span lang-mr>लुंबिनीपासून कुशीनगरपर्यंत — नऊ महत्त्वाचे क्षण</span></div>
+    </div>
+    <div class="ov-card" onclick="goPage('teachings')">
+      <span class="ov-glyph">☸</span>
+      <div class="ov-title"><span lang-en>Core Teachings</span><span lang-mr>मुख्य शिकवण</span></div>
+      <div class="ov-desc"><span lang-en>Noble Truths, Eightfold Path, and the nature of mind</span><span lang-mr>आर्यसत्ये, अष्टांगिक मार्ग आणि मनाचे स्वरूप</span></div>
+    </div>
+    <div class="ov-card" onclick="goPage('path')">
+      <span class="ov-glyph">🌿</span>
+      <div class="ov-title"><span lang-en>Path to Awakening</span><span lang-mr>ज्ञानप्राप्तीचा मार्ग</span></div>
+      <div class="ov-desc"><span lang-en>Six stages of the inner journey to Bodhi</span><span lang-mr>बोधीप्राप्तीच्या अंतर्गत प्रवासाचे सहा टप्पे</span></div>
+    </div>
+    <div class="ov-card" onclick="goPage('stories')">
+      <span class="ov-glyph">📖</span>
+      <div class="ov-title"><span lang-en>Stories</span><span lang-mr>कथा</span></div>
+      <div class="ov-desc"><span lang-en>Kisagotami, Angulimala, and other transformations</span><span lang-mr>किसागोतमी, अंगुलिमाल आणि इतर परिवर्तने</span></div>
+    </div>
+    <div class="ov-card" onclick="goPage('era')">
+      <span class="ov-glyph">🏛️</span>
+      <div class="ov-title"><span lang-en>Buddha's Era</span><span lang-mr>बुद्धकालीन युग</span></div>
+      <div class="ov-desc"><span lang-en>Six rival philosophical schools of 500 BCE</span><span lang-mr>इ.स.पू. ५०० मधील सहा प्रतिस्पर्धी विचारधारा</span></div>
+    </div>
+    <div class="ov-card" onclick="goPage('today')">
+      <span class="ov-glyph">🌍</span>
+      <div class="ov-title"><span lang-en>Dhamma Today</span><span lang-mr>आजचा धम्म</span></div>
+      <div class="ov-desc"><span lang-en>Ancient wisdom for anxiety, anger, and modern life</span><span lang-mr>चिंता, राग आणि आधुनिक जीवनासाठी प्राचीन शहाणपण</span></div>
+    </div>
+    <div class="ov-card" onclick="goPage('book')" style="background:rgba(184,134,11,.06); border-top:2px solid var(--gold-bright);">
+      <span class="ov-glyph">📚</span>
+      <div class="ov-title" style="color:var(--gold-bright);"><span lang-en>Journey of Buddhism</span><span lang-mr>बौद्ध धर्माचा इतिहास</span></div>
+      <div class="ov-desc"><span lang-en>भारतीय उपखंडातील बौद्ध धर्माचा इतिहास — 8 chapters + appendices</span><span lang-mr>भारतीय उपखंडातील बौद्ध धर्माचा इतिहास — ८ प्रकरणे + परिशिष्टे</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ LIFE ============ -->
+<div class="page" id="page-life">
+  <div class="shead"><div class="shead-inner">
+    <p class="s-label"><span lang-en>Chapter I</span><span lang-mr>अध्याय १</span></p>
+    <h2 class="s-title"><span lang-en>Life of <em>Siddhartha</em></span><span lang-mr>सिद्धार्थाचे <em>जीवन</em></span></h2>
+    <div class="s-line"></div>
+    <p class="s-intro"><span lang-en>From a royal palace in the Himalayan foothills to the forests of Magadha — the journey of one man who sought the truth about suffering and found liberation. Click any event to read its full context.</span><span lang-mr>हिमालयाच्या पायथ्याशी असलेल्या एका राजवाड्यापासून मगधाच्या जंगलापर्यंत — दुःखाचे सत्य शोधून मुक्ती मिळवलेल्या एका माणसाचा प्रवास. संपूर्ण माहितीसाठी कोणत्याही घटनेवर क्लिक करा.</span></p>
+  </div></div>
+
+  <div class="content-wrap"><div class="timeline"><div class="tl-rail">
+
+    <div class="tl-item">
+      <div class="tl-card" onclick="this.parentElement.classList.toggle('open')">
+        <p class="tl-date"><span class="tl-num">01</span><span lang-en>c. 563 BCE · Lumbini, Shakya Republic</span><span lang-mr>इ.स.पू. ५६३ · लुंबिनी, शाक्य गणराज्य</span></p>
+        <h3 class="tl-title"><span lang-en>Birth of Siddhartha Gautama</span><span lang-mr>सिद्धार्थ गौतमाचा जन्म</span></h3>
+        <p class="tl-desc"><span lang-en>Born in Lumbini to King Suddhodana and Queen Maya Devi of the Shakya clan. The sage Asita prophesied he would become either a great king or a fully Awakened One.</span><span lang-mr>शाक्य वंशाचे राजे शुद्धोधन आणि राणी मायादेवी यांच्या पोटी लुंबिनी येथे जन्म झाला. ऋषी असितांनी भविष्य वर्तवले — हा मुलगा एकतर महान चक्रवर्ती राजा होईल किंवा पूर्णपणे जागलेला बुद्ध.</span></p>
+        <div class="tl-more">
+          <p class="tl-quote"><span lang-en>"There is born at Kapilavastu a child who shall become the Awakened One." — Nidānakathā tradition</span><span lang-mr>"कपिलवस्तूमध्ये एक मूल जन्मले आहे जो जागृत झालेला बनेल." — निदानकथा परंपरा</span></p>
+          <p class="tl-extra-text"><span lang-en>Tradition holds that Queen Maya died seven days after the birth, and Siddhartha was raised by her sister, Mahapajapati Gotami, who became his foster mother. The birth is said to have occurred in a grove of sal trees, with the infant immediately able to stand and take seven steps — a detail found in later biographical texts rather than the earliest suttas, which focus more on his life as an adult ascetic.</span><span lang-mr>परंपरेनुसार, राणी मायादेवी प्रसूतीनंतर सात दिवसांत मरण पावल्या आणि सिद्धार्थाचे संगोपन त्यांची बहीण महाप्रजापती गोतमी यांनी केले, ज्या त्यांच्या पालक माता बनल्या. जन्म शाल वृक्षांच्या बागेत झाला असे सांगितले जाते. नवजात बालक लगेच उभे राहून सात पावले चालले अशी कथा नंतरच्या चरित्रात्मक ग्रंथांमध्ये आढळते — सर्वात प्राचीन सुत्तांमध्ये मात्र त्यांच्या प्रौढ तपस्वी जीवनावर अधिक भर दिला आहे.</span></p>
+        </div>
+        <span class="expand-btn"><span class="lbl"></span><span class="arrow">▾</span></span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-card" onclick="this.parentElement.classList.toggle('open')">
+        <p class="tl-date"><span class="tl-num">02</span><span lang-en>c. 547–531 BCE · Kapilavastu, Palace</span><span lang-mr>इ.स.पू. ५४७–५३१ · कपिलवस्तू, राजवाडा</span></p>
+        <h3 class="tl-title"><span lang-en>Palace Life &amp; The Sheltered Prince</span><span lang-mr>राजवाड्यातील जीवन आणि संरक्षित राजकुमार</span></h3>
+        <p class="tl-desc"><span lang-en>King Suddhodana, fearing the prophecy of renunciation, shielded Siddhartha from all suffering — surrounding him with beauty, music, and luxury. He married Yasodhara and had a son, Rahula. Yet beneath abundance, a restlessness grew.</span><span lang-mr>संन्यासाच्या भविष्यवाणीची भीती बाळगून, राजा शुद्धोधनांनी सिद्धार्थाला सर्व प्रकारच्या दुःखापासून दूर ठेवले — सौंदर्य, संगीत आणि वैभवाने वेढून. त्यांनी यशोधरेशी विवाह केला आणि राहुल नावाचा पुत्र झाला. परंतु या वैभवाखाली एक अस्वस्थता वाढत होती.</span></p>
+        <div class="tl-more">
+          <p class="tl-extra-text"><span lang-en>Buddhist tradition describes three palaces built for each season, and that the king ordered all signs of old age, sickness, and death kept far from the prince's sight — even instructing that anyone elderly or unwell be removed from his path. This deliberate isolation, the texts suggest, only deepened the eventual shock of the Four Sights, since Siddhartha had no prior frame of reference for suffering at all.</span><span lang-mr>बौद्ध परंपरेनुसार प्रत्येक ऋतूसाठी एक असे तीन राजवाडे बांधले गेले होते, आणि राजांनी म्हातारपण, आजारपण आणि मृत्यूची कोणतीही चिन्हे राजकुमाराच्या दृष्टीपासून दूर ठेवण्याचा आदेश दिला होता — अगदी वृद्ध किंवा आजारी व्यक्तींना त्यांच्या मार्गातून हटवण्याचाही आदेश होता. या जाणीवपूर्वक केलेल्या अलिप्ततेमुळेच चार दृश्यांचा धक्का अधिक तीव्र झाला, कारण सिद्धार्थाला दुःखाची आधी काहीच कल्पना नव्हती.</span></p>
+        </div>
+        <span class="expand-btn"><span class="arrow">▾</span></span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-card" onclick="this.parentElement.classList.toggle('open')">
+        <p class="tl-date"><span class="tl-num">03</span><span lang-en>c. 531 BCE · City Gates of Kapilavastu</span><span lang-mr>इ.स.पू. ५३१ · कपिलवस्तूचे प्रवेशद्वार</span></p>
+        <h3 class="tl-title"><span lang-en>The Four Sights</span><span lang-mr>चार दृश्ये</span></h3>
+        <p class="tl-desc"><span lang-en>On four chariot excursions, Siddhartha encountered what his father had concealed: an old man bent with age, a person ravaged by disease, a corpse being carried to cremation, and finally a wandering ascetic with a peaceful, luminous face. These four sights shattered his sheltered world.</span><span lang-mr>चार रथयात्रांमध्ये, सिद्धार्थाने त्या गोष्टी पाहिल्या ज्या त्यांच्या वडिलांनी लपवल्या होत्या: वार्धक्याने वाकलेला एक वृद्ध, आजाराने पिचलेला माणूस, अंत्यसंस्कारासाठी नेले जात असलेले प्रेत, आणि अखेरीस शांत व तेजस्वी चेहऱ्याचा एक भटकणारा तपस्वी. या चार दृश्यांनी त्यांचे सुरक्षित जग उद्ध्वस्त केले.</span></p>
+        <div class="tl-more">
+          <p class="tl-quote"><span lang-en>"If there is birth, there is aging. If there is aging, there is sickness. If there is sickness, there is death. This is the nature of the conditioned world."</span><span lang-mr>"जन्म असेल तर म्हातारपण आहे. म्हातारपण असेल तर आजार आहे. आजार असेल तर मृत्यू आहे. हेच संस्कृत जगाचे स्वरूप आहे."</span></p>
+          <p class="tl-extra-text"><span lang-en>The charioteer Channa explained each sight to the increasingly troubled prince. The fourth sight — the calm ascetic — is what gave Siddhartha a glimpse of a possible response to suffering, planting the idea that a deliberate spiritual path might exist beyond mere endurance of decay and death.</span><span lang-mr>सारथी चन्न यांनी प्रत्येक दृश्य वाढत्या व्यथित राजकुमाराला समजावले. चौथे दृश्य — शांत तपस्वी — यामुळेच सिद्धार्थाला दुःखाला प्रतिसाद देण्याची एक शक्यता दिसली, आणि क्षय व मृत्यू केवळ सहन करण्याऐवजी एक जाणीवपूर्वक आध्यात्मिक मार्ग असू शकतो ही कल्पना रुजली.</span></p>
+        </div>
+        <span class="expand-btn"><span class="arrow">▾</span></span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-card" onclick="this.parentElement.classList.toggle('open')">
+        <p class="tl-date"><span class="tl-num">04</span><span lang-en>c. 531 BCE · The Great Renunciation</span><span lang-mr>इ.स.पू. ५३१ · महाप्रस्थान</span></p>
+        <h3 class="tl-title"><span lang-en>The Great Departure (Mahābhinishkramaṇa)</span><span lang-mr>महाभिनिष्क्रमण</span></h3>
+        <p class="tl-desc"><span lang-en>At age 29, in the dead of night, Siddhartha gazed at his sleeping wife and infant son one last time. He then rode out of Kapilavastu on his horse Kanthaka with his charioteer Channa — leaving behind kingdom, family, and comfort in search of the truth of suffering.</span><span lang-mr>वयाच्या २९ व्या वर्षी, मध्यरात्री, सिद्धार्थाने झोपलेल्या पत्नी आणि अर्भक पुत्राकडे शेवटचे पाहिले. नंतर ते आपला घोडा कंथक आणि सारथी चन्न यांच्यासोबत कपिलवस्तू सोडून निघाले — राज्य, कुटुंब आणि सुखसोयी मागे सोडून दुःखाच्या सत्याच्या शोधात.</span></p>
+        <div class="tl-more">
+          <p class="tl-extra-text"><span lang-en>Traditional accounts describe this departure as occurring with quiet ceremony rather than dramatic escape — the palace gates are said to have opened silently, and the gods themselves muffled the horse's hooves. Whatever the literal truth, the symbolic weight is clear: this was a deliberate, considered renunciation of every form of worldly security, undertaken precisely because Siddhartha had everything a person could want and still found it insufficient against the fact of mortality.</span><span lang-mr>पारंपरिक कथांनुसार हे प्रस्थान नाट्यमय पलायन नव्हे तर शांत विधीपूर्वक झाले — राजवाड्याचे दरवाजे शांतपणे उघडले गेले आणि देवांनीच घोड्याच्या पावलांचा आवाज दबवला, असे सांगितले जाते. शब्दशः सत्य काहीही असो, याचे प्रतीकात्मक महत्त्व स्पष्ट आहे: ही एक जाणीवपूर्वक, विचारपूर्वक केलेली सर्व प्रकारच्या जागतिक सुरक्षिततेची त्याग होती — आणि हे तेव्हाच घडले जेव्हा सिद्धार्थाकडे माणसाला हवे असणारे सर्वकाही होते, आणि तरीही ते मृत्यूच्या सत्यासमोर अपुरे वाटले.</span></p>
+        </div>
+        <span class="expand-btn"><span class="arrow">▾</span></span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-card" onclick="this.parentElement.classList.toggle('open')">
+        <p class="tl-date"><span class="tl-num">05</span><span lang-en>c. 531–525 BCE · Forests of Magadha</span><span lang-mr>इ.स.पू. ५३१–५२५ · मगधाची जंगले</span></p>
+        <h3 class="tl-title"><span lang-en>Seeking &amp; Asceticism</span><span lang-mr>शोध आणि तपश्चर्या</span></h3>
+        <p class="tl-desc"><span lang-en>Siddhartha studied under two renowned meditation teachers — Alara Kalama and Uddaka Ramaputta — mastering their highest meditative attainments. Finding these insufficient for liberation, he joined five ascetics in the Uruvela forest and practised severe mortification for nearly six years, nearly dying.</span><span lang-mr>सिद्धार्थांनी दोन प्रसिद्ध ध्यान गुरूंकडून — आळार कालाम आणि उद्दक रामपुत्त — शिक्षण घेतले आणि त्यांच्या सर्वोच्च ध्यानावस्था प्राप्त केल्या. या अवस्था मुक्तीसाठी अपुऱ्या असल्याचे जाणवल्यावर, ते उरुवेला जंगलातील पाच तपस्व्यांसोबत सामील झाले आणि सुमारे सहा वर्षे कठोर तपश्चर्या केली — मृत्यूच्या जवळ जाऊन.</span></p>
+        <div class="tl-more">
+          <p class="tl-extra-text"><span lang-en>Both teachers told Siddhartha he had attained their own level of realization and invited him to lead their communities — yet he recognized that even the highest formless meditative states (the "sphere of nothingness" and "neither perception nor non-perception") were temporary mental states that did not uproot craving permanently. His subsequent ascetic phase was reportedly so extreme that, according to later texts, his ribs became visible like the rafters of an old shed, and he was at one point mistaken for dead by a passing herdsman.</span><span lang-mr>दोन्ही गुरूंनी सिद्धार्थाला सांगितले की त्यांनी त्यांच्याच पातळीची साक्षात्कार प्राप्त केली आहे आणि त्यांना त्यांच्या समुदायांचे नेतृत्व करण्याची विनंती केली — परंतु सिद्धार्थांना जाणवले की सर्वोच्च निराकार ध्यानावस्थाही ("शून्यता क्षेत्र" आणि "ना संज्ञा ना असंज्ञा") तात्पुरत्या मानसिक अवस्था होत्या ज्या तृष्णेला कायमचे उपटून काढत नव्हत्या. त्यांचा त्यानंतरचा तपस्वी कालखंड इतका तीव्र होता की नंतरच्या ग्रंथांनुसार त्यांच्या पाठीच्या कण्या जुन्या झोपडीच्या तुळ्यांसारख्या दिसू लागल्या, आणि एका प्रसंगी जवळून जाणाऱ्या गुराख्याने त्यांना मृत समजले.</span></p>
+        </div>
+        <span class="expand-btn"><span class="arrow">▾</span></span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-card" onclick="this.parentElement.classList.toggle('open')">
+        <p class="tl-date"><span class="tl-num">06</span><span lang-en>c. 525 BCE · Bodh Gaya</span><span lang-mr>इ.स.पू. ५२५ · बोधगया</span></p>
+        <h3 class="tl-title"><span lang-en>Enlightenment under the Bodhi Tree</span><span lang-mr>बोधिवृक्षाखाली ज्ञानप्राप्ती</span></h3>
+        <p class="tl-desc"><span lang-en>Abandoning extreme asceticism for the Middle Way, Siddhartha sat beneath a sacred fig tree at Bodh Gaya, vowing not to rise until he attained liberation. After a night of profound meditation — passing through the four jhanas, recollecting past lives, and penetrating the nature of dependent origination — he attained complete Awakening at dawn. He was 35 years old.</span><span lang-mr>अतिरेकी तपश्चर्या सोडून मध्यममार्ग स्वीकारत, सिद्धार्थ बोधगयेतील एका पवित्र पिंपळाच्या झाडाखाली बसले, मुक्ती मिळेपर्यंत न उठण्याची प्रतिज्ञा करून. खोल ध्यानाच्या एका रात्रीनंतर — चार ध्यानावस्थांमधून जात, पूर्वजन्मांची आठवण करत, आणि प्रतीत्यसमुत्पादाचे स्वरूप उमगत — पहाटे त्यांनी संपूर्ण ज्ञानप्राप्ती केली. त्यांचे वय होते ३५ वर्षे.</span></p>
+        <div class="tl-more">
+          <p class="tl-quote"><span lang-en>"I have found the ancient path, the ancient road, the old path that was trodden by the Perfectly Enlightened Ones of old." — Saṃyutta Nikāya</span><span lang-mr>"मी तो प्राचीन मार्ग शोधला, तो जुना रस्ता ज्यावर पूर्वीचे सम्यक संबुद्ध चालले होते." — संयुत्त निकाय</span></p>
+          <p class="tl-extra-text"><span lang-en>The texts describe three watches of the night: in the first, Siddhartha recollected his own countless past lives in detail; in the second, he perceived the arising and passing of all beings according to their karma (the "divine eye"); in the third watch, at dawn, he penetrated the chain of dependent origination and the Four Noble Truths directly, destroying the deepest roots of craving, aversion, and ignorance. Tradition also records a final confrontation with Mara, the personification of temptation and death, who attempted to disturb his resolve with fear, desire, and doubt in the moments before Awakening.</span><span lang-mr>ग्रंथांमध्ये त्या रात्रीच्या तीन प्रहरांचे वर्णन आहे: पहिल्या प्रहरात सिद्धार्थांना त्यांचे स्वतःचे असंख्य पूर्वजन्म तपशीलवार आठवले; दुसऱ्या प्रहरात त्यांनी सर्व प्राण्यांचे त्यांच्या कर्मानुसार जन्म-मृत्यू पाहिले ("दिव्य दृष्टी"); तिसऱ्या प्रहरात, पहाटे, त्यांनी प्रतीत्यसमुत्पादाची साखळी आणि चार आर्यसत्ये प्रत्यक्ष उमगली, ज्यामुळे तृष्णा, द्वेष आणि अज्ञानाची सर्वात गहन मुळे नष्ट झाली. परंपरेनुसार ज्ञानप्राप्तीच्या क्षणाआधी माराशी — मोह आणि मृत्यूचे प्रतीक — अंतिम सामना झाला, ज्याने भीती, इच्छा आणि शंका निर्माण करून त्यांचा निश्चय ढळवण्याचा प्रयत्न केला.</span></p>
+        </div>
+        <span class="expand-btn"><span class="arrow">▾</span></span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-card" onclick="this.parentElement.classList.toggle('open')">
+        <p class="tl-date"><span class="tl-num">07</span><span lang-en>c. 525 BCE · Sarnath (Isipatana)</span><span lang-mr>इ.स.पू. ५२५ · सारनाथ (इसिपतन)</span></p>
+        <h3 class="tl-title"><span lang-en>First Sermon — Dhammacakkappavattana Sutta</span><span lang-mr>पहिला उपदेश — धम्मचक्कप्पवत्तन सुत्त</span></h3>
+        <p class="tl-desc"><span lang-en>The Buddha walked to the Deer Park at Isipatana near Sarnath and taught his first discourse to the five ascetics who had been his former companions. He set in motion the Wheel of Dhamma — teaching the Four Noble Truths and the Noble Eightfold Path. This moment is known as the First Turning of the Wheel of Dhamma.</span><span lang-mr>बुद्ध सारनाथजवळील इसिपतन मृगदावात गेले आणि त्यांच्या पूर्वीच्या पाच साथीदार तपस्व्यांना पहिला उपदेश दिला. त्यांनी धम्मचक्र सुरू केले — चार आर्यसत्ये आणि अष्टांगिक मार्ग शिकवत. हा क्षण धम्मचक्राचे पहिले प्रवर्तन म्हणून ओळखला जातो.</span></p>
+        <div class="tl-more">
+          <p class="tl-extra-text"><span lang-en>The five ascetics initially refused to acknowledge him, having seen him as having abandoned the path when he accepted food after his austerities — but as he spoke, one of them, Kondanna, attained the first stage of stream-entry, prompting the Buddha to exclaim "Kondanna has understood! Kondanna has understood!" This is traditionally regarded as the moment the Sangha — the monastic community — first came into existence.</span><span lang-mr>पाच तपस्व्यांनी सुरुवातीला त्यांना ओळखण्यास नकार दिला, कारण तपश्चर्येनंतर अन्न स्वीकारल्यामुळे त्यांनी मार्ग सोडला असे त्यांना वाटले होते — परंतु बुद्ध बोलत असताना, त्यापैकी एक, कोंडण्ण, यांनी स्रोतापत्तीची पहिली अवस्था प्राप्त केली, ज्यामुळे बुद्ध उद्गारले "कोंडण्णाला समजले! कोंडण्णाला समजले!" हा क्षण परंपरेने संघाच्या — भिक्षु समुदायाच्या — पहिल्या स्थापनेचा क्षण मानला जातो.</span></p>
+        </div>
+        <span class="expand-btn"><span class="arrow">▾</span></span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-card" onclick="this.parentElement.classList.toggle('open')">
+        <p class="tl-date"><span class="tl-num">08</span><span lang-en>c. 525–483 BCE · Across the Gangetic Plain</span><span lang-mr>इ.स.पू. ५२५–४८३ · गंगेच्या मैदानात</span></p>
+        <h3 class="tl-title"><span lang-en>45 Years of Teaching &amp; The Sangha</span><span lang-mr>शिकवणीची ४५ वर्षे आणि संघ</span></h3>
+        <p class="tl-desc"><span lang-en>For 45 years, the Buddha walked barefoot across the kingdoms of Magadha, Kosala, Vajji, and beyond — teaching kings and commoners, Brahmins and outcasts, men and women equally. He established the Sangha, ordained the first nuns (Bhikkhuni Sangha), and left behind thousands of discourses preserved in the Pali Canon.</span><span lang-mr>४५ वर्षे, बुद्ध मगध, कोसल, वज्जी आणि त्यापुढील राज्यांमध्ये अनवाणी पायी फिरले — राजे आणि सामान्य लोक, ब्राह्मण आणि अस्पृश्य, स्त्री-पुरुष या सर्वांना समानतेने शिकवले. त्यांनी संघाची स्थापना केली, पहिल्या भिक्षुणी संघाला दीक्षा दिली, आणि पाली त्रिपिटकात जतन केलेले हजारो उपदेश मागे ठेवले.</span></p>
+        <div class="tl-more">
+          <p class="tl-extra-text"><span lang-en>This was also a period of great institutional challenge. His cousin Devadatta attempted to split the Sangha and reportedly made several attempts on the Buddha's life. The Buddha's decision to ordain women, urged on by his foster mother Mahapajapati Gotami, was historically significant though the conditions attached to it (the eight garudhammas) remain a subject of considerable scholarly discussion regarding gender and institutional structure in early Buddhism.</span><span lang-mr>हा कालखंड मोठ्या संस्थात्मक आव्हानांचाही होता. त्यांचे चुलत बंधू देवदत्त यांनी संघात फूट पाडण्याचा प्रयत्न केला आणि अनेक वेळा बुद्धांच्या जीवावर हल्ला करण्याचा प्रयत्न केल्याचे सांगितले जाते. त्यांच्या पालक माता महाप्रजापती गोतमी यांच्या आग्रहाने स्त्रियांना दीक्षा देण्याचा निर्णय ऐतिहासिक दृष्टीने महत्त्वाचा होता, जरी त्याला जोडलेल्या आठ गरुधम्मांविषयी सुरुवातीच्या बौद्ध धर्मातील लिंगभाव आणि संस्थात्मक रचनेच्या संदर्भात विद्वानांमध्ये अजूनही चर्चा होते.</span></p>
+        </div>
+        <span class="expand-btn"><span class="arrow">▾</span></span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-card" onclick="this.parentElement.classList.toggle('open')">
+        <p class="tl-date"><span class="tl-num">09</span><span lang-en>c. 483 BCE · Kushinagar</span><span lang-mr>इ.स.पू. ४८३ · कुशीनगर</span></p>
+        <h3 class="tl-title"><span lang-en>Mahaparinirvana — The Final Passing</span><span lang-mr>महापरिनिर्वाण — अंतिम क्षण</span></h3>
+        <p class="tl-desc"><span lang-en>At age 80, the Buddha passed away at Kushinagar, lying between twin sala trees. His final words to his assembled disciples were among the most profound in all of Buddhist literature.</span><span lang-mr>वयाच्या ८० व्या वर्षी, बुद्धांनी कुशीनगरमध्ये दोन शाल वृक्षांच्या मध्ये देहत्याग केला. त्यांच्या जमलेल्या शिष्यांना दिलेले शेवटचे शब्द बौद्ध साहित्यातील सर्वात गहन विचारांपैकी आहेत.</span></p>
+        <div class="tl-more">
+          <p class="tl-quote"><span lang-en>"All conditioned things are impermanent. Work out your salvation with diligence." — Digha Nikaya, Mahaparinibbana Sutta</span><span lang-mr>"सर्व संस्कार अनित्य आहेत. प्रमादरहित होऊन तुमच्या मुक्तीसाठी प्रयत्न करा." — दीघ निकाय, महापरिनिब्बान सुत्त</span></p>
+          <p class="tl-extra-text"><span lang-en>According to tradition, the Buddha's final meal was offered by a blacksmith named Cunda and may have caused the illness leading to his death — yet the Buddha specifically asked that Cunda not be blamed, framing the meal as an act of merit rather than harm. His last recorded instruction to the Sangha was that the Dhamma and Vinaya (monastic discipline) themselves should serve as the teacher after his passing — there would be no single human successor.</span><span lang-mr>परंपरेनुसार, बुद्धांचे शेवटचे भोजन कुंद नावाच्या एका लोहाराने दिले होते आणि त्यामुळेच त्यांच्या मृत्यूस कारणीभूत आजार झाला असावा — परंतु बुद्धांनी विशेष आग्रहाने सांगितले की कुंदला दोष देऊ नये, आणि या भोजनाला हानीऐवजी पुण्यकर्म म्हणून मानले. संघाला दिलेली त्यांची शेवटची नोंदलेली सूचना होती की त्यांच्या मृत्यूनंतर धम्म आणि विनय (भिक्षु शिस्त) हेच गुरुस्थानी असतील — कोणताही एकमेव मानवी वारस असणार नाही.</span></p>
+        </div>
+        <span class="expand-btn"><span class="arrow">▾</span></span>
+      </div>
+    </div>
+
+  </div></div></div>
+</div>
+
+<!-- ============ TEACHINGS ============ -->
+<div class="page" id="page-teachings">
+  <div class="shead"><div class="shead-inner">
+    <p class="s-label"><span lang-en>Chapter II</span><span lang-mr>अध्याय २</span></p>
+    <h2 class="s-title"><span lang-en>Core <em>Teachings</em></span><span lang-mr>मुख्य <em>शिकवण</em></span></h2>
+    <div class="s-line"></div>
+    <p class="s-intro"><span lang-en>The Dhamma is not a dogma to be believed but a path to be walked. Click any card to explore.</span><span lang-mr>धम्म म्हणजे विश्वास ठेवण्याची गोष्ट नाही — तो जगण्याचा मार्ग आहे. प्रत्येक कार्डावर क्लिक करा.</span></p>
+  </div></div>
+
+  <div class="content-wrap"><div class="teach-grid">
+
+    <div class="teach-card" onclick="this.classList.toggle('open')">
+      <span class="teach-num">I</span>
+      <p class="teach-pali">Cattāri Ariyasaccāni</p>
+      <h3 class="teach-title"><span lang-en>The Four Noble Truths</span><span lang-mr>चार आर्यसत्ये</span></h3>
+      <p class="teach-desc"><span lang-en>The foundational diagnosis of the human condition.</span><span lang-mr>मानवी अस्तित्वाचे मूलभूत निदान.</span></p>
+      <div class="teach-more">
+        <ul class="eight-list">
+          <li><span class="e-num">1</span><div><span class="e-name"><span lang-en>Dukkha</span><span lang-mr>दुःख</span></span> — <span lang-en>Life is marked by dissatisfaction, impermanence, and the inability of conditioned things to fully satisfy.</span><span lang-mr>जीवन असमाधान, अनित्यता आणि संस्कृत गोष्टींच्या पूर्ण तृप्तीच्या असमर्थतेने चिन्हांकित आहे.</span></div></li>
+          <li><span class="e-num">2</span><div><span class="e-name"><span lang-en>Samudaya</span><span lang-mr>समुदय</span></span> — <span lang-en>Craving and clinging to sense pleasures, existence, and non-existence perpetuate the cycle.</span><span lang-mr>इंद्रिय सुख, अस्तित्व आणि अनस्तित्वाची तृष्णा आणि आसक्ती हे चक्र चालू ठेवतात.</span></div></li>
+          <li><span class="e-num">3</span><div><span class="e-name"><span lang-en>Nirodha</span><span lang-mr>निरोध</span></span> — <span lang-en>Nibbana — the complete letting go of craving — is realizable.</span><span lang-mr>निब्बान — तृष्णेचा संपूर्ण त्याग — साध्य आहे.</span></div></li>
+          <li><span class="e-num">4</span><div><span class="e-name"><span lang-en>Magga</span><span lang-mr>मग्ग</span></span> — <span lang-en>The Noble Eightfold Path leads to the end of suffering.</span><span lang-mr>अष्टांगिक मार्ग दुःखाच्या अंताकडे घेऊन जातो.</span></div></li>
+        </ul>
+        <p class="teach-foot-quote"><span lang-en>The Buddha compared himself to a physician: Dukkha is the diagnosis, Samudaya the cause, Nirodha the prognosis of a cure, and Magga the prescribed treatment — a deliberately clinical, non-mystical framing of spiritual practice.</span><span lang-mr>बुद्धांनी स्वतःला एका वैद्याशी तुलना केली: दुःख हे निदान आहे, समुदय हे कारण आहे, निरोध हे बरे होण्याचे भाकीत आहे, आणि मग्ग हे उपचार आहेत — आध्यात्मिक साधनेचे हे जाणीवपूर्वक वैद्यकीय, अतींद्रिय नसलेले मांडणी आहे.</span></p>
+      </div>
+    </div>
+
+    <div class="teach-card" onclick="this.classList.toggle('open')">
+      <span class="teach-num">II</span>
+      <p class="teach-pali">Ariya Aṭṭhaṅgika Magga</p>
+      <h3 class="teach-title"><span lang-en>The Noble Eightfold Path</span><span lang-mr>अष्टांगिक मार्ग</span></h3>
+      <p class="teach-desc"><span lang-en>Eight interconnected practices spanning wisdom, ethics, and mental cultivation.</span><span lang-mr>प्रज्ञा, शील आणि मनाच्या जोपासनेवर आधारित आठ परस्परसंबंधित साधना.</span></p>
+      <div class="teach-more">
+        <ul class="eight-list">
+          <li><span class="e-num">1</span><div><span class="e-name"><span lang-en>Right View</span><span lang-mr>सम्यक दृष्टी</span></span> — <span lang-en>Understanding the nature of reality, suffering, and the path.</span><span lang-mr>वास्तव, दुःख आणि मार्गाचे स्वरूप समजून घेणे.</span></div></li>
+          <li><span class="e-num">2</span><div><span class="e-name"><span lang-en>Right Intention</span><span lang-mr>सम्यक संकल्प</span></span> — <span lang-en>Intentions of renunciation, non-ill-will, and non-cruelty.</span><span lang-mr>त्याग, अद्वेष आणि अहिंसेचे संकल्प.</span></div></li>
+          <li><span class="e-num">3</span><div><span class="e-name"><span lang-en>Right Speech</span><span lang-mr>सम्यक वाणी</span></span> — <span lang-en>Truthful, kind, timely, and beneficial words.</span><span lang-mr>सत्य, दयाळू, योग्य वेळी आणि हितकारक शब्द.</span></div></li>
+          <li><span class="e-num">4</span><div><span class="e-name"><span lang-en>Right Action</span><span lang-mr>सम्यक कर्म</span></span> — <span lang-en>Non-harming, non-stealing, non-sexual misconduct.</span><span lang-mr>हिंसा न करणे, चोरी न करणे, अनैतिक संबंध न ठेवणे.</span></div></li>
+          <li><span class="e-num">5</span><div><span class="e-name"><span lang-en>Right Livelihood</span><span lang-mr>सम्यक आजीविका</span></span> — <span lang-en>Earning a living without harming others.</span><span lang-mr>इतरांना हानी न पोहोचवता उपजीविका करणे.</span></div></li>
+          <li><span class="e-num">6</span><div><span class="e-name"><span lang-en>Right Effort</span><span lang-mr>सम्यक प्रयत्न</span></span> — <span lang-en>Cultivating wholesome states; abandoning unwholesome ones.</span><span lang-mr>कुशल अवस्था जोपासणे; अकुशल अवस्था सोडणे.</span></div></li>
+          <li><span class="e-num">7</span><div><span class="e-name"><span lang-en>Right Mindfulness</span><span lang-mr>सम्यक स्मृती</span></span> — <span lang-en>Clear awareness of body, feelings, mind, and mental objects.</span><span lang-mr>शरीर, भावना, मन आणि मानसिक वस्तूंची स्पष्ट जाणीव.</span></div></li>
+          <li><span class="e-num">8</span><div><span class="e-name"><span lang-en>Right Concentration</span><span lang-mr>सम्यक समाधी</span></span> — <span lang-en>Developing deep, unified, tranquil states of mind (jhana).</span><span lang-mr>गहन, एकाग्र, शांत मनाच्या अवस्था (ध्यान) विकसित करणे.</span></div></li>
+        </ul>
+        <p class="teach-foot-quote"><span lang-en>The eight factors are traditionally grouped into three divisions: wisdom (view, intention), ethical conduct (speech, action, livelihood), and mental discipline (effort, mindfulness, concentration) — practised together, not in strict sequence.</span><span lang-mr>हे आठ घटक परंपरेने तीन विभागांत गटबद्ध केले जातात: प्रज्ञा (दृष्टी, संकल्प), शील (वाणी, कर्म, आजीविका), आणि समाधी (प्रयत्न, स्मृती, समाधी) — हे क्रमाने नव्हे, तर एकत्रितपणे साधले जातात.</span></p>
+      </div>
+    </div>
+
+    <div class="teach-card" onclick="this.classList.toggle('open')">
+      <span class="teach-num">III</span>
+      <p class="teach-pali">Tilakkhaṇa</p>
+      <h3 class="teach-title"><span lang-en>The Three Marks of Existence</span><span lang-mr>अस्तित्वाची तीन लक्षणे</span></h3>
+      <p class="teach-desc"><span lang-en>All conditioned phenomena share three universal characteristics.</span><span lang-mr>सर्व संस्कृत घटनांमध्ये तीन सार्वत्रिक गुणधर्म असतात.</span></p>
+      <div class="teach-more">
+        <ul class="eight-list">
+          <li><span class="e-num">1</span><div><span class="e-name"><span lang-en>Anicca</span><span lang-mr>अनिच्च</span></span> — <span lang-en>Impermanence: all phenomena arise and pass away.</span><span lang-mr>अनित्यता: सर्व घटना उत्पन्न होतात आणि नष्ट होतात.</span></div></li>
+          <li><span class="e-num">2</span><div><span class="e-name"><span lang-en>Dukkha</span><span lang-mr>दुक्ख</span></span> — <span lang-en>Unsatisfactoriness: clinging to impermanent things generates suffering.</span><span lang-mr>असमाधान: अनित्य गोष्टींना धरून राहिल्याने दुःख निर्माण होते.</span></div></li>
+          <li><span class="e-num">3</span><div><span class="e-name"><span lang-en>Anatta</span><span lang-mr>अनत्ता</span></span> — <span lang-en>Non-self: there is no permanent self underlying experience.</span><span lang-mr>अनात्म: अनुभवाच्या मुळाशी कोणताही स्थायी आत्मा नाही.</span></div></li>
+        </ul>
+        <p class="teach-foot-quote"><span lang-en>Anatta is the most philosophically distinctive of the Buddha's teachings relative to contemporaneous Indian thought, which generally posited an eternal soul (atman). The Buddha instead described the person as five aggregates — form, feeling, perception, mental formations, and consciousness — none of which, individually or together, constitute a fixed self.</span><span lang-mr>अनत्ता ही बुद्धांच्या शिकवणींपैकी समकालीन भारतीय विचारसरणीच्या तुलनेत सर्वाधिक तत्त्वज्ञानात्मक दृष्टीने वेगळी शिकवण आहे, जी सामान्यतः शाश्वत आत्म्याची (आत्मन) कल्पना मांडत होती. त्याऐवजी बुद्धांनी व्यक्तीला पाच स्कंधांच्या रूपात वर्णन केले — रूप, वेदना, संज्ञा, संस्कार, आणि विज्ञान — ज्यापैकी कोणताही, वैयक्तिक किंवा एकत्रितपणे, एक स्थिर आत्मा बनत नाही.</span></p>
+      </div>
+    </div>
+
+    <div class="teach-card" onclick="this.classList.toggle('open')">
+      <span class="teach-num">IV</span>
+      <p class="teach-pali">Paṭicca-samuppāda</p>
+      <h3 class="teach-title"><span lang-en>Dependent Origination</span><span lang-mr>प्रतीत्यसमुत्पाद</span></h3>
+      <p class="teach-desc"><span lang-en>How suffering arises through a chain of twelve interdependent conditions.</span><span lang-mr>बारा परस्परावलंबी कारणांच्या साखळीतून दुःख कसे उत्पन्न होते.</span></p>
+      <div class="teach-more">
+        <p style="font-size:.92rem;color:var(--paper-dim);line-height:1.75;margin-bottom:.8rem;">
+          <span lang-en>The twelve links: Ignorance → Formations → Consciousness → Mind-and-body → Six sense bases → Contact → Feeling → Craving → Clinging → Becoming → Birth → Aging-and-death.</span>
+          <span lang-mr>बारा कड्या: अविद्या → संस्कार → विज्ञान → नामरूप → सडायतन → स्पर्श → वेदना → तृष्णा → उपादान → भव → जाति → जरामरण.</span>
+        </p>
+        <p class="teach-foot-quote"><span lang-en>This is presented as a description of causality, not a linear timeline of one lifetime. Each link conditions the next, and — crucially for the Buddha's path — each link can also be broken: removing ignorance at the start collapses the entire chain, which is the theoretical basis for how the Eightfold Path leads to liberation.</span><span lang-mr>हे कार्यकारणतेचे वर्णन आहे, एका जन्माची सरळ रेषीय कालरेखा नाही. प्रत्येक कडी पुढच्या कडीला कारणीभूत होते, आणि — बुद्धांच्या मार्गासाठी महत्त्वाचे — प्रत्येक कडी तोडलीही जाऊ शकते: सुरुवातीला अविद्या नष्ट केल्याने संपूर्ण साखळी कोलमडते, हाच अष्टांगिक मार्ग मुक्तीकडे कसा घेऊन जातो याचा सैद्धांतिक आधार आहे.</span></p>
+      </div>
+    </div>
+
+    <div class="teach-card" onclick="this.classList.toggle('open')">
+      <span class="teach-num">V</span>
+      <p class="teach-pali">Brahmavihāra</p>
+      <h3 class="teach-title"><span lang-en>The Four Sublime States</span><span lang-mr>चार ब्रह्मविहार</span></h3>
+      <p class="teach-desc"><span lang-en>Four boundless qualities of heart that form the basis of compassionate engagement.</span><span lang-mr>करुणामय वर्तनाचा आधार बनणारे हृदयाचे चार असीम गुणधर्म.</span></p>
+      <div class="teach-more">
+        <ul class="eight-list">
+          <li><span class="e-num">1</span><div><span class="e-name"><span lang-en>Metta</span><span lang-mr>मेत्ता</span></span> — <span lang-en>Loving-kindness: unconditional goodwill toward all beings.</span><span lang-mr>मैत्री: सर्व प्राण्यांप्रती बिनशर्त सद्भावना.</span></div></li>
+          <li><span class="e-num">2</span><div><span class="e-name"><span lang-en>Karuna</span><span lang-mr>करुणा</span></span> — <span lang-en>Compassion: the wish for all beings to be free from suffering.</span><span lang-mr>करुणा: सर्व प्राणी दुःखमुक्त व्हावेत ही इच्छा.</span></div></li>
+          <li><span class="e-num">3</span><div><span class="e-name"><span lang-en>Mudita</span><span lang-mr>मुदिता</span></span> — <span lang-en>Sympathetic joy: genuine rejoicing in the happiness of others.</span><span lang-mr>मुदिता: इतरांच्या सुखातील खरा आनंद.</span></div></li>
+          <li><span class="e-num">4</span><div><span class="e-name"><span lang-en>Upekkha</span><span lang-mr>उपेक्खा</span></span> — <span lang-en>Equanimity: a balanced, even-minded response to all conditions.</span><span lang-mr>समता: सर्व परिस्थितींना समतोल प्रतिसाद.</span></div></li>
+        </ul>
+        <p class="teach-foot-quote"><span lang-en>These four are called "immeasurable" because traditional practice involves extending each quality outward in widening circles — to oneself, a loved one, a neutral person, a difficult person, and finally all beings without limit or exception.</span><span lang-mr>हे चार "अप्रमेय" म्हटले जातात कारण पारंपरिक साधनेत प्रत्येक गुण हळूहळू वाढत्या वर्तुळांत विस्तारला जातो — स्वतःपासून, प्रिय व्यक्तीपासून, तटस्थ व्यक्तीपासून, कठीण व्यक्तीपासून, आणि अखेरीस मर्यादा किंवा अपवाद नसलेल्या सर्व प्राण्यांपर्यंत.</span></p>
+      </div>
+    </div>
+
+    <div class="teach-card" onclick="this.classList.toggle('open')">
+      <span class="teach-num">VI</span>
+      <p class="teach-pali">Nibbāna</p>
+      <h3 class="teach-title"><span lang-en>Nibbana — Liberation</span><span lang-mr>निब्बान — मुक्ती</span></h3>
+      <p class="teach-desc"><span lang-en>The complete extinguishing of craving, aversion, and delusion.</span><span lang-mr>तृष्णा, द्वेष आणि मोहाचे संपूर्ण विसर्जन.</span></p>
+      <div class="teach-more">
+        <p style="font-size:.92rem;color:var(--paper-dim);line-height:1.75;margin-bottom:.8rem;">
+          <span lang-en>The word Nibbana literally means "blowing out" — the extinguishing of the fires of greed, hatred, and delusion. The Buddha refused to speculate on what happens "after" Nibbana, as such questions do not lead to liberation.</span>
+          <span lang-mr>निब्बान या शब्दाचा शब्दशः अर्थ "विझणे" असा आहे — लोभ, द्वेष आणि मोहाच्या ज्वाळा विझणे. निब्बानानंतर "काय होते" याबद्दल बुद्धांनी अंदाज बांधण्यास नकार दिला, कारण असे प्रश्न मुक्तीकडे घेऊन जात नाहीत.</span>
+        </p>
+        <p class="teach-foot-quote"><span lang-en>"There is, monks, an unborn, unbecome, unmade, unconditioned. Were there not that unborn, no escape would be seen from the born, the become, the made, the conditioned." — Udana 8.1. Tradition distinguishes Nibbana attained while still alive (with the body's aggregates remaining) from final Nibbana at death (Parinibbana), when no further rebirth occurs.</span><span lang-mr>"भिक्षूंनो, एक असजात, असंभूत, असंस्कृत, असंख्यात आहे. ते नसते तर जन्मलेल्या, झालेल्या, बनवलेल्या, संस्कृत गोष्टीतून सुटका दिसली नसती." — उदान ८.१. परंपरा जिवंत असताना प्राप्त झालेल्या निब्बानाला (शरीराचे स्कंध शिल्लक असताना) मृत्यूनंतरच्या अंतिम निब्बानापासून (परिनिब्बान) वेगळे मानते, ज्यानंतर पुनर्जन्म होत नाही.</span></p>
+      </div>
+    </div>
+
+  </div></div>
+</div>
+
+<!-- ============ PATH ============ -->
+<div class="page" id="page-path">
+  <div class="shead"><div class="shead-inner">
+    <p class="s-label"><span lang-en>Chapter III</span><span lang-mr>अध्याय ३</span></p>
+    <h2 class="s-title"><span lang-en>Path to <em>Enlightenment</em></span><span lang-mr>ज्ञानप्राप्तीचा <em>मार्ग</em></span></h2>
+    <div class="s-line"></div>
+    <p class="s-intro"><span lang-en>The inner journey from a sheltered prince to the Fully Awakened One — six years of searching the full spectrum of human experience before discovering the Middle Way.</span><span lang-mr>संरक्षित राजकुमारापासून पूर्ण जागृत बुद्धापर्यंतचा अंतर्गत प्रवास — मध्यममार्ग शोधण्याआधी सहा वर्षांचा मानवी अनुभवाचा संपूर्ण शोध.</span></p>
+  </div></div>
+
+  <div class="content-wrap"><div class="stages">
+
+    <div class="stage">
+      <div class="stage-num-col"><div class="stage-num">I</div></div>
+      <div class="stage-body" onclick="this.classList.toggle('open')">
+        <p class="stage-loc"><span lang-en>Kapilavastu · Age 29</span><span lang-mr>कपिलवस्तू · वय २९</span></p>
+        <h3 class="stage-title"><span lang-en>The Awakening of Conscience</span><span lang-mr>विवेकाची जागृती</span></h3>
+        <p class="stage-desc"><span lang-en>Encountering the Four Sights cracked open Siddhartha's consciousness. He could no longer unsee what he had seen. The comfortable life of the palace had become hollow. This inner awakening to dukkha was the first movement toward liberation. It is worth noting this wasn't a sudden conversion but the surfacing of a disquiet that, by tradition, had been building since childhood — including the episode of the wounded swan, which already showed an unusual sensitivity to suffering in others.</span><span lang-mr>चार दृश्यांचा सामना केल्यामुळे सिद्धार्थाच्या चेतनेत भेगा पडल्या. त्यांनी जे पाहिले ते आता न पाहिल्यासारखे करू शकत नव्हते. राजवाड्याचे सुखी जीवन पोकळ वाटू लागले. दुःखाची ही अंतर्गत जागृती मुक्तीच्या दिशेने पहिले पाऊल होते. हे लक्षात घेण्यासारखे आहे की ही अचानक झालेली परिवर्तन नव्हती, तर परंपरेनुसार बालपणापासूनच वाढत असलेल्या अस्वस्थतेचे प्रकटीकरण होते — ज्यात जखमी हंसाचा प्रसंगही समाविष्ट आहे, ज्यात इतरांच्या दुःखाबद्दल असामान्य संवेदनशीलता आधीच दिसून आली होती.</span></p>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-num-col"><div class="stage-num">II</div></div>
+      <div class="stage-body" onclick="this.classList.toggle('open')">
+        <p class="stage-loc"><span lang-en>Rajagaha &amp; Vesali · Age 29–30</span><span lang-mr>राजगृह आणि वैशाली · वय २९–३०</span></p>
+        <h3 class="stage-title"><span lang-en>Study Under the Masters</span><span lang-mr>गुरूंकडून शिक्षण</span></h3>
+        <p class="stage-desc"><span lang-en>Siddhartha sought out two celebrated teachers: Alara Kalama, who taught the attainment of "nothingness," and Uddaka Ramaputta, who taught the "sphere of neither perception nor non-perception." He mastered both states rapidly — yet both teachers admitted these attainments did not end rebirth or suffering. He moved on, declining their invitation to become a co-leader of their communities, since the goal was liberation itself, not status or institutional success.</span><span lang-mr>सिद्धार्थांनी दोन प्रसिद्ध गुरूंचा शोध घेतला: आळार कालाम, जे "शून्यतेची" अवस्था शिकवत होते, आणि उद्दक रामपुत्त, जे "ना संज्ञा ना असंज्ञा क्षेत्र" शिकवत होते. त्यांनी दोन्ही अवस्था लवकर प्राप्त केल्या — परंतु दोन्ही गुरूंनी मान्य केले की या अवस्था पुनर्जन्म किंवा दुःख संपवत नाहीत. त्यांनी पुढे जाण्याचा निर्णय घेतला, त्यांच्या समुदायांचे सह-नेतृत्व करण्याचे आमंत्रण नाकारले, कारण ध्येय मुक्ती होते, प्रतिष्ठा किंवा संस्थात्मक यश नव्हे.</span></p>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-num-col"><div class="stage-num">III</div></div>
+      <div class="stage-body" onclick="this.classList.toggle('open')">
+        <p class="stage-loc"><span lang-en>Uruvela Forest · Age 30–35</span><span lang-mr>उरुवेला जंगल · वय ३०–३५</span></p>
+        <h3 class="stage-title"><span lang-en>The Years of Extreme Asceticism</span><span lang-mr>अतिरेकी तपश्चर्येची वर्षे</span></h3>
+        <p class="stage-desc"><span lang-en>Joining five ascetics in the Uruvela forest, Siddhartha practised the most severe austerities — drastically reducing food, holding the breath until his head pounded, exposing himself to scorching heat and bitter cold. He reduced himself to a skeleton. His five companions believed he was close to truth. Yet he found that a withered body produced only a withered mind — no liberation. This phase is historically significant because it places the Buddha in direct dialogue with the broader sramana ascetic culture of his time, including practices closely resembling early Jain austerities.</span><span lang-mr>उरुवेला जंगलातील पाच तपस्व्यांसोबत सामील होऊन, सिद्धार्थांनी सर्वात कठोर तपश्चर्या केली — अन्न मोठ्या प्रमाणात कमी केले, डोके भणभणेपर्यंत श्वास रोखला, तीव्र उष्णता आणि कडक थंडी सहन केली. ते हाडांचा सापळा बनले. त्यांच्या पाच साथीदारांना वाटले की ते सत्याच्या जवळ आहेत. परंतु त्यांना जाणवले की कृश शरीर केवळ कृश मनच निर्माण करते — मुक्ती नाही. हा टप्पा ऐतिहासिक दृष्टीने महत्त्वाचा आहे कारण तो बुद्धांना त्यांच्या काळातील व्यापक श्रमण तपस्वी संस्कृतीशी, ज्यात सुरुवातीच्या जैन तपश्चर्येसारख्या साधनांचाही समावेश आहे, थेट संवादात ठेवतो.</span></p>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-num-col"><div class="stage-num">IV</div></div>
+      <div class="stage-body" onclick="this.classList.toggle('open')">
+        <p class="stage-loc"><span lang-en>Uruvela · The Turning Point</span><span lang-mr>उरुवेला · निर्णायक क्षण</span></p>
+        <h3 class="stage-title"><span lang-en>Discovering the Middle Way</span><span lang-mr>मध्यममार्गाचा शोध</span></h3>
+        <p class="stage-desc"><span lang-en>Near death from starvation, Siddhartha recalled a spontaneous meditative stillness he had experienced as a child under a rose-apple tree during a ploughing festival. That natural, effortless joy — not born of denial or indulgence — pointed to something real. He accepted milk-rice from Sujata, a village girl, and regained his strength. His five companions, thinking him spiritually fallen, abandoned him in disgust — a rejection that, while painful, freed him to find his own path without obligation to their approval.</span><span lang-mr>उपासमारीने मरणाच्या जवळ असताना, सिद्धार्थांना बालपणातील नांगरणी उत्सवाच्या वेळी जंबूच्या झाडाखाली अनुभवलेली एक उत्स्फूर्त ध्यानावस्था आठवली. ती नैसर्गिक, सहज आनंद — दमन किंवा भोगातून जन्मलेली नव्हे — काहीतरी खरे असल्याचे दर्शवत होती. त्यांनी सुजाता नावाच्या गाव मुलीकडून खीर स्वीकारली आणि शक्ती परत मिळवली. त्यांचे पाच साथीदार, त्यांना आध्यात्मिक दृष्टीने पडले समजून, तिरस्काराने त्यांना सोडून गेले — हा नकार वेदनादायी असला तरी त्यांना त्यांच्या मान्यतेच्या बंधनातून मुक्त करून स्वतःचा मार्ग शोधण्याची संधी दिली.</span></p>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-num-col"><div class="stage-num">V</div></div>
+      <div class="stage-body" onclick="this.classList.toggle('open')">
+        <p class="stage-loc"><span lang-en>Bodh Gaya · The Night of Awakening</span><span lang-mr>बोधगया · ज्ञानप्राप्तीची रात्र</span></p>
+        <h3 class="stage-title"><span lang-en>The Night under the Bodhi Tree</span><span lang-mr>बोधिवृक्षाखालील रात्र</span></h3>
+        <p class="stage-desc"><span lang-en>Alone, beneath the Bodhi tree, Siddhartha sat in firm resolve. The tradition records that through the night he passed through deep meditative absorptions (jhanas), recalled his past lives, perceived the arising and passing of all beings according to kamma, and penetrated the chain of dependent origination. He saw clearly the Four Noble Truths. At dawn, all craving ceased. He was fully Awake — a Sammā Sambuddha. The tradition's account of Mara's final assault — armies of fear, daughters of desire, and accusations of unworthiness — can be read as a psychologically precise depiction of exactly the obstacles meditators report at the threshold of deep insight.</span><span lang-mr>एकटे, बोधिवृक्षाखाली, सिद्धार्थ दृढ निश्चयाने बसले. परंपरेनुसार त्या रात्री ते गहन ध्यानावस्थांमधून (झान) गेले, त्यांचे पूर्वजन्म आठवले, कर्मानुसार सर्व प्राण्यांचे उत्पत्ती आणि विनाश पाहिले, आणि प्रतीत्यसमुत्पादाची साखळी उमगली. त्यांना चार आर्यसत्ये स्पष्टपणे दिसली. पहाटे, सर्व तृष्णा संपली. ते पूर्णपणे जागे झाले — सम्यक संबुद्ध. माराच्या अंतिम हल्ल्याची परंपरेची नोंद — भीतीच्या सेना, इच्छेच्या मुली, आणि अयोग्यतेचे आरोप — हे ध्यानधारकांना गहन अंतर्दृष्टीच्या उंबरठ्यावर येणाऱ्या नेमक्या अडचणींचे मानसशास्त्रीयदृष्ट्या सूक्ष्म वर्णन म्हणून वाचले जाऊ शकते.</span></p>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-num-col"><div class="stage-num">VI</div></div>
+      <div class="stage-body" onclick="this.classList.toggle('open')">
+        <p class="stage-loc"><span lang-en>Bodh Gaya · Seven Weeks Post-Awakening</span><span lang-mr>बोधगया · ज्ञानप्राप्तीनंतरचे सात आठवडे</span></p>
+        <h3 class="stage-title"><span lang-en>The Question of Teaching</span><span lang-mr>शिकवण्याचा प्रश्न</span></h3>
+        <p class="stage-desc"><span lang-en>The texts record that after his Awakening, the Buddha spent several weeks in the vicinity of the Bodhi tree in the bliss of liberation. He contemplated whether to teach — wondering if the profound truth he had realized could be understood by those deep in craving and delusion. According to the tradition, the deity Brahma Sahampati appealed to him: "There are beings with little dust in their eyes." Moved by compassion, the Buddha resolved to teach. This hesitation is theologically significant: it frames the Buddha's decision to teach not as automatic or obligatory, but as a free and deliberate act of compassion toward beings he had no further personal need to help.</span><span lang-mr>ग्रंथांमध्ये नोंद आहे की ज्ञानप्राप्तीनंतर, बुद्धांनी बोधिवृक्षाजवळ मुक्तीच्या आनंदात अनेक आठवडे घालवले. त्यांनी शिकवायचे की नाही याचा विचार केला — तृष्णा आणि मोहात बुडलेल्या लोकांना हे गहन सत्य समजेल का याबद्दल साशंक होते. परंपरेनुसार, ब्रह्मा सहंपती देवतेने त्यांना विनंती केली: "अशी प्राणी आहेत ज्यांच्या डोळ्यांत कमी धूळ आहे." करुणेने प्रेरित होऊन, बुद्धांनी शिकवण्याचा निश्चय केला. हा विलंब धर्मशास्त्रीय दृष्टीने महत्त्वाचा आहे: तो बुद्धांच्या शिकवण्याच्या निर्णयाला स्वयंचलित किंवा बंधनकारक न मानता, ज्या प्राण्यांना मदत करण्याची त्यांची स्वतःची काहीही गरज नव्हती त्यांच्याप्रती मुक्त आणि जाणीवपूर्वक केलेली करुणामय कृती म्हणून मांडतो.</span></p>
+      </div>
+    </div>
+
+  </div></div>
+</div>
+
+<!-- ============ STORIES ============ -->
+<div class="page" id="page-stories">
+  <div class="shead"><div class="shead-inner">
+    <p class="s-label"><span lang-en>Chapter IV</span><span lang-mr>अध्याय ४</span></p>
+    <h2 class="s-title"><span lang-en>Stories of <em>Transformation</em></span><span lang-mr>परिवर्तनाच्या <em>कथा</em></span></h2>
+    <div class="s-line"></div>
+    <p class="s-intro"><span lang-en>The Buddha was a master storyteller. These parables and real encounters contain some of the most profound teachings in all Buddhist literature.</span><span lang-mr>बुद्ध एक महान कथाकार होते. या कथा आणि खऱ्या भेटींमध्ये बौद्ध साहित्यातील काही सर्वात गहन शिकवणी दडलेल्या आहेत.</span></p>
+  </div></div>
+
+  <div class="content-wrap"><div class="story-grid">
+
+    <div class="story-card" onclick="this.classList.toggle('open')">
+      <p class="story-theme"><span lang-en>Grief &amp; Impermanence</span><span lang-mr>शोक आणि अनित्यता</span></p>
+      <h3 class="story-title"><span lang-en>Kisagotami &amp; the Mustard Seed</span><span lang-mr>किसागोतमी आणि मोहरीचे दाणे</span></h3>
+      <p class="story-summary"><span lang-en>A grief-stricken mother carries her dead child to the Buddha seeking medicine to revive him.</span><span lang-mr>शोकग्रस्त आई आपल्या मृत मुलाला बुद्धांकडे घेऊन येते, त्याला जिवंत करण्यासाठी औषध मागत.</span></p>
+      <div class="story-full">
+        <p><span lang-en>Kisagotami's only child had died. Maddened by grief, she carried the tiny corpse through the streets of Savatthi, begging for medicine. Someone sent her to the Buddha.</span><span lang-mr>किसागोतमीचा एकुलता एक मुलगा मरण पावला होता. शोकाने वेडी झालेली ती लहान प्रेत घेऊन सावत्थीच्या रस्त्यांवरून फिरत, औषध मागत होती. कुणीतरी तिला बुद्धांकडे पाठवले.</span></p>
+        <p><span lang-en>The Buddha listened with compassion and said: "Bring me a handful of mustard seeds — from a house where no one has died."</span><span lang-mr>बुद्धांनी करुणेने ऐकले आणि म्हणाले: "मला मोहरीचे दाणे आण — पण अशा घरातून जिथे कधीही कुणाचा मृत्यू झाला नाही."</span></p>
+        <p><span lang-en>Kisagotami went from door to door across the city. At every house: "Yes, we have mustard seeds — but a father died here." "A child." "A mother." "A husband." There was no house death had not visited.</span><span lang-mr>किसागोतमी शहरभर घरोघरी फिरली. प्रत्येक घरात: "हो, मोहरीचे दाणे आहेत — पण इथे वडील गेले." "इथे मूल गेले." "इथे आई गेली." "इथे पती गेला." मृत्यूने न स्पर्शलेले एकही घर नव्हते.</span></p>
+        <p><span lang-en>As the sun set, understanding arose in her: death is not only mine. Death is universal. She returned to the Buddha, laid her child to rest, and took refuge in the Dhamma. She eventually attained Awakening.</span><span lang-mr>सूर्यास्त होताना, तिच्या मनात उमज पडला: मृत्यू केवळ माझ्यासाठी नाही. मृत्यू सर्वव्यापी आहे. ती बुद्धांकडे परत आली, आपल्या मुलाला विश्राम दिला, आणि धम्माचा आश्रय घेतला. अखेर तिने ज्ञानप्राप्ती केली.</span></p>
+        <p><span lang-en>Tradition adds that Kisagotami later became one of the eminent female disciples, known specifically for her contemplation of impermanence — turning her personal grief into a teaching that countless others would draw strength from for centuries.</span><span lang-mr>परंपरेनुसार किसागोतमी पुढे प्रमुख भिक्षुणींपैकी एक बनली, विशेषतः अनित्यतेच्या चिंतनासाठी ओळखली गेली — तिने तिचे वैयक्तिक दुःख अशा शिकवणीत बदलले ज्यातून शतकानुशतके असंख्य लोकांना शक्ती मिळाली.</span></p>
+        <div class="story-quote"><span lang-en>"The life of mortals in this world is troubled and brief, and combined with pain. There is no means by which those that have been born can avoid dying." — Sutta Pitaka</span><span lang-mr>"या जगातील मानवांचे जीवन दुःखी, अल्प आणि वेदनामय आहे. जे जन्मलेले आहेत त्यांना मृत्यू टाळण्याचा कोणताही मार्ग नाही." — सुत्त पिटक</span></div>
+      </div>
+      <span class="expand-btn"><span class="arrow">▾</span></span>
+    </div>
+
+    <div class="story-card" onclick="this.classList.toggle('open')">
+      <p class="story-theme"><span lang-en>The Power of Compassion</span><span lang-mr>करुणेची शक्ती</span></p>
+      <h3 class="story-title"><span lang-en>Angulimala — The Garland of Fingers</span><span lang-mr>अंगुलिमाल — बोटांचा माळ</span></h3>
+      <p class="story-summary"><span lang-en>A serial killer who wore a garland of human fingers meets the Buddha — and is transformed not by force, but by presence.</span><span lang-mr>मानवी बोटांचा माळ घालणारा एक सीरियल किलर बुद्धांना भेटतो — शक्तीने नव्हे, उपस्थितीने बदलतो.</span></p>
+      <div class="story-full">
+        <p><span lang-en>Angulimala was a feared bandit who wore a necklace of fingers severed from his victims. He had killed 999 people and needed one more finger to complete his vow. The whole kingdom trembled. Even his parents dared not approach him.</span><span lang-mr>अंगुलिमाल एक भयभीत करणारा डाकू होता जो आपल्या बळींची तोडलेली बोटे माळेत घालत असे. त्याने ९९९ माणसे मारली होती आणि त्याची प्रतिज्ञा पूर्ण करण्यासाठी एक बोट अजून हवे होते. संपूर्ण राज्य भयभीत होते. त्याचे आई-वडीलही त्याजवळ जाण्याचे धाडस करत नसत.</span></p>
+        <p><span lang-en>The Buddha walked alone into the forest where Angulimala lurked. Seeing an easy target, Angulimala ran after him with his sword drawn — yet could not catch up, though the Buddha walked calmly. "Stop, ascetic!" he shouted.</span><span lang-mr>बुद्ध एकटेच त्या जंगलात गेले जिथे अंगुलिमाल लपून बसला होता. सोपा बळी पाहून, अंगुलिमालने तलवार काढून त्यांच्या मागे धावत सुटला — परंतु बुद्ध शांतपणे चालत असतानाही तो त्यांना पकडू शकला नाही. "थांब, भिक्षू!" तो ओरडला.</span></p>
+        <p><span lang-en>The Buddha replied: "I have already stopped. It is you who have not stopped." Confused, Angulimala asked what this meant. The Buddha explained: "I have stopped harming beings. You have not stopped."</span><span lang-mr>बुद्धांनी उत्तर दिले: "मी आधीच थांबलो आहे. थांबला नाहीस तो तू आहेस." गोंधळलेल्या अंगुलिमालने याचा अर्थ विचारला. बुद्धांनी स्पष्ट केले: "मी सर्व प्राण्यांना दुखावणे थांबवले आहे. तू थांबलेला नाहीस."</span></p>
+        <p><span lang-en>These words pierced deeper than any weapon. Angulimala threw down his sword, asked to become a monk, and later attained liberation. His story is one of the most radical demonstrations of the Dhamma: no one is beyond transformation.</span><span lang-mr>हे शब्द कोणत्याही शस्त्रापेक्षा खोलवर रुतले. अंगुलिमालने आपली तलवार टाकली, भिक्षू होण्याची विनंती केली, आणि नंतर मुक्ती प्राप्त केली. त्याची कथा धम्माच्या सर्वात क्रांतिकारक प्रदर्शनांपैकी एक आहे: कोणीही परिवर्तनाच्या पलीकडे नाही.</span></p>
+        <p><span lang-en>The kingdom's people, having known Angulimala as a murderer, sometimes still threw stones at him during his alms rounds even after his ordination — yet the Buddha specifically taught him to bear this with equanimity as the residual fruit of past karma, while his future was now entirely changed.</span><span lang-mr>राज्यातील लोकांनी अंगुलिमालला खुनी म्हणून ओळखले होते, आणि दीक्षा घेतल्यानंतरही भिक्षाटनाच्या वेळी कधीकधी त्याच्यावर दगड फेकले — परंतु बुद्धांनी त्याला विशेष शिकवले की हे भूतकाळातील कर्माचे अवशिष्ट फळ समजून समतेने सहन करावे, तर त्याचे भविष्य आता पूर्णपणे बदलले होते.</span></p>
+        <div class="story-quote"><span lang-en>"I have stopped forever from killing living beings. You, Angulimala, harm beings; I do not." — Majjhima Nikaya 86</span><span lang-mr>"मी सर्व जीवांना मारणे कायमचे थांबवले आहे. तू, अंगुलिमाल, प्राण्यांना दुखावतोस; मी दुखावत नाही." — मज्झिम निकाय ८६</span></div>
+      </div>
+      <span class="expand-btn"><span class="arrow">▾</span></span>
+    </div>
+
+    <div class="story-card" onclick="this.classList.toggle('open')">
+      <p class="story-theme"><span lang-en>Pragmatism over Metaphysics</span><span lang-mr>तत्त्वज्ञानावर व्यावहारिकता</span></p>
+      <h3 class="story-title"><span lang-en>The Poisoned Arrow</span><span lang-mr>विषारी बाण</span></h3>
+      <p class="story-summary"><span lang-en>A monk demands answers about the origin of the universe before he will practice. The Buddha responds with a timeless analogy.</span><span lang-mr>एक भिक्षू साधना करण्याआधी विश्वाच्या उत्पत्तीबद्दल उत्तरे मागतो. बुद्ध एका चिरकालिक रूपकाने उत्तर देतात.</span></p>
+      <div class="story-full">
+        <p><span lang-en>The monk Malunkyaputta came to the Buddha with an ultimatum: if you don't answer whether the universe is eternal, whether it is finite or infinite, whether the soul and body are the same or different — I will give up the training.</span><span lang-mr>भिक्षू मालुंक्यपुत्त बुद्धांकडे एक अल्टिमेटम देऊन आला: विश्व शाश्वत आहे की नाही, ते सीमित की असीम आहे, आत्मा आणि शरीर एकच की वेगळे — याचे उत्तर दिले नाही तर मी प्रशिक्षण सोडून देईन.</span></p>
+        <p><span lang-en>The Buddha replied: "Suppose a man were struck by a poisoned arrow. His friends bring a physician. But the man says: 'I will not let this arrow be removed until I know the name of the man who shot me, what clan he belongs to, how tall he was, what bow he used...' That man would die before these questions were answered."</span><span lang-mr>बुद्धांनी उत्तर दिले: "समजा एका माणसाला विषारी बाण लागला. त्याचे मित्र वैद्य आणतात. परंतु तो माणूस म्हणतो: 'मला कोणी बाण मारला, तो कोणत्या कुळातील आहे, तो किती उंच होता, त्याने कोणता धनुष्य वापरला — हे कळल्याशिवाय मी हा बाण काढू देणार नाही.' तो माणूस ही उत्तरे येण्याआधीच मरेल."</span></p>
+        <p><span lang-en>"The spiritual life does not depend on these speculations. Whether the world is eternal or not eternal — there is still birth, aging, death, sorrow, lamentation, pain. It is the cessation of these that I teach."</span><span lang-mr>"आध्यात्मिक जीवन या अंदाजांवर अवलंबून नाही. विश्व शाश्वत असो किंवा नसो — जन्म, म्हातारपण, मृत्यू, शोक, विलाप, वेदना तरीही असतातच. यांचाच अंत मी शिकवतो."</span></p>
+        <p><span lang-en>This sutta is often cited in modern discussions of religion and science as an early articulation of a pragmatic, non-dogmatic spiritual method that deliberately avoids unfalsifiable metaphysical claims in favor of practices with directly observable results.</span><span lang-mr>हे सुत्त आज धर्म आणि विज्ञानाच्या आधुनिक चर्चांमध्ये अनेकदा उद्धृत केले जाते, कारण ते एका व्यावहारिक, अदोग्मॅटिक आध्यात्मिक पद्धतीचे प्राचीन उद्गार आहे जी जाणीवपूर्वक अप्रमाणित तत्त्वज्ञानात्मक दाव्यांना टाळून थेट निरीक्षणीय परिणाम देणाऱ्या साधनांना प्राधान्य देते.</span></p>
+        <div class="story-quote"><span lang-en>"I have not declared that the world is eternal; I have not declared that it is not eternal. What have I declared? Suffering, its arising, its cessation, and the path." — Majjhima Nikaya 63</span><span lang-mr>"मी विश्व शाश्वत आहे असे सांगितले नाही; मी ते शाश्वत नाही असेही सांगितले नाही. मी काय सांगितले? दुःख, त्याची उत्पत्ती, त्याचा अंत, आणि मार्ग." — मज्झिम निकाय ६३</span></div>
+      </div>
+      <span class="expand-btn"><span class="arrow">▾</span></span>
+    </div>
+
+    <div class="story-card" onclick="this.classList.toggle('open')">
+      <p class="story-theme"><span lang-en>Non-attachment to the Path Itself</span><span lang-mr>मार्गाचाच त्याग</span></p>
+      <h3 class="story-title"><span lang-en>The Parable of the Raft</span><span lang-mr>तराफ्याची कथा</span></h3>
+      <p class="story-summary"><span lang-en>The Dhamma is a vehicle for crossing over — not something to be clung to once you have arrived.</span><span lang-mr>धम्म पार होण्याचे साधन आहे — पैलतीरावर पोहोचल्यावर धरून ठेवायची गोष्ट नाही.</span></p>
+      <div class="story-full">
+        <p><span lang-en>The Buddha said: "Suppose a man, on a long journey, comes to a great flood. The near bank is dangerous; the far bank is safe. There is no ferry, no bridge. He gathers branches and grass and makes a raft, crosses over safely, and reaches the far shore."</span><span lang-mr>बुद्ध म्हणाले: "समजा एक माणूस, दीर्घ प्रवासात, एका मोठ्या पुराजवळ येतो. जवळचा किनारा धोकादायक आहे; पैलतीर सुरक्षित आहे. तेथे नाव नाही, पूल नाही. तो फांद्या आणि गवत जमा करून तराफा बनवतो, सुरक्षितपणे पार करतो, आणि पैलतीराला पोहोचतो."</span></p>
+        <p><span lang-en>"Now, having crossed, should he think: 'This raft has served me well. Let me carry it on my head wherever I go'? Or should he simply leave it and walk on?"</span><span lang-mr>"आता, पार केल्यावर, त्याने विचार करावा का: 'या तराफ्याने मला चांगली सेवा दिली. मी हा माझ्या डोक्यावर घेऊनच जिथेही जाईन तिथे जाईन'? की त्याने तो तसाच सोडून पुढे चालावे?"</span></p>
+        <p><span lang-en>"In the same way, monks, I teach the Dhamma as a raft — for crossing over, not for holding onto. Even the Dhamma is to be let go of — what to speak of what is contrary to the Dhamma."</span><span lang-mr>"त्याचप्रमाणे, भिक्षूंनो, मी धम्म एका तराफ्यासारखा शिकवतो — पार होण्यासाठी, धरून ठेवण्यासाठी नव्हे. धम्मालाही सोडून द्यायचे आहे — धम्माच्या विरुद्ध असलेल्या गोष्टींबद्दल तर बोलायलाच नको."</span></p>
+        <p><span lang-en>This teaching is often invoked to caution against rigid dogmatism within Buddhism itself — the practices and doctrines are tools serving liberation, and clinging to them as ends in themselves would replicate the very grasping the Dhamma is meant to dissolve.</span><span lang-mr>ही शिकवण बौद्ध धर्मातच कठोर मतांधतेविरुद्ध सावधगिरीसाठी अनेकदा वापरली जाते — साधना आणि सिद्धांत हे मुक्तीची सेवा करणारी साधने आहेत, आणि त्यांना स्वतःमध्येच अंतिम ध्येय मानून धरून ठेवल्यास नेमकी तीच आसक्ती पुन्हा निर्माण होईल जी धम्माने विरघळवायची आहे.</span></p>
+        <div class="story-quote"><span lang-en>"The Dhamma is like a raft for crossing over, not for holding onto." — Majjhima Nikaya 22</span><span lang-mr>"धम्म पार होण्यासाठीचा तराफा आहे, धरून ठेवण्यासाठी नव्हे." — मज्झिम निकाय २२</span></div>
+      </div>
+      <span class="expand-btn"><span class="arrow">▾</span></span>
+    </div>
+
+    <div class="story-card" onclick="this.classList.toggle('open')">
+      <p class="story-theme"><span lang-en>Anger &amp; Non-reactivity</span><span lang-mr>राग आणि अप्रतिक्रिया</span></p>
+      <h3 class="story-title"><span lang-en>The Brahmin Who Spat</span><span lang-mr>थुंकणारा ब्राह्मण</span></h3>
+      <p class="story-summary"><span lang-en>A Brahmin, furious at the Buddha's teaching that all castes are equal, spits in his face.</span><span lang-mr>जातिसमानतेच्या शिकवणीमुळे संतापलेला एक ब्राह्मण बुद्धांच्या चेहऱ्यावर थुंकतो.</span></p>
+      <div class="story-full">
+        <p><span lang-en>A Brahmin named Akkosaka came to the Buddha full of rage, hurling insults at him, calling him worthless, accusing him of dishonouring the caste traditions. When words weren't enough, he spat at the Buddha's feet.</span><span lang-mr>अक्कोसक नावाचा एक ब्राह्मण रागाने भरलेला बुद्धांकडे आला, अपमान करत, त्यांना निरुपयोगी म्हणत, जातिपरंपरेचा अनादर केल्याचा आरोप करत. शब्द पुरेसे नसल्यावर, त्याने बुद्धांच्या पायावर थुंकले.</span></p>
+        <p><span lang-en>The Buddha sat quietly. Then he asked: "Brahmin, if you prepare a feast and your guests refuse to eat — to whom does the food return?"</span><span lang-mr>बुद्ध शांतपणे बसले. नंतर त्यांनी विचारले: "ब्राह्मण, जर तू मेजवानी तयार केली आणि तुझे अतिथी जेवायला नाकारले — ते भोजन कुणाकडे परत जाते?"</span></p>
+        <p><span lang-en>The Brahmin said: "To me, of course." The Buddha replied: "In the same way, the abuse you have offered me — I do not accept it. It returns to you."</span><span lang-mr>ब्राह्मण म्हणाला: "नक्कीच माझ्याकडे." बुद्धांनी उत्तर दिले: "त्याचप्रमाणे, तू मला दिलेली शिवीगाळ — मी ती स्वीकारत नाही. ती तुझ्याकडेच परत जाते."</span></p>
+        <p><span lang-en>"One who returns anger for anger makes things worse. One who does not return anger wins a battle that is hard to win." Akkosaka was struck speechless. He eventually became a disciple.</span><span lang-mr>"जो रागाला रागाने उत्तर देतो तो परिस्थिती अधिक बिघडवतो. जो रागाला उत्तर देत नाही तो जिंकण्यास कठीण असलेली लढाई जिंकतो." अक्कोसक स्तब्ध झाला. अखेर तो एक शिष्य बनला.</span></p>
+        <p><span lang-en>This episode is frequently taught as a practical model for handling personal attacks: the Buddha neither suppressed his reaction nor retaliated, but simply declined to participate in the transaction of anger at all — a third option beyond fight or flight.</span><span lang-mr>हा प्रसंग वैयक्तिक हल्ले हाताळण्याचे एक व्यावहारिक उदाहरण म्हणून अनेकदा शिकवला जातो: बुद्धांनी त्यांची प्रतिक्रिया दाबलीही नाही किंवा प्रतिकारही केला नाही, तर त्यांनी रागाच्या या व्यवहारातच सहभागी होण्यास नकार दिला — लढा किंवा पळून जाण्यापलीकडचा तिसरा पर्याय.</span></p>
+        <div class="story-quote"><span lang-en>"Conquer anger with non-anger. Conquer evil with good. Conquer the miser with generosity. Conquer the liar with truth." — Dhammapada 223</span><span lang-mr>"रागावर अरागाने मात करा. वाईटावर चांगल्याने मात करा. कंजूषावर उदारतेने मात करा. लबाडावर सत्याने मात करा." — धम्मपद २२३</span></div>
+      </div>
+      <span class="expand-btn"><span class="arrow">▾</span></span>
+    </div>
+
+    <div class="story-card" onclick="this.classList.toggle('open')">
+      <p class="story-theme"><span lang-en>Compassion vs. Privilege</span><span lang-mr>करुणा आणि विशेषाधिकार</span></p>
+      <h3 class="story-title"><span lang-en>The Wounded Swan</span><span lang-mr>जखमी हंस</span></h3>
+      <p class="story-summary"><span lang-en>A young Siddhartha's dispute over a wounded swan raises a question that would define his entire life.</span><span lang-mr>तरुण सिद्धार्थाचा जखमी हंसावरील वाद त्यांचे संपूर्ण जीवन ठरवणारा प्रश्न उभा करतो.</span></p>
+      <div class="story-full">
+        <p><span lang-en>As a boy, Siddhartha was walking in the palace gardens when he found a swan that had been shot down by an arrow — wounded, not dead. He gently removed the arrow and cradled the bird.</span><span lang-mr>लहान असताना, सिद्धार्थ राजवाड्याच्या बागेत फिरत असताना त्यांना एक हंस सापडला जो बाणाने पडला होता — जखमी, मृत नव्हे. त्यांनी हळुवारपणे बाण काढला आणि पक्ष्याला उराशी घेतले.</span></p>
+        <p><span lang-en>His cousin Devadatta arrived and claimed the swan: "I shot it — it is mine." Siddhartha refused. The dispute was brought before a council of wise men.</span><span lang-mr>त्यांचे चुलत बंधू देवदत्त आले आणि हंसावर हक्क सांगितला: "मी तो मारला — तो माझा आहे." सिद्धार्थांनी नकार दिला. हा वाद ज्ञानी पुरुषांच्या परिषदेसमोर मांडला गेला.</span></p>
+        <p><span lang-en>After deliberation, the elders ruled: "A life belongs to one who saves it, not to one who seeks to destroy it." The swan was returned to Siddhartha.</span><span lang-mr>विचारविनिमयानंतर, वृद्धांनी निर्णय दिला: "एक जीव त्याच्याकडे राहतो जो त्याला वाचवतो, नष्ट करण्याचा प्रयत्न करणाऱ्याकडे नाही." हंस सिद्धार्थांना परत दिला गेला.</span></p>
+        <p><span lang-en>This childhood episode, preserved in tradition, is seen as the earliest expression of the compassion that would define the Awakened One — the instinct to protect, not possess; to heal, not harm. It also foreshadows the lifelong rivalry between Siddhartha and Devadatta, which would later resurface in far more serious form within the Sangha itself.</span><span lang-mr>परंपरेत जतन केलेला हा बालपणीचा प्रसंग, जागृत बुद्धाची व्याख्या करणाऱ्या करुणेचे सर्वात प्राचीन प्रकटीकरण म्हणून पाहिले जाते — रक्षण करण्याची प्रेरणा, ताबा घेण्याची नव्हे; बरे करण्याची, हानी करण्याची नव्हे. हे सिद्धार्थ आणि देवदत्त यांच्यातील आयुष्यभराच्या प्रतिस्पर्ध्याचेही पूर्वसूचक आहे, जे नंतर संघातच अधिक गंभीर स्वरूपात पुन्हा समोर येईल.</span></p>
+        <div class="story-quote"><span lang-en>A life belongs to one who seeks to save it — not to one who seeks to destroy it.</span><span lang-mr>एक जीव त्याच्याकडे राहतो जो वाचवण्याचा प्रयत्न करतो — नष्ट करण्याचा प्रयत्न करणाऱ्याकडे नाही.</span></div>
+      </div>
+      <span class="expand-btn"><span class="arrow">▾</span></span>
+    </div>
+
+  </div></div>
+</div>
+
+<!-- ============ ERA ============ -->
+<div class="page" id="page-era">
+  <div class="shead"><div class="shead-inner">
+    <p class="s-label"><span lang-en>Chapter V</span><span lang-mr>अध्याय ५</span></p>
+    <h2 class="s-title"><span lang-en>Buddha's Era — <em>Six Rival Schools</em></span><span lang-mr>बुद्धकालीन युग — <em>सहा प्रतिस्पर्धी संप्रदाय</em></span></h2>
+    <div class="s-line"></div>
+    <p class="s-intro"><span lang-en>Ancient India around 500 BCE was a battlefield of ideas. Six major sramana schools competed for philosophical truth. Understanding these rivals illuminates what made the Buddha's Middle Way unique.</span><span lang-mr>इ.स.पू. ५०० च्या सुमारास प्राचीन भारत विचारांचे रणक्षेत्र होते. सहा प्रमुख श्रमण संप्रदाय तत्त्वज्ञानात्मक सत्यासाठी स्पर्धा करत होते. हे प्रतिस्पर्धी समजल्यास बुद्धांचा मध्यममार्ग कशामुळे वेगळा ठरला हे स्पष्ट होते.</span></p>
+  </div></div>
+
+  <div class="content-wrap"><div class="rival-grid">
+
+    <div class="rival-card">
+      <span class="rival-tag"><span lang-en>Absolute Fatalism</span><span lang-mr>संपूर्ण नियतिवाद</span></span>
+      <h3 class="rival-name">Ajivika · आजीविक</h3>
+      <p class="rival-founder"><span lang-en>Founded by Makkhali Gosala</span><span lang-mr>मक्खली गोसाल यांनी स्थापित</span></p>
+      <p class="rival-desc"><span lang-en>The Ajivikas taught Niyati — absolute, inescapable fate. Every being passes through exactly 8,400,000 great kalpas of transmigration before liberation, regardless of effort, virtue, or wisdom. Free will is an illusion.</span><span lang-mr>आजीविकांनी नियतीची शिकवण दिली — संपूर्ण, अटळ नियती. प्रत्येक प्राणी प्रयत्न, सद्गुण किंवा प्रज्ञा यांचा विचार न करता मुक्तीआधी नेमक्या ८,४००,००० महाकल्पांच्या पुनर्जन्मातून जातो. स्वातंत्र्य इच्छाशक्ती एक भ्रम आहे.</span></p>
+      <div class="rival-buddha"><span lang-en>The Buddha strongly rejected this: "If liberation is predetermined, there is no point in the spiritual life. Right effort and right choice are the heart of the path." He called Niyati the most dangerous of all views.</span><span lang-mr>बुद्धांनी हे जोरदारपणे नाकारले: "जर मुक्ती पूर्वनिर्धारित असेल, तर आध्यात्मिक जीवनाचा काही अर्थ नाही. सम्यक प्रयत्न आणि सम्यक निवड हे मार्गाचे हृदय आहे." त्यांनी नियतीला सर्व दृष्टिकोनांपैकी सर्वात धोकादायक मानले.</span></div>
+    </div>
+
+    <div class="rival-card">
+      <span class="rival-tag"><span lang-en>Extreme Asceticism · Non-violence</span><span lang-mr>अतिरेकी तपश्चर्या · अहिंसा</span></span>
+      <h3 class="rival-name">Jainism (Nirgrantha) · जैन धर्म</h3>
+      <p class="rival-founder"><span lang-en>Propagated by Vardhamana Mahavira</span><span lang-mr>वर्धमान महावीर यांनी प्रसार केला</span></p>
+      <p class="rival-desc"><span lang-en>Mahavira, a contemporary of the Buddha, taught that karma is a subtle physical substance that clings to the soul (jiva). Liberation requires burning off all karma through extreme austerity, absolute non-violence, and nudity as a sign of non-possession.</span><span lang-mr>महावीर, जे बुद्धांचे समकालीन होते, यांनी शिकवले की कर्म हा आत्म्याला (जिवा) चिकटणारा एक सूक्ष्म भौतिक पदार्थ आहे. मुक्तीसाठी अतिरेकी तपश्चर्या, संपूर्ण अहिंसा, आणि अपरिग्रहाचे चिन्ह म्हणून नग्नतेद्वारे सर्व कर्म जाळून टाकणे आवश्यक आहे.</span></p>
+      <div class="rival-buddha"><span lang-en>Both teachers rejected Vedic authority and caste. But the Buddha rejected extreme asceticism from personal experience: "I tried it for six years. A withered body produces a withered mind." The Middle Way was his direct answer to Jain practice.</span><span lang-mr>दोन्ही गुरूंनी वैदिक अधिकार आणि जातिव्यवस्था नाकारली. परंतु बुद्धांनी स्वतःच्या अनुभवातून अतिरेकी तपश्चर्या नाकारली: "मी सहा वर्षे प्रयत्न केला. कृश शरीर केवळ कृश मनच निर्माण करते." मध्यममार्ग हे जैन साधनेला त्यांचे थेट उत्तर होते.</span></div>
+    </div>
+
+    <div class="rival-card">
+      <span class="rival-tag"><span lang-en>Materialism · Atheism</span><span lang-mr>भौतिकवाद · नास्तिकता</span></span>
+      <h3 class="rival-name">Lokayata / Carvaka · लोकायत / चार्वाक</h3>
+      <p class="rival-founder"><span lang-en>Represented by Ajita Kesakambali</span><span lang-mr>अजित केसकंबली यांनी प्रतिनिधित्व</span></p>
+      <p class="rival-desc"><span lang-en>The Carvakas were India's ancient materialists and atheists. They taught that only the physical world exists — no soul, no karma, no rebirth, no moral consequence. "Eat, drink, be merry, for after death there is nothing." Virtue was a pretence of the weak.</span><span lang-mr>चार्वाक हे भारताचे प्राचीन भौतिकवादी आणि नास्तिक होते. त्यांनी शिकवले की केवळ भौतिक जग अस्तित्वात आहे — आत्मा नाही, कर्म नाही, पुनर्जन्म नाही, नैतिक परिणाम नाही. "खा, प्या, मजा करा, कारण मृत्यूनंतर काहीही नाही." सद्गुण म्हणजे दुर्बलांचे ढोंग.</span></p>
+      <div class="rival-buddha"><span lang-en>The Buddha disagreed: "Actions have consequences — in this life and beyond. The view that there is no karma, no result of actions, no virtue — this leads to nihilism and the destruction of the moral life."</span><span lang-mr>बुद्धांनी असहमती दर्शवली: "कृतींचे परिणाम होतात — या जीवनात आणि त्यापुढेही. कर्म नाही, कृतींचा परिणाम नाही, सद्गुण नाही असा दृष्टिकोन — यामुळे शून्यवाद आणि नैतिक जीवनाचा नाश होतो."</span></div>
+    </div>
+
+    <div class="rival-card">
+      <span class="rival-tag"><span lang-en>Radical Agnosticism</span><span lang-mr>कट्टर अज्ञेयवाद</span></span>
+      <h3 class="rival-name">Scepticism (Amaravikkhepa) · संशयवाद</h3>
+      <p class="rival-founder">Sanjaya Belatthiputta · संजय वेलट्ठिपुत्त</p>
+      <p class="rival-desc"><span lang-en>Sanjaya refused all definitive philosophical positions — particularly on questions of the afterlife, the soul, and liberation. His method was called "eel-wriggling" (Amaravikkhepa) — evasion of every metaphysical claim. Notably, Sariputta and Moggallana (the Buddha's two chief disciples) were originally his students before leaving him to follow the Dhamma.</span><span lang-mr>संजय यांनी सर्व निश्चित तत्त्वज्ञानात्मक भूमिका नाकारल्या — विशेषतः मृत्योत्तर जीवन, आत्मा आणि मुक्तीच्या प्रश्नांवर. त्यांची पद्धत "साप-वळणे" (अमरावि​क्खेप) म्हणून ओळखली जात होती — प्रत्येक तत्त्वज्ञानात्मक दाव्यापासून पळवाट. विशेष म्हणजे, सारिपुत्त आणि मोग्गलान (बुद्धांचे दोन मुख्य शिष्य) सुरुवातीला त्यांचे विद्यार्थी होते, धम्माचे अनुसरण करण्याआधी.</span></p>
+      <div class="rival-buddha"><span lang-en>The Buddha also refused certain metaphysical questions — but for a different reason: because they do not lead to liberation. His silence was purposeful, not evasive. The path itself was his answer.</span><span lang-mr>बुद्धांनीही काही तत्त्वज्ञानात्मक प्रश्न नाकारले — पण वेगळ्या कारणासाठी: कारण ते मुक्तीकडे घेऊन जात नाहीत. त्यांचे मौन उद्देशपूर्ण होते, पळवाट नव्हे. मार्गच त्यांचे उत्तर होता.</span></div>
+    </div>
+
+    <div class="rival-card">
+      <span class="rival-tag"><span lang-en>Caste · Ritual · Atman</span><span lang-mr>जाती · विधी · आत्मन</span></span>
+      <h3 class="rival-name">Brahmanism · ब्राह्मणवाद</h3>
+      <p class="rival-founder"><span lang-en>Vedic Orthodox Tradition</span><span lang-mr>वैदिक सनातन परंपरा</span></p>
+      <p class="rival-desc"><span lang-en>The dominant tradition of the Gangetic plain taught that the universe was sustained by Vedic ritual (yajna), that caste hierarchy was divinely ordained, and that liberation (moksha) meant the union of the individual soul (atman) with the universal soul (Brahman). Brahmin birth granted spiritual authority.</span><span lang-mr>गंगेच्या मैदानातील प्रबळ परंपरेने शिकवले की विश्व वैदिक यज्ञांद्वारे टिकून आहे, जातिव्यवस्था ईश्वरनिर्मित आहे, आणि मुक्ती (मोक्ष) म्हणजे वैयक्तिक आत्म्याचे (आत्मन) सार्वत्रिक आत्म्याशी (ब्रह्म) मिलन. ब्राह्मण जन्म आध्यात्मिक अधिकार देत असे.</span></p>
+      <div class="rival-buddha"><span lang-en>"Not by birth is one a Brahmin, nor by birth a non-Brahmin. By deeds is one a Brahmin. By deeds is one not a Brahmin." The Buddha challenged the entire caste-based religious order — making the Dhamma open to all.</span><span lang-mr>"जन्माने कुणी ब्राह्मण नाही, जन्माने कुणी अब्राह्मण नाही. कर्मानेच कुणी ब्राह्मण ठरतो. कर्मानेच कुणी अब्राह्मण ठरतो." बुद्धांनी संपूर्ण जातिआधारित धार्मिक व्यवस्थेला आव्हान दिले — धम्म सर्वांसाठी खुला केला.</span></div>
+    </div>
+
+    <div class="rival-card">
+      <span class="rival-tag"><span lang-en>Eternalism · Seven Elements</span><span lang-mr>शाश्वतवाद · सात तत्त्वे</span></span>
+      <h3 class="rival-name">Pakudha's Eternalism · पकुध कच्चायन</h3>
+      <p class="rival-founder">Pakudha Kaccayana · पकुध कच्चायन</p>
+      <p class="rival-desc"><span lang-en>Pakudha taught that reality consists of seven eternal, indestructible elements: earth, water, fire, air, pleasure, pain, and the soul. Because these elements are uncreated and indestructible, he argued there is ultimately no killing — a sword merely passes between elements.</span><span lang-mr>पकुधांनी शिकवले की वास्तव सात शाश्वत, अविनाशी तत्त्वांनी बनलेले आहे: पृथ्वी, जल, अग्नी, वायू, सुख, दुःख, आणि आत्मा. ही तत्त्वे अनिर्मित आणि अविनाशी असल्यामुळे, त्यांनी असा युक्तिवाद केला की प्रत्यक्षात हत्या नाहीच — तलवार केवळ तत्त्वांच्यामध्ये जाते.</span></p>
+      <div class="rival-buddha"><span lang-en>The Buddha steered between eternalism (things exist forever) and annihilationism (things are destroyed at death) — the Middle Way on the metaphysical level. "I teach not the self as eternal, nor its annihilation — I teach dependent origination."</span><span lang-mr>बुद्धांनी शाश्वतवाद (गोष्टी सदैव अस्तित्वात असतात) आणि उच्छेदवाद (मृत्यूनंतर गोष्टी नष्ट होतात) यांच्यामध्ये मध्यममार्ग स्वीकारला — तत्त्वज्ञानात्मक स्तरावरचा मध्यममार्ग. "मी आत्मा शाश्वत आहे असे शिकवत नाही, किंवा त्याचा नाश होतो असेही नाही — मी प्रतीत्यसमुत्पाद शिकवतो."</span></div>
+    </div>
+
+  </div></div>
+</div>
+
+<!-- ============ TODAY ============ -->
+<div class="page" id="page-today">
+  <div class="shead"><div class="shead-inner">
+    <p class="s-label"><span lang-en>Chapter VI</span><span lang-mr>अध्याय ६</span></p>
+    <h2 class="s-title"><span lang-en>The Dhamma <em>Today</em></span><span lang-mr>आजचा <em>धम्म</em></span></h2>
+    <div class="s-line"></div>
+    <p class="s-intro"><span lang-en>2,500 years have passed. Yet the fires the Buddha identified — craving, aversion, and delusion — still burn in every human heart. His medicine is as precise today as it was then.</span><span lang-mr>२,५०० वर्षे उलटली. परंतु बुद्धांनी ओळखलेल्या तृष्णा, द्वेष आणि मोहाच्या ज्वाळा आजही प्रत्येक मानवी हृदयात जळत आहेत. त्यांचे औषध आजही तितकेच नेमके आहे जितके तेव्हा होते.</span></p>
+  </div></div>
+
+  <div class="content-wrap"><div class="modern-grid">
+
+    <div class="modern-card">
+      <h3 class="modern-title"><span lang-en>Anxiety &amp; Overthinking</span><span lang-mr>चिंता आणि जास्त विचार</span></h3>
+      <p class="modern-problem"><span lang-en>The mind that cannot stop — running scenarios, worrying about futures that haven't come.</span><span lang-mr>थांबत नाही असे मन — परिस्थितींची उगवण, न आलेल्या भविष्याची काळजी.</span></p>
+      <p class="modern-teaching"><span lang-en>The Buddha identified the root: the mind that grabs at every passing thought as "mine." Right Mindfulness teaches us to watch thoughts arise and pass without adding fuel — observing, not engaging. The Satipatthana Sutta is the Buddha's complete manual for this.</span><span lang-mr>बुद्धांनी मूळ कारण ओळखले: प्रत्येक येणाऱ्या विचाराला "माझा" म्हणून धरणारे मन. सम्यक स्मृती शिकवते — विचार येतात आणि जातात, त्यांना इंधन न देता पाहायचे — सहभागी न होता निरीक्षण करायचे. सातिपट्ठान सुत्त हे याचे बुद्धांचे संपूर्ण मार्गदर्शन आहे.</span></p>
+      <div class="modern-quote"><span lang-en>"Do not dwell in the past, do not dream of the future. Concentrate the mind on the present moment."</span><span lang-mr>"भूतकाळात राहू नको, भविष्याची स्वप्ने पाहू नको. मन सध्याच्या क्षणावर केंद्रित कर."</span></div>
+    </div>
+
+    <div class="modern-card">
+      <h3 class="modern-title"><span lang-en>Anger &amp; Conflict</span><span lang-mr>राग आणि संघर्ष</span></h3>
+      <p class="modern-problem"><span lang-en>The fire that burns its own container — we often harm ourselves most in our rage.</span><span lang-mr>स्वतःलाच जाळणारी आग — रागात आपणच सर्वाधिक जळतो.</span></p>
+      <p class="modern-teaching"><span lang-en>The Buddha taught that anger is one of the three root poisons (dosa). It arises when reality doesn't match our demand for things to be different. Metta meditation is the direct antidote — not suppression, but a broadening of the heart that leaves less room for hatred.</span><span lang-mr>बुद्धांनी शिकवले की राग (दोस) तीन मूळ विषांपैकी एक आहे. वास्तव आपल्या अपेक्षेनुसार नसेल तेव्हा तो उद्भवतो. मेत्ता भावना थेट उपाय आहे — दाबणे नव्हे, तर हृदय इतके मोठे करणे की द्वेषाला जागा उरणार नाही.</span></p>
+      <div class="modern-quote"><span lang-en>"Holding on to anger is like grasping a hot coal with the intent of throwing it at someone else — you are the one who gets burned."</span><span lang-mr>"रागाला धरून ठेवणे म्हणजे दुसऱ्यावर टाकण्यासाठी जळता निखारा हातात धरण्यासारखे आहे — जळतो तू स्वतःच."</span></div>
+    </div>
+
+    <div class="modern-card">
+      <h3 class="modern-title"><span lang-en>Relationships &amp; Loss</span><span lang-mr>नाती आणि वियोग</span></h3>
+      <p class="modern-problem"><span lang-en>Love that becomes attachment. Loss that becomes prolonged suffering.</span><span lang-mr>प्रेम जेव्हा आसक्ती बनते. वेदना जेव्हा दीर्घकाळ टिकते.</span></p>
+      <p class="modern-teaching"><span lang-en>The Buddha did not teach against love — he taught against the possessive, fear-driven clinging that masquerades as love. True Metta is love without ownership. Impermanence applied to relationships teaches us to treasure what is here now — without the grief of resisting what must inevitably change.</span><span lang-mr>बुद्धांनी प्रेमाला विरोध केला नाही — मालकी हक्क आणि भीतीतून जन्मलेल्या आसक्तीला विरोध केला, जी प्रेमाचा बुरखा घालते. खरी मेत्ता म्हणजे मालकीशिवाय प्रेम. नात्यांमध्ये अनित्यता स्वीकारल्याने जे आत्ता आहे त्याची किंमत वाढते — अटळ बदलाला विरोध करण्याच्या दुःखाशिवाय.</span></p>
+      <div class="modern-quote"><span lang-en>"If you truly loved yourself, you could never hurt another."</span><span lang-mr>"जर तुम्ही स्वतःवर खरोखर प्रेम केले असते, तर तुम्ही दुसऱ्याला कधीच दुखवू शकला नसता."</span></div>
+    </div>
+
+    <div class="modern-card">
+      <h3 class="modern-title"><span lang-en>Social Media &amp; Distraction</span><span lang-mr>सोशल मीडिया आणि विक्षेप</span></h3>
+      <p class="modern-problem"><span lang-en>The infinite scroll — craving stimulation, fearing boredom, seeking validation.</span><span lang-mr>अखंड स्क्रोलिंग — उत्तेजनाची तहान, कंटाळ्याची भीती, मान्यतेचा शोध.</span></p>
+      <p class="modern-teaching"><span lang-en>The Buddha described the untrained mind as a "monkey mind" — swinging from branch to branch, never still. The same diagnosis fits the dopamine-driven attention economy: endless craving for the next notification, comparison, scroll. Right Effort and Right Mindfulness are the antidote — choosing what the mind feeds on.</span><span lang-mr>बुद्धांनी अप्रशिक्षित मनाला "माकडाचे मन" म्हटले — फांदीवरून फांदीवर उडणारे, कधीच स्थिर नाही. आत्ताच्या डोपामीन-चालित लक्ष-अर्थव्यवस्थेलाही हेच निदान लागू होते: पुढच्या नोटिफिकेशनची, तुलनेची, स्क्रोलिंगची अखंड तृष्णा. सम्यक प्रयत्न आणि सम्यक स्मृती हाच उपाय आहे — मन काय खाते हे निवडणे.</span></p>
+      <div class="modern-quote"><span lang-en>"The mind, when not properly guarded, brings great suffering." — Dhammapada</span><span lang-mr>"मन नीट जपले नाही तर ते मोठे दुःख आणते." — धम्मपद</span></div>
+    </div>
+
+    <div class="modern-card">
+      <h3 class="modern-title"><span lang-en>Success, Failure &amp; Identity</span><span lang-mr>यश, अपयश आणि ओळख</span></h3>
+      <p class="modern-problem"><span lang-en>We define ourselves by outcomes — and shatter when outcomes change.</span><span lang-mr>आपण स्वतःला परिणामांनी ओळखतो — आणि परिणाम बदलले की तुटतो.</span></p>
+      <p class="modern-teaching"><span lang-en>The teaching of Anatta cuts at the root of identity-based suffering. "I am successful" and "I am a failure" are both constructions built on shifting ground. The Buddha taught liberation from the very need to define and defend a fixed self — which makes both success lighter and failure less catastrophic.</span><span lang-mr>अनत्ताची शिकवण ओळखीवर आधारित दुःखाचे मूळ तोडते. "मी यशस्वी आहे" आणि "मी अपयशी आहे" — दोन्ही बदलत्या जमिनीवर बांधलेल्या संरचना आहेत. बुद्धांनी स्थिर "मी" परिभाषित आणि रक्षण करण्याच्या गरजेतूनच मुक्तीची शिकवण दिली — ज्यामुळे यशाचे ओझे कमी होते आणि अपयशाची वेदना कमी होते.</span></p>
+      <div class="modern-quote"><span lang-en>"In the end, only three things matter: how much you loved, how gently you lived, and how gracefully you let go."</span><span lang-mr>"शेवटी तीनच गोष्टी महत्त्वाच्या असतात: तुम्ही किती प्रेम केले, किती सौम्यतेने जगलात, आणि किती सहजतेने सोडून दिले."</span></div>
+    </div>
+
+    <div class="modern-card">
+      <h3 class="modern-title"><span lang-en>Social Justice &amp; Equality</span><span lang-mr>सामाजिक न्याय आणि समता</span></h3>
+      <p class="modern-problem"><span lang-en>Systems of power that divide human beings by birth, not by character.</span><span lang-mr>जन्मावर आधारित मानवांना विभागणाऱ्या सत्ता व्यवस्था, स्वभावावर नाही.</span></p>
+      <p class="modern-teaching"><span lang-en>The Buddha's rejection of caste was radical in 500 BCE and remains radical. He ordained people of all castes into the Sangha — including Upali, a barber, who became one of the greatest Vinaya masters. His teaching that dignity comes from action, not birth, was a direct challenge to every hierarchy built on inherited status.</span><span lang-mr>बुद्धांचे जातिव्यवस्थेचे नकार इ.स.पू. ५०० मध्ये क्रांतिकारक होते आणि आजही आहे. त्यांनी सर्व जातींच्या लोकांना संघात दीक्षा दिली — उपाली नावाच्या न्हाव्यासह, जो पुढे सर्वश्रेष्ठ विनय आचार्यांपैकी एक बनला. प्रतिष्ठा जन्मातून नाही, कर्मातून येते ही त्यांची शिकवण वंशपरंपरागत स्थानावर बांधलेल्या प्रत्येक श्रेणीव्यवस्थेला थेट आव्हान होती.</span></p>
+      <div class="modern-quote"><span lang-en>"Not by birth is one a Brahmin. By deeds alone." — Dhammapada 393</span><span lang-mr>"जन्माने कुणी ब्राह्मण नाही. कर्मानेच." — धम्मपद ३९३</span></div>
+    </div>
+
+  </div></div>
+
+  <div class="banner">
+    <p class="banner-quote"><span lang-en>"Three things cannot be long hidden: the sun, the moon, and the truth."</span><span lang-mr>"तीन गोष्टी जास्त काळ लपवता येत नाहीत: सूर्य, चंद्र, आणि सत्य."</span></p>
+    <p class="banner-cite"><span lang-en>Traditional — Dhamma</span><span lang-mr>पारंपरिक — धम्म</span></p>
+  </div>
+
+  <div class="cta-box">
+    <p><span lang-en>Follow for more Buddha's wisdom:</span><span lang-mr>अधिक बुद्धांच्या शिकवणींसाठी फॉलो करा:</span> <strong>@srbhawle</strong></p>
+  </div>
+</div>
+
+<!-- ============ BOOK / GRANTHMAALA ============ -->
+<div class="page" id="page-book">
+
+  <!-- Hero -->
+  <div class="book-hero">
+    <span class="book-series-label"><span lang-en>History Series · Marathi</span><span lang-mr>ऐतिहासिक मालिका · मराठी</span></span>
+    <h2 class="book-series-title">भारतीय उपखंडातील बौद्ध धर्माचा इतिहास</h2>
+    <p class="book-series-sub">२,५०० वर्षांचा एक महाप्रवास</p>
+    <div class="hr-thin" style="margin:1.2rem auto;"></div>
+    <p class="book-about">
+      <span lang-en>A Marathi-language historical journey tracing the complete arc of Buddhism in the Indian subcontinent — from the Buddha's Mahaparinirvana to the modern Navayana movement. Evidence-based narrative history, grounded in archaeology, inscriptions, and contemporary scholarship. Written by Sandeep Bhawle.</span>
+      <span lang-mr>भारतीय उपखंडातील बौद्ध धर्माचा संपूर्ण इतिहास मराठीत — बुद्धांच्या महापरिनिर्वाणापासून ते आधुनिक नवयान चळवळीपर्यंत. पुरातत्त्व, अभिलेख आणि आधुनिक इतिहासलेखनावर आधारित पुरावा-आधारित कथनात्मक इतिहास. लेखन — संदीप भावले.</span>
+    </p>
+    <a class="book-dl-btn" href="journey.html" target="_blank" rel="noopener noreferrer" style="margin-top:1.4rem; padding:.7rem 1.4rem; font-size:.92rem; border-color:var(--gold-bright); background:rgba(184,134,11,.10);">
+      🗺 <span lang-en>Explore the interactive map: The Wheel of Peace</span><span lang-mr>नकाशावरचा प्रवास पाहा: शांतीचे धम्मचक्र</span>
+    </a>
+  </div>
+
+  <div class="content-wrap">
+
+    <!-- Chapter Cards -->
+    <div style="padding:2rem 0 .5rem;">
+      <p class="s-label"><span lang-en>Chapters</span><span lang-mr>प्रकरणे</span></p>
+    </div>
+
+    <div class="book-grid">
+
+      <!-- Chapter 1 -->
+      <div class="book-card">
+        <div>
+          <span class="book-chapter-num"><span lang-en>Chapter 1</span><span lang-mr>प्रकरण १</span></span>
+          <p class="book-chapter-era"><span lang-en>c. 5th century BCE · Archaeology &amp; Historiography</span><span lang-mr>इसवीसनपूर्व ५वे शतक · पुरातत्त्व व इतिहासशास्त्र</span></p>
+          <h3 class="book-chapter-title">अंतिम प्रवास</h3>
+          <p class="book-chapter-subtitle">महापरिनिर्वाण आणि त्यानंतर उरलेले जग</p>
+        </div>
+        <div class="book-card-row">
+          <p class="book-chapter-subtitle" style="font-size:.82rem; max-width:300px;">
+            <span lang-en>The Buddha's final journey, his Mahaparinirvana at Kushinagar, and the world he left behind — the earliest historical record of early Buddhist community formation.</span>
+            <span lang-mr>बुद्धांचा अंतिम प्रवास, कुशीनगरमध्ये महापरिनिर्वाण, आणि त्यांनी मागे सोडलेले जग — सुरुवातीच्या बौद्ध समुदाय निर्मितीचा सर्वात जुना ऐतिहासिक आलेख.</span>
+          </p>
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.3rem;">
+          <a class="book-dl-btn" href="chapter-1.html" target="_blank" rel="noopener noreferrer" style="background:rgba(201,161,76,.08);border-color:var(--gold);">
+            👁 <span lang-en>Read</span><span lang-mr>वाचा</span>
+          </a>
+          <a class="book-dl-btn" href="TGB_Chapter_1.pdf" target="_blank" rel="noopener noreferrer" download>
+            ⬇ <span lang-en>Download</span><span lang-mr>डाउनलोड</span>
+          </a>
+        </div>
+        </div>
+      </div>
+
+      <!-- Chapter 2 -->
+      <div class="book-card">
+        <div>
+          <span class="book-chapter-num"><span lang-en>Chapter 2</span><span lang-mr>प्रकरण २</span></span>
+          <p class="book-chapter-era"><span lang-en>4th–3rd century BCE · Archaeology &amp; Historiography</span><span lang-mr>इसवीसनपूर्व ४थे–३रे शतक</span></p>
+          <h3 class="book-chapter-title">विभाजनाची बीजे</h3>
+          <p class="book-chapter-subtitle">दुसरी संगीती · नंद साम्राज्य · प्रारंभिक पंथीय विभाजन</p>
+        </div>
+        <div class="book-card-row">
+          <p class="book-chapter-subtitle" style="font-size:.82rem; max-width:300px;">
+            <span lang-en>The Second Council, the Nanda Empire's rise, and the first seeds of sectarian division — how Buddhism began to fracture within a century of the Buddha's passing.</span>
+            <span lang-mr>दुसरी संगीती, नंद साम्राज्याचा उदय, आणि पंथीय विभाजनाची पहिली बीजे — बुद्धांच्या निर्वाणानंतर एका शतकातच बौद्ध धर्मात फूट कशी पडली.</span>
+          </p>
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.3rem;">
+          <a class="book-dl-btn" href="chapter-2.html" target="_blank" rel="noopener noreferrer" style="background:rgba(201,161,76,.08);border-color:var(--gold);">
+            👁 <span lang-en>Read</span><span lang-mr>वाचा</span>
+          </a>
+          <a class="book-dl-btn" href="TGB_Chapter_2.pdf" target="_blank" rel="noopener noreferrer" download>
+            ⬇ <span lang-en>Download</span><span lang-mr>डाउनलोड</span>
+          </a>
+        </div>
+        </div>
+      </div>
+
+      <!-- Chapter 3 -->
+      <div class="book-card">
+        <div>
+          <span class="book-chapter-num"><span lang-en>Chapter 3</span><span lang-mr>प्रकरण ३</span></span>
+          <p class="book-chapter-era"><span lang-en>3rd century BCE · Archaeology, Inscriptions &amp; Edicts</span><span lang-mr>इसवीसनपूर्व ३रे शतक · अभिलेख व शिलालेख</span></p>
+          <h3 class="book-chapter-title">अशोक महान</h3>
+          <p class="book-chapter-subtitle">कलिंग युद्ध, धम्म राज्य आणि बौद्ध धर्माचा जागतिक प्रसार</p>
+        </div>
+        <div class="book-card-row">
+          <p class="book-chapter-subtitle" style="font-size:.82rem; max-width:300px;">
+            <span lang-en>The Kalinga war, Ashoka's conversion, his Dhamma edicts carved in stone across the subcontinent, and the first systematic global spread of Buddhism as a missionary religion.</span>
+            <span lang-mr>कलिंग युद्ध, अशोकाचे धर्मांतर, उपखंडभर दगडावर कोरलेले त्यांचे धम्म शिलालेख, आणि बौद्ध धर्माचा पहिला पद्धतशीर जागतिक प्रसार.</span>
+          </p>
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.3rem;">
+          <a class="book-dl-btn" href="chapter-3.html" target="_blank" rel="noopener noreferrer" style="background:rgba(201,161,76,.08);border-color:var(--gold);">
+            👁 <span lang-en>Read</span><span lang-mr>वाचा</span>
+          </a>
+          <a class="book-dl-btn" href="TGB_Chapter_3.pdf" target="_blank" rel="noopener noreferrer" download>
+            ⬇ <span lang-en>Download</span><span lang-mr>डाउनलोड</span>
+          </a>
+        </div>
+        </div>
+      </div>
+
+      <!-- Chapter 4 -->
+      <div class="book-card">
+        <div>
+          <span class="book-chapter-num"><span lang-en>Chapter 4</span><span lang-mr>प्रकरण ४</span></span>
+          <p class="book-chapter-era"><span lang-en>2nd–1st century BCE · Numismatics, Archaeology &amp; Literature</span><span lang-mr>इसवीसनपूर्व २रे–१ले शतक · नाणकशास्त्र व साहित्य</span></p>
+          <h3 class="book-chapter-title">मिलिंद आणि इंडो-ग्रीक</h3>
+          <p class="book-chapter-subtitle">ग्रीक राजा, बौद्ध भिक्षू आणि तत्त्वज्ञानाचा अपूर्व संगम</p>
+        </div>
+        <div class="book-card-row">
+          <p class="book-chapter-subtitle" style="font-size:.82rem; max-width:300px;">
+            <span lang-en>King Menander (Milinda) and Nagasena's famous dialogues, the Indo-Greek synthesis, and how Greek rulers became some of Buddhism's most unexpected patrons.</span>
+            <span lang-mr>राजा मिलिंद (मेनँडर) आणि नागसेनाचे प्रसिद्ध संवाद, इंडो-ग्रीक संश्लेषण, आणि ग्रीक राजे बौद्ध धर्माचे कसे अनपेक्षित संरक्षक बनले.</span>
+          </p>
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.3rem;">
+          <a class="book-dl-btn" href="chapter-4.html" target="_blank" rel="noopener noreferrer" style="background:rgba(201,161,76,.08);border-color:var(--gold);">
+            👁 <span lang-en>Read</span><span lang-mr>वाचा</span>
+          </a>
+          <a class="book-dl-btn" href="TGB_Chapter_4.pdf" target="_blank" rel="noopener noreferrer" download>
+            ⬇ <span lang-en>Download</span><span lang-mr>डाउनलोड</span>
+          </a>
+        </div>
+        </div>
+      </div>
+
+      <!-- Chapter 5 -->
+      <div class="book-card">
+        <div>
+          <span class="book-chapter-num"><span lang-en>Chapter 5</span><span lang-mr>प्रकरण ५</span></span>
+          <p class="book-chapter-era"><span lang-en>1st–3rd century CE · Numismatics, Archaeology &amp; Chinese Sources</span><span lang-mr>इसवीसन १ले–३रे शतक · चिनी स्रोत</span></p>
+          <h3 class="book-chapter-title">कुशाण आणि कनिष्क</h3>
+          <p class="book-chapter-subtitle">रेशीम मार्ग, चौथी संगीती आणि महायानाचा सुवर्णकाळ</p>
+        </div>
+        <div class="book-card-row">
+          <p class="book-chapter-subtitle" style="font-size:.82rem; max-width:300px;">
+            <span lang-en>Emperor Kanishka, the Silk Road as a conduit for Buddhist ideas, the Fourth Council, and the golden age of Mahayana — Buddhism's great transformation from reform movement to world religion.</span>
+            <span lang-mr>सम्राट कनिष्क, बौद्ध विचारांसाठी रेशीम मार्गाचे माध्यम, चौथी संगीती, आणि महायानाचा सुवर्णकाळ — बौद्ध धर्माचे सुधारणा चळवळीतून जागतिक धर्मात परिवर्तन.</span>
+          </p>
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.3rem;">
+          <a class="book-dl-btn" href="chapter-5.html" target="_blank" rel="noopener noreferrer" style="background:rgba(201,161,76,.08);border-color:var(--gold);">
+            👁 <span lang-en>Read</span><span lang-mr>वाचा</span>
+          </a>
+          <a class="book-dl-btn" href="TGB_Chapter_5.pdf" target="_blank" rel="noopener noreferrer" download>
+            ⬇ <span lang-en>Download</span><span lang-mr>डाउनलोड</span>
+          </a>
+        </div>
+        </div>
+      </div>
+
+      <!-- Chapter 6 -->
+      <div class="book-card">
+        <div>
+          <span class="book-chapter-num"><span lang-en>Chapter 6</span><span lang-mr>प्रकरण ६</span></span>
+          <p class="book-chapter-era"><span lang-en>3rd–7th century CE · Archaeology, Chinese Pilgrims &amp; Inscriptions</span><span lang-mr>इसवीसन ३रे–७वे शतक · चिनी तीर्थयात्री</span></p>
+          <h3 class="book-chapter-title">गुप्त साम्राज्य आणि नालंदा</h3>
+          <p class="book-chapter-subtitle">सुवर्णयुग, जगातील पहिले विद्यापीठ आणि फाहियानचा भारत</p>
+        </div>
+        <div class="book-card-row">
+          <p class="book-chapter-subtitle" style="font-size:.82rem; max-width:300px;">
+            <span lang-en>The Gupta golden age, Nalanda as the world's first residential university, and the accounts of Chinese pilgrim Fa-Hien — Buddhism at the peak of its intellectual and institutional power.</span>
+            <span lang-mr>गुप्त सुवर्णयुग, जगातील पहिले निवासी विद्यापीठ म्हणून नालंदा, आणि चिनी तीर्थयात्री फाहियानच्या नोंदी — बौद्ध धर्म त्याच्या बौद्धिक आणि संस्थात्मक शक्तीच्या शिखरावर.</span>
+          </p>
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.3rem;">
+          <a class="book-dl-btn" href="chapter-6.html" target="_blank" rel="noopener noreferrer" style="background:rgba(201,161,76,.08);border-color:var(--gold);">
+            👁 <span lang-en>Read</span><span lang-mr>वाचा</span>
+          </a>
+          <a class="book-dl-btn" href="TGB_Chapter_6.pdf" target="_blank" rel="noopener noreferrer" download>
+            ⬇ <span lang-en>Download</span><span lang-mr>डाउनलोड</span>
+          </a>
+        </div>
+        </div>
+      </div>
+
+      <!-- Chapter 7 -->
+      <div class="book-card">
+        <div>
+          <span class="book-chapter-num"><span lang-en>Chapter 7</span><span lang-mr>प्रकरण ७</span></span>
+          <p class="book-chapter-era"><span lang-en>750–12th century CE · Archaeology, Tibetan Sources &amp; Inscriptions</span><span lang-mr>इसवीसन ७५०–१२वे शतक · तिबेटी स्रोत</span></p>
+          <h3 class="book-chapter-title">पाल साम्राज्य आणि अस्त</h3>
+          <p class="book-chapter-subtitle">बौद्ध धर्माचा अंतिम सुवर्णकाळ, तुर्की आक्रमणे आणि नालंदाचे दहन</p>
+        </div>
+        <div class="book-card-row">
+          <p class="book-chapter-subtitle" style="font-size:.82rem; max-width:300px;">
+            <span lang-en>The Pala Empire as Buddhism's last great royal patrons, Vikramashila and Somapura's glory, the Turkish invasions, and the burning of Nalanda — the end of Buddhism in its homeland.</span>
+            <span lang-mr>पाल साम्राज्य बौद्ध धर्माचे शेवटचे महान राजाश्रयदाते, विक्रमशीला आणि सोमपुराचे वैभव, तुर्की आक्रमणे, आणि नालंदाचे दहन — त्याच्या मातृभूमीत बौद्ध धर्माचा अंत.</span>
+          </p>
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.3rem;">
+          <a class="book-dl-btn" href="chapter-7.html" target="_blank" rel="noopener noreferrer" style="background:rgba(201,161,76,.08);border-color:var(--gold);">
+            👁 <span lang-en>Read</span><span lang-mr>वाचा</span>
+          </a>
+          <a class="book-dl-btn" href="TGB_Chapter_7.pdf" target="_blank" rel="noopener noreferrer" download>
+            ⬇ <span lang-en>Download</span><span lang-mr>डाउनलोड</span>
+          </a>
+        </div>
+        </div>
+      </div>
+
+      <!-- Chapter 7A -->
+      <div class="book-card" style="border-top:1px solid var(--line-strong);">
+        <div>
+          <span class="book-chapter-num"><span lang-en>Chapter 7A · Supplementary</span><span lang-mr>प्रकरण ७अ · पूरक प्रकरण</span></span>
+          <p class="book-chapter-era"><span lang-en>500–12th century CE · Historical Analysis &amp; Comparative Historiography</span><span lang-mr>इसवीसन ५०० – १२वे शतक · तौलनिक इतिहासलेखन</span></p>
+          <h3 class="book-chapter-title">अस्ताची बहुकारणे</h3>
+          <p class="book-chapter-subtitle">राजाश्रयाची स्पर्धा, कृषी-आर्थिक स्थित्यंतर आणि शंकराचार्यांविषयीचा लोकसमज</p>
+        </div>
+        <div class="book-card-row">
+          <p class="book-chapter-subtitle" style="font-size:.82rem; max-width:300px;">
+            <span lang-en>A supplementary chapter examining the multiple causes of Buddhism's decline — competition for royal patronage, agricultural-economic shifts, and a critical historical assessment of the Shankaracharya narrative, through the eyes of modern scholars.</span>
+            <span lang-mr>बौद्ध धर्माच्या ऱ्हासाच्या बहुविध कारणांची तपासणी करणारे पूरक प्रकरण — राजाश्रयाची स्पर्धा, कृषी-आर्थिक बदल, आणि आधुनिक इतिहासकारांच्या नजरेतून शंकराचार्यांच्या कथनाचे गंभीर मूल्यांकन.</span>
+          </p>
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.3rem;">
+          <a class="book-dl-btn" href="chapter-7a.html" target="_blank" rel="noopener noreferrer" style="background:rgba(201,161,76,.08);border-color:var(--gold);">
+            👁 <span lang-en>Read</span><span lang-mr>वाचा</span>
+          </a>
+          <a class="book-dl-btn" href="TGB_Chapter_7A.pdf" target="_blank" rel="noopener noreferrer" download>
+            ⬇ <span lang-en>Download</span><span lang-mr>डाउनलोड</span>
+          </a>
+        </div>
+        </div>
+      </div>
+
+      <!-- Chapter 8 -->
+      <div class="book-card">
+        <div>
+          <span class="book-chapter-num"><span lang-en>Chapter 8 · Final</span><span lang-mr>प्रकरण ८ · अंतिम</span></span>
+          <p class="book-chapter-era"><span lang-en>19th–21st century CE · Colonial rediscovery, Navayana &amp; Modern revival</span><span lang-mr>इसवीसन १९वे–२१वे शतक · वसाहती पुनःशोध, नवयान</span></p>
+          <h3 class="book-chapter-title">पुनरुत्थान</h3>
+          <p class="book-chapter-subtitle">वसाहती पुनःशोध, अनागारिक धर्मपाल, डॉ. आंबेडकर आणि नवयान बौद्ध धर्म</p>
+        </div>
+        <div class="book-card-row">
+          <p class="book-chapter-subtitle" style="font-size:.82rem; max-width:300px;">
+            <span lang-en>The colonial rediscovery of Buddhist sites, Anagarika Dharmapala's revival movement, Dr. Ambedkar's Navayana conversion of 1956, and the contemporary Buddhist renaissance in the Indian subcontinent.</span>
+            <span lang-mr>बौद्ध स्थळांचा वसाहती पुनःशोध, अनागारिक धर्मपाल यांची पुनरुज्जीवन चळवळ, डॉ. आंबेडकरांचे १९५६ चे नवयान धर्मांतर, आणि भारतीय उपखंडातील समकालीन बौद्ध पुनरुत्थान.</span>
+          </p>
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.3rem;">
+          <a class="book-dl-btn" href="chapter-8.html" target="_blank" rel="noopener noreferrer" style="background:rgba(201,161,76,.08);border-color:var(--gold);">
+            👁 <span lang-en>Read</span><span lang-mr>वाचा</span>
+          </a>
+          <a class="book-dl-btn" href="TGB_Chapter_8.pdf" target="_blank" rel="noopener noreferrer" download>
+            ⬇ <span lang-en>Download</span><span lang-mr>डाउनलोड</span>
+          </a>
+        </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Appendices -->
+    <div style="padding:.5rem 0 .5rem;">
+      <p class="s-label"><span lang-en>Appendices</span><span lang-mr>परिशिष्टे</span></p>
+    </div>
+    <div class="book-appendix-row">
+      <div class="book-appendix-card">
+        <span class="book-appendix-label"><span lang-en>Appendix A</span><span lang-mr>परिशिष्ट अ</span></span>
+        <h3 class="book-appendix-title">संदर्भ कालरेषा</h3>
+        <p class="book-appendix-desc">
+          <span lang-en>Complete comparative timeline — from 6th century BCE to 13th century CE. Traces the rise and fall of Buddhism across every major dynasty and empire in the Indian subcontinent.</span>
+          <span lang-mr>इसवीसनपूर्व ६वे शतक ते इसवीसन १३वे शतक — संपूर्ण तौलनिक कालरेषा. भारतीय उपखंडातील प्रत्येक प्रमुख राजवंश आणि साम्राज्यातील बौद्ध धर्माचा उत्कर्ष आणि ऱ्हास.</span>
+        </p>
+        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.3rem;">
+          <a class="book-dl-btn" href="appendix-a.html" target="_blank" rel="noopener noreferrer" style="background:rgba(201,161,76,.08);border-color:var(--gold);">
+            👁 <span lang-en>Read</span><span lang-mr>वाचा</span>
+          </a>
+          <a class="book-dl-btn" href="Appendix_A.pdf" target="_blank" rel="noopener noreferrer" download>
+            ⬇ <span lang-en>Download</span><span lang-mr>डाउनलोड</span>
+          </a>
+        </div>
+      </div>
+      <div class="book-appendix-card">
+        <span class="book-appendix-label"><span lang-en>Appendix B</span><span lang-mr>परिशिष्ट ब</span></span>
+        <h3 class="book-appendix-title">संदर्भसूची</h3>
+        <p class="book-appendix-desc">
+          <span lang-en>Consolidated bibliography — primary sources, archaeological evidence, and modern historiography used across all 8 chapters and Chapter 7A. Includes Pali Canon references, epigraphic sources, and scholarly works.</span>
+          <span lang-mr>प्रकरण १ ते ८ आणि ७अ मध्ये वापरलेले प्राथमिक स्रोत, पुरातत्त्वीय पुरावे आणि आधुनिक इतिहासलेखन — एकत्रित यादी. पाली त्रिपिटक संदर्भ, अभिलेखीय स्रोत, आणि विद्वत्तापूर्ण ग्रंथांचा समावेश.</span>
+        </p>
+        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.3rem;">
+          <a class="book-dl-btn" href="appendix-b.html" target="_blank" rel="noopener noreferrer" style="background:rgba(201,161,76,.08);border-color:var(--gold);">
+            👁 <span lang-en>Read</span><span lang-mr>वाचा</span>
+          </a>
+          <a class="book-dl-btn" href="Appendix_B.pdf" target="_blank" rel="noopener noreferrer" download>
+            ⬇ <span lang-en>Download</span><span lang-mr>डाउनलोड</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notice about PDF hosting -->
+
+    <div class="cta-box" style="margin-top:2rem;">
+      <p>
+        <span lang-en>Content by</span><span lang-mr>लेखन —</span>
+        <strong>संदीप भावले</strong> &nbsp;·&nbsp;
+        <span lang-en>Follow for more</span><span lang-mr>अधिक माहितीसाठी फॉलो करा</span>:
+        <strong>@srbhawle</strong>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <span class="foot-glyph">☸</span>
+  <p class="foot-title"><span lang-en>Buddha &amp; His Dhamma</span><span lang-mr>बुद्ध आणि त्यांचा धम्म</span></p>
+  <p class="foot-sub"><span lang-en>Spreading knowledge and awareness of the Awakened One's life and teachings</span><span lang-mr>जागृत बुद्धांच्या जीवनाचे आणि शिकवणींचे ज्ञान व जागरूकता पसरवणे</span></p>
+  <div class="foot-links">
+    <a onclick="goPage('life')"><span lang-en>Life</span><span lang-mr>जीवन</span></a>
+    <a onclick="goPage('teachings')"><span lang-en>Teachings</span><span lang-mr>शिकवण</span></a>
+    <a onclick="goPage('path')"><span lang-en>Path</span><span lang-mr>मार्ग</span></a>
+    <a onclick="goPage('stories')"><span lang-en>Stories</span><span lang-mr>कथा</span></a>
+    <a onclick="goPage('era')"><span lang-en>Era</span><span lang-mr>कालखंड</span></a>
+    <a onclick="goPage('today')"><span lang-en>Today</span><span lang-mr>आज</span></a>
+  </div>
+  <p class="foot-copy"><span lang-en>Content grounded in the Pali Canon, Nikayas, and established Buddhist scholarship.</span><span lang-mr>हा मजकूर पाली त्रिपिटक, निकाय आणि स्थापित बौद्ध अभ्यासावर आधारित आहे.</span><br>Sabbe sattā sukhitā hontu &nbsp;·&nbsp; सर्व प्राणी सुखी होवोत &nbsp;·&nbsp; <span lang-en>May all beings be happy.</span></p>
+</footer>
+
+<button class="scrolltop" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+function goPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const el=document.getElementById('page-'+id);
+  if(el){el.classList.add('active'); window.scrollTo({top:0,behavior:'smooth'});}
+  document.querySelectorAll('.navlinks button').forEach(b=>b.classList.toggle('active', b.dataset.p===id));
+  document.getElementById('navlinks').classList.remove('open');
+}
+
+function setLang(lang){
+  document.getElementById('htmlRoot').setAttribute('data-lang', lang);
+  document.getElementById('btnEN').classList.toggle('active', lang==='en');
+  document.getElementById('btnMR').classList.toggle('active', lang==='mr');
+  localStorage.setItem('bd-lang', lang);
+}
+
+function toggleTheme(){
+  const root = document.getElementById('htmlRoot');
+  const isDark = root.getAttribute('data-theme') === 'dark';
+  const newTheme = isDark ? 'light' : 'dark';
+  root.setAttribute('data-theme', newTheme);
+  document.getElementById('themeBtn').textContent = isDark ? '☀️' : '🌙';
+  localStorage.setItem('bd-theme', newTheme);
+}
+
+(function(){
+  const savedLang = localStorage.getItem('bd-lang');
+  if(savedLang === 'mr'){ setLang('mr'); }
+
+  const savedTheme = localStorage.getItem('bd-theme');
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+  if(theme === 'dark'){
+    document.getElementById('htmlRoot').setAttribute('data-theme', 'dark');
+    document.getElementById('themeBtn').textContent = '🌙';
+  }
+})();
+
+document.querySelectorAll('.expand-btn').forEach(btn=>{
+  const lbl = document.createElement('span');
+});
+
+window.addEventListener('scroll', function(){
+  const btn = document.getElementById('scrollTopBtn');
+  if(window.scrollY > 600){ btn.classList.add('show'); } else { btn.classList.remove('show'); }
+});
+</script>
+</body>
+</html>
