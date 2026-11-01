@@ -194,16 +194,16 @@ html[data-lang="mr"] .chip{font-family:var(--dev);}
   border:1px solid var(--line);
 }
 /* 7th card (Journey) spans full bottom row */
-.overview-grid .ov-card:nth-child(7){ grid-column: 1 / -1; display:flex; align-items:center; gap:1.5rem; }
-.overview-grid .ov-card:nth-child(7) .ov-glyph{ font-size:2.2rem; margin-bottom:0; flex-shrink:0; }
-.overview-grid .ov-card:nth-child(7) .ov-content{ flex:1; }
+.overview-grid .ov-card:nth-child(n+7){ grid-column: 1 / -1; display:flex; align-items:center; gap:1.5rem; }
+.overview-grid .ov-card:nth-child(n+7) .ov-glyph{ font-size:2.2rem; margin-bottom:0; flex-shrink:0; }
+.overview-grid .ov-card:nth-child(n+7) .ov-content{ flex:1; }
 @media (max-width:860px){ 
   .overview-grid{grid-template-columns:repeat(2, 1fr);} 
-  .overview-grid .ov-card:nth-child(7){ grid-column: 1 / -1; }
+  .overview-grid .ov-card:nth-child(n+7){ grid-column: 1 / -1; }
 }
 @media (max-width:560px){ 
   .overview-grid{grid-template-columns:1fr;} 
-  .overview-grid .ov-card:nth-child(7){ grid-column: 1; flex-direction:column; align-items:flex-start; gap:0.5rem; }
+  .overview-grid .ov-card:nth-child(n+7){ grid-column: 1; flex-direction:column; align-items:flex-start; gap:0.5rem; }
 }
 .ov-card{
   background:var(--ink-900); padding:1.6rem; text-align:left; cursor:pointer;
@@ -461,12 +461,23 @@ html[data-lang="mr"] .book-chapter-era{font-style:normal; font-family:var(--dev)
 .scrolltop.show{opacity:1; pointer-events:auto;}
 .scrolltop:hover{transform:translateY(-3px);}
 
+/* ============ NAV: hamburger below 1180px ============ */
+@media (max-width:1180px){
+  nav{padding:0 .8rem; height:auto; min-height:64px; flex-wrap:wrap; row-gap:.5rem; padding-top:.6rem; padding-bottom:.6rem;}
+  .navlinks{display:none; position:absolute; top:100%; left:0; right:0; flex-direction:column; background:var(--ink-950); border-bottom:1px solid var(--line); padding:.8rem; box-shadow:0 8px 24px rgba(44,26,14,.18);}
+  .navlinks.open{display:flex;}
+  .navlinks button{text-align:left; padding:.65rem .8rem;}
+  .navtoggle{display:block; order:3;}
+  .lang-toggle{order:2; flex-shrink:0;}
+  nav > div{display:flex; align-items:center; gap:.6rem; flex-shrink:0;}
+}
+
 /* ============ MOBILE ============ */
 @media (max-width:760px){
   nav{padding:0 .8rem; height:auto; min-height:64px; flex-wrap:wrap; row-gap:.5rem; padding-top:.6rem; padding-bottom:.6rem;}
   .brand{font-size:.92rem;}
   .brand span:not(.wheel){white-space:nowrap;}
-  .navlinks{display:none; position:absolute; top:100%; left:0; right:0; flex-direction:column; background:rgba(14,11,7,.98); border-bottom:1px solid var(--line); padding:.8rem; box-shadow:0 8px 24px rgba(0,0,0,.4);}
+  .navlinks{display:none; position:absolute; top:100%; left:0; right:0; flex-direction:column; background:var(--ink-950); border-bottom:1px solid var(--line); padding:.8rem; box-shadow:0 8px 24px rgba(44,26,14,.18);}
   .navlinks.open{display:flex;}
   .navlinks button{text-align:left; padding:.65rem .8rem;}
   .navtoggle{display:block; order:3;}
@@ -502,6 +513,7 @@ html[data-lang="mr"] .book-chapter-era{font-style:normal; font-family:var(--dev)
     <li><button onclick="goPage('era')" data-p="era"><span lang-en>Era</span><span lang-mr>कालखंड</span></button></li>
     <li><button onclick="goPage('today')" data-p="today"><span lang-en>Today</span><span lang-mr>आज</span></button></li>
     <li><button onclick="goPage('book')" data-p="book" style="color:var(--gold-bright);"><span lang-en>☸ Journey</span><span lang-mr>☸ इतिहास</span></button></li>
+    <li><button onclick="window.open('journey.html','_blank','noopener,noreferrer')" style="color:var(--gold-bright);"><span lang-en>🗺 Map</span><span lang-mr>🗺 नकाशा</span></button></li>
   </ul>
   <div style="display:flex; align-items:center; gap:.6rem;">
     <div class="lang-toggle" translate="no">
@@ -586,6 +598,11 @@ html[data-lang="mr"] .book-chapter-era{font-style:normal; font-family:var(--dev)
       <span class="ov-glyph">📚</span>
       <div class="ov-title" style="color:var(--gold-bright);"><span lang-en>Journey of Buddhism</span><span lang-mr>बौद्ध धर्माचा इतिहास</span></div>
       <div class="ov-desc"><span lang-en>भारतीय उपखंडातील बौद्ध धर्माचा इतिहास — 8 chapters + appendices</span><span lang-mr>भारतीय उपखंडातील बौद्ध धर्माचा इतिहास — ८ प्रकरणे + परिशिष्टे</span></div>
+    </div>
+    <div class="ov-card" onclick="window.open('journey.html','_blank','noopener,noreferrer')" style="background:rgba(184,134,11,.06); border-top:2px solid var(--gold-bright);">
+      <span class="ov-glyph">🗺</span>
+      <div class="ov-title" style="color:var(--gold-bright);"><span lang-en>The Wheel of Peace · Interactive Map</span><span lang-mr>शांतीचे धम्मचक्र · नकाशावरचा प्रवास</span></div>
+      <div class="ov-desc"><span lang-en>Follow Buddhism across 10 eras, from Magadha to the world</span><span lang-mr>मगधापासून जगभर — १० कालखंडांतून बौद्ध धम्माचा प्रवास</span></div>
     </div>
   </div>
 </div>
